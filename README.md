@@ -34,6 +34,33 @@ Most Spark NVFP4 benchmarks are for MoE models (Qwen3.5-35B-A3B, etc.) which onl
 - **PyTorch**: Nightly from `https://download.pytorch.org/whl/nightly/cu130`
 - **Transformers**: 5.x+ (required for `qwen3_5` model type recognition)
 - **Performance**: ~11 tok/s decode at batch 1, ~55 GB memory used, ~66 GB free
+- **MTP (speculative decoding)**: Disabled for now (see [MTP Status](#mtp-status) below)
+
+## Verified Benchmarks
+
+Independently measured on a single DGX Spark, April 2026. Three runs at different generation lengths, all consistent:
+
+| Max Tokens | Completion Tokens | Wall Time | tok/s |
+|-----------|------------------|-----------|-------|
+| 20 | 20 | 1.8s | 11.3 |
+| 150 | 150 | 13.2s | 11.4 |
+| 400 | 400 | 35.2s | 11.4 |
+
+Throughput is stable across generation lengths, consistent with bandwidth-bound inference on the Spark's 273 GB/s memory bus.
+
+### Community Context
+
+As of April 2026, no other verified NVFP4 tok/s measurements for Qwen3.5-27B **dense** on a single DGX Spark exist in public forums or repositories. The closest data points:
+
+| Source | Format | tok/s | Type |
+|--------|--------|-------|------|
+| [NVIDIA Forum (cho)](https://forums.developer.nvidia.com/t/how-fast-can-qwen3-5-27b-be-after-converting-to-nvfp4/362776) | NVFP4 (theoretical) | ~20.2 | Math only |
+| [NVIDIA Forum (joshua.dale.warner)](https://forums.developer.nvidia.com/t/how-fast-can-qwen3-5-27b-be-after-converting-to-nvfp4/362776) | INT4 | ~12 | Measured |
+| [NVIDIA Forum (josephbreda)](https://forums.developer.nvidia.com/t/how-fast-can-qwen3-5-27b-be-after-converting-to-nvfp4/362776) | NVFP4 | "no faster than FP8" | Vague, no number |
+| [NVIDIA Forum](https://forums.developer.nvidia.com/t/run-qwen3-5-27b-with-spark-vllm-docker/362563) | BF16 | ~4 | Measured |
+| **This repo** | **NVFP4 (fine-tuned)** | **11.4** | **Measured, verified** |
+
+Our 11.4 tok/s represents ~56% of theoretical bandwidth peak, consistent with the community's 50-55% efficiency estimate for current frameworks. The [NVIDIA Forum thread](https://forums.developer.nvidia.com/t/how-fast-can-qwen3-5-27b-be-after-converting-to-nvfp4/362776) on dense 27B NVFP4 speed closed without resolution -- most users pivoted to MoE models instead.
 
 ## Full Path: Fine-Tuned Model → Serving on Spark
 
@@ -123,7 +150,7 @@ exec ~/models/vllm-native/bin/python3 -u -m vllm.entrypoints.openai.api_server \
 
 **Key flags:**
 - `--language-model-only`: Required. ModelOpt exports weights with `model.language_model.` prefix. This flag strips the prefix and skips vision encoder loading.
-- `--gpu-memory-utilization 0.40`: Conservative for UMA. 0.40 × 121 GB = ~48 GB budget. With the 19 GB model, this leaves room for KV cache and system overhead.
+- `--gpu-memory-utilization 0.40`: Conservative for UMA. 0.40 x 121 GB = ~48 GB budget. With the 19 GB model, this leaves room for KV cache and system overhead.
 - `--enforce-eager`: Disables CUDAGraph compilation. Safe default for initial setup.
 - `--kv-cache-dtype fp8`: Reduces KV cache memory footprint.
 
@@ -227,6 +254,23 @@ Documenting these with specific error messages so they're searchable.
 | TRT-LLM spark-single-gpu-dev tag | `ValueError: model type 'qwen3_5' not recognized` | Older transformers bundled in container doesn't know Qwen3.5 |
 | Docker with `gpu_memory_utilization > 0.40` | System freeze (nvidia-modeset D-state) | UMA: `torch.cuda.mem_get_info()` reports full system RAM as GPU memory |
 | `--language-model-only` with stale index.json | `RuntimeError: Cannot find any model weights` | Index referenced nonexistent shard filenames from modelopt export |
+
+## MTP Status
+
+**MTP (Multi-Token Prediction) speculative decoding is disabled in the current configuration.**
+
+Qwen3.5-27B includes a native MTP head (15 tensors, BF16) that enables speculative decoding — predicting multiple tokens per forward pass to improve throughput. The checkpoint preserves these tensors, and vLLM supports the flag:
+
+```
+--speculative-config '{"method":"mtp","num_speculative_tokens":1}'
+```
+
+**Why it's disabled for now:**
+- The combination of `--language-model-only` + MTP + NVFP4 on SM121 is untested. MTP requires a separate forward pass through the draft head (BF16) while the main model runs NVFP4 — mixed-precision speculative decoding on the eugr FLASHINFER_CUTLASS backend.
+- If MTP works, expected throughput improvement is 1.4-1.7x (from ~11 tok/s to ~15-19 tok/s).
+- If it fails, the likely symptom is a crash during model load or silently disabled MTP (same 11 tok/s). It should not freeze the Spark — the MTP head is only ~811 MB.
+
+**Testing MTP is the next optimization target.** If you try it and it works (or doesn't), please open an issue.
 
 ## Notes
 
