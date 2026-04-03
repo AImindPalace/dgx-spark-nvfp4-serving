@@ -33,20 +33,36 @@ Most Spark NVFP4 benchmarks are for MoE models (Qwen3.5-35B-A3B, etc.) which onl
 - **Backend**: FLASHINFER_CUTLASS (auto-selected by vLLM, SM121 E2M1 patch built into eugr wheels)
 - **PyTorch**: Nightly from `https://download.pytorch.org/whl/nightly/cu130`
 - **Transformers**: 5.x+ (required for `qwen3_5` model type recognition)
-- **Performance**: ~11 tok/s decode at batch 1, ~55 GB memory used, ~66 GB free
-- **MTP (speculative decoding)**: Disabled for now (see [MTP Status](#mtp-status) below)
+- **Performance (baseline)**: ~11.2 tok/s decode at batch 1, ~55 GB memory used, ~66 GB free
+- **Performance (MTP enabled)**: ~17.1 tok/s decode at batch 1 — **52% speedup**, no quality degradation (see [MTP](#mtp-multi-token-prediction-speculative-decoding))
+- **Thinking mode**: Qwen3.5's native thinking mode works via `chat_template_kwargs` (see [Thinking Mode](#thinking-mode-qwen35s-native-chain-of-thought))
 
 ## Verified Benchmarks
 
-Independently measured on a single DGX Spark, April 2026. Three runs at different generation lengths, all consistent:
+Independently measured on a single DGX Spark, April 2026.
 
-| Max Tokens | Completion Tokens | Wall Time | tok/s |
-|-----------|------------------|-----------|-------|
-| 20 | 20 | 1.8s | 11.3 |
-| 150 | 150 | 13.2s | 11.4 |
-| 400 | 400 | 35.2s | 11.4 |
+### Throughput
 
-Throughput is stable across generation lengths, consistent with bandwidth-bound inference on the Spark's 273 GB/s memory bus.
+| Configuration | tok/s | Memory | Notes |
+|--------------|-------|--------|-------|
+| **NVFP4 baseline** (`--enforce-eager`) | 11.2 | ~55 GB | Stable across generation lengths |
+| **NVFP4 + MTP** (speculative decoding) | **17.1** | ~59 GB | **52% faster**, no quality loss |
+
+MTP throughput is consistent across 20 long-form completions (1,000–7,000 tokens each). The +4 GB memory overhead comes from the BF16 MTP draft head (~811 MB) plus additional KV cache for speculative tokens.
+
+### Quality (Fine-Tuned Model)
+
+We benchmarked our DoRA fine-tuned model (trained on 64 trading/finance/decision-science books) against DeepSeek Reasoner (`deepseek-reasoner`) using a 20-prompt evaluation suite covering market analysis, strategy, risk management, decision science, statistical reasoning, behavioral finance, and general reasoning. Each completion was scored 1-5 on five criteria: framework application, concrete parameters, conflict acknowledgment, reasoning depth, and proportional confidence.
+
+| Model | Overall (all 20) | Excl. failures | Zero-answer failures | Perfect 5.0 scores |
+|-------|-----------------|----------------|---------------------|-------------------|
+| **Jarvis (NVFP4 + MTP)** | **4.71** | **4.91** | 1 | **11** |
+| **Jarvis (NVFP4 baseline)** | 4.54 | 4.73 | 1 | 6 |
+| DeepSeek Reasoner (API) | 3.95 | 4.38 | 4 | 3 |
+
+The fine-tuned 27B model outperformed DeepSeek Reasoner on 11 of 15 comparable prompts. The largest gap was in framework application (+0.73) — the fine-tuned model consistently names and correctly applies specific analytical frameworks from its training corpus, while DeepSeek knows the concepts but applies them more generically. MTP did not degrade quality on any dimension.
+
+*These scores reflect domain-specific evaluation criteria. Results will vary by use case. DeepSeek Reasoner is a strong general-purpose model being compared on domain-specific prompts that favor fine-tuned knowledge.*
 
 ### Community Context
 
@@ -58,9 +74,10 @@ As of April 2026, no other verified NVFP4 tok/s measurements for Qwen3.5-27B **d
 | [NVIDIA Forum (joshua.dale.warner)](https://forums.developer.nvidia.com/t/how-fast-can-qwen3-5-27b-be-after-converting-to-nvfp4/362776) | INT4 | ~12 | Measured |
 | [NVIDIA Forum (josephbreda)](https://forums.developer.nvidia.com/t/how-fast-can-qwen3-5-27b-be-after-converting-to-nvfp4/362776) | NVFP4 | "no faster than FP8" | Vague, no number |
 | [NVIDIA Forum](https://forums.developer.nvidia.com/t/run-qwen3-5-27b-with-spark-vllm-docker/362563) | BF16 | ~4 | Measured |
-| **This repo** | **NVFP4 (fine-tuned)** | **11.4** | **Measured, verified** |
+| **This repo (baseline)** | **NVFP4 (fine-tuned)** | **11.2** | **Measured** |
+| **This repo (MTP)** | **NVFP4 + MTP** | **17.1** | **Measured** |
 
-Our 11.4 tok/s represents ~56% of theoretical bandwidth peak, consistent with the community's 50-55% efficiency estimate for current frameworks. The [NVIDIA Forum thread](https://forums.developer.nvidia.com/t/how-fast-can-qwen3-5-27b-be-after-converting-to-nvfp4/362776) on dense 27B NVFP4 speed closed without resolution -- most users pivoted to MoE models instead.
+Our MTP result of 17.1 tok/s represents ~84% of the theoretical bandwidth peak (~20.2 tok/s), a significant improvement over the baseline's ~56%. This appears to be the first verified MTP-enabled dense Qwen3.5-27B measurement on a DGX Spark.
 
 ## Full Path: Fine-Tuned Model → Serving on Spark
 
@@ -141,18 +158,21 @@ exec ~/models/vllm-native/bin/python3 -u -m vllm.entrypoints.openai.api_server \
   --quantization modelopt \
   --enforce-eager \
   --gpu-memory-utilization 0.40 \
-  --max-model-len 4096 \
+  --max-model-len 8192 \
   --kv-cache-dtype fp8 \
   --trust-remote-code \
   --language-model-only \
+  --speculative-config '{"method":"mtp","num_speculative_tokens":1}' \
   --host 0.0.0.0 --port 8000
 ```
 
 **Key flags:**
 - `--language-model-only`: Required. ModelOpt exports weights with `model.language_model.` prefix. This flag strips the prefix and skips vision encoder loading.
-- `--gpu-memory-utilization 0.40`: Conservative for UMA. 0.40 x 121 GB = ~48 GB budget. With the 19 GB model, this leaves room for KV cache and system overhead.
+- `--gpu-memory-utilization 0.40`: Conservative for UMA. 0.40 × 121 GB = ~48 GB budget. With the 19 GB model + MTP head, this leaves room for KV cache and system overhead.
 - `--enforce-eager`: Disables CUDAGraph compilation. Safe default for initial setup.
 - `--kv-cache-dtype fp8`: Reduces KV cache memory footprint.
+- `--speculative-config '{"method":"mtp","num_speculative_tokens":1}'`: Enables MTP speculative decoding using the model's native BF16 MTP head. See [MTP section](#mtp-multi-token-prediction-speculative-decoding) for details.
+- `--max-model-len 8192`: Increased from 4096 to support longer completions when thinking mode is active.
 
 **Do NOT set `VLLM_NVFP4_GEMM_BACKEND`.** Let vLLM auto-select FLASHINFER_CUTLASS. The eugr wheels include the SM121 software E2M1 patch. Forcing Marlin causes `size_n=96 not divisible by tile_n_size=64` on Qwen3.5's GDN linear attention layers.
 
@@ -255,27 +275,117 @@ Documenting these with specific error messages so they're searchable.
 | Docker with `gpu_memory_utilization > 0.40` | System freeze (nvidia-modeset D-state) | UMA: `torch.cuda.mem_get_info()` reports full system RAM as GPU memory |
 | `--language-model-only` with stale index.json | `RuntimeError: Cannot find any model weights` | Index referenced nonexistent shard filenames from modelopt export |
 
-## MTP Status
+## MTP (Multi-Token Prediction / Speculative Decoding)
 
-**MTP (Multi-Token Prediction) speculative decoding is disabled in the current configuration.**
+**MTP is working and recommended.** It provides a 52% throughput improvement with no measurable quality degradation.
 
-Qwen3.5-27B includes a native MTP head (15 tensors, BF16) that enables speculative decoding — predicting multiple tokens per forward pass to improve throughput. The checkpoint preserves these tensors, and vLLM supports the flag:
+Qwen3.5-27B includes a native MTP head (15 tensors, BF16) that enables speculative decoding — the draft head predicts the next token while the main model verifies, allowing multiple tokens per forward pass.
+
+### How to Enable
+
+Add this flag to your serve command:
 
 ```
 --speculative-config '{"method":"mtp","num_speculative_tokens":1}'
 ```
 
-**Why it's disabled for now:**
-- The combination of `--language-model-only` + MTP + NVFP4 on SM121 is untested. MTP requires a separate forward pass through the draft head (BF16) while the main model runs NVFP4 — mixed-precision speculative decoding on the eugr FLASHINFER_CUTLASS backend.
-- If MTP works, expected throughput improvement is 1.4-1.7x (from ~11 tok/s to ~15-19 tok/s).
-- If it fails, the likely symptom is a crash during model load or silently disabled MTP (same 11 tok/s). It should not freeze the Spark — the MTP head is only ~811 MB.
+That's it. The MTP head must be present in your checkpoint (it is if you used `export_hf_checkpoint()` with the default config — only if you explicitly excluded MTP tensors during quantization would they be missing).
 
-**Testing MTP is the next optimization target.** If you try it and it works (or doesn't), please open an issue.
+### Verified Results
+
+| Metric | Baseline | MTP Enabled | Delta |
+|--------|----------|-------------|-------|
+| Throughput | 11.2 tok/s | **17.1 tok/s** | **+52%** |
+| Memory | ~55 GB | ~59 GB | +4 GB |
+| TTFT | ~175 ms | ~175 ms | No change |
+
+Measured across 20 long-form completions (1,000–7,000 tokens each) on a single DGX Spark. Throughput is consistent — no outlier prompts showed degradation.
+
+### Why It Works (Mixed Precision)
+
+The main model runs NVFP4 while the MTP draft head runs BF16. This mixed-precision speculative decoding works on the eugr FLASHINFER_CUTLASS backend because the draft head is a small, separate forward pass that doesn't interact with the NVFP4 GEMM kernels. The draft head is ~811 MB — negligible overhead on the Spark's 121 GB memory pool.
+
+### Gotcha: MTP Head Must Be BF16
+
+During quantization with `modelopt`, exclude the MTP head from NVFP4 quantization:
+
+```python
+config = mtq.NVFP4_DEFAULT_CFG.copy()
+config["quant_cfg"]["*mtp*"] = {"enable": False}
+```
+
+If you quantize the MTP head to NVFP4, speculative decoding accuracy drops and throughput gains disappear (the verifier rejects most draft tokens). The head must remain BF16.
+
+## Thinking Mode (Qwen3.5's Native Chain-of-Thought)
+
+Qwen3.5 supports a native thinking mode where the model produces a chain-of-thought reasoning trace in a `<think>...</think>` block, separate from the final answer. When properly configured, vLLM routes the thinking content to a `reasoning_content` field in the streaming response, keeping the completion clean.
+
+### How to Enable
+
+**Client side** — pass `enable_thinking` in the request:
+
+```python
+payload = {
+    "model": "/path/to/your/model",
+    "messages": [{"role": "user", "content": "Your prompt here"}],
+    "max_tokens": 4096,
+    "temperature": 0,
+    "stream": True,
+    "chat_template_kwargs": {"enable_thinking": True},
+}
+```
+
+**Server side** — the serve command needs `--enable-reasoning-content` (vLLM 0.18.2+):
+
+```bash
+exec ~/models/vllm-native/bin/python3 -u -m vllm.entrypoints.openai.api_server \
+  ... \
+  --enable-reasoning-content
+```
+
+### Streaming Response Format
+
+When thinking mode is active, the SSE stream contains two types of delta content:
+
+```python
+# In each SSE chunk:
+delta = choices[0]["delta"]
+
+# Thinking content (chain-of-thought reasoning)
+reasoning_text = delta.get("reasoning_content", "")
+
+# Answer content (the actual completion)
+answer_text = delta.get("content", "")
+```
+
+The reasoning tokens are generated first, followed by the answer tokens. TTFT for the *answer* content will be longer because the model thinks first — typically 5-30 seconds of reasoning before the first answer token appears.
+
+### Why This Matters
+
+Without thinking mode properly configured, Qwen3.5 still thinks — but it emits the reasoning as free-form text in the regular completion stream. You get output like:
+
+```
+Here's a thinking process that leads to the suggested response:
+
+1. **Deconstruct the Request:** ...
+2. **Analyze:** ...
+...
+</think>
+
+[actual answer buried at the end]
+```
+
+This wastes most of your `max_tokens` budget on scratchpad content. With `enable_thinking`, the reasoning is cleanly separated and doesn't count against `max_tokens` for the answer.
+
+### Gotcha: `reasoning_content` vs `reasoning`
+
+Some vLLM versions use `reasoning_content` in the delta, others use `reasoning`. Check your version. The field name in the streaming delta must match what your client code reads, or the thinking content silently goes to the wrong place (empty reasoning field, scratchpad leaks into completion).
 
 ## Notes
 
 - This was tested with a DoRA fine-tuned Qwen3.5-27B, but the config fixes likely apply to any Qwen3.5 model quantized through `modelopt export_hf_checkpoint()`. Stock NVFP4 models from NVIDIA or the community (e.g., [osoleve/Qwen3.5-27B-Text-NVFP4-MTP](https://huggingface.co/osoleve/Qwen3.5-27B-Text-NVFP4-MTP)) already have the correct config format and shouldn't need these fixes.
-- Dense 27B performance (~11 tok/s) is much lower than MoE benchmarks you'll see online (30-60+ tok/s). This is expected — dense models are bandwidth-bound on the Spark.
+- Dense 27B baseline performance (~11 tok/s) is much lower than MoE benchmarks you'll see online (30-60+ tok/s). This is expected — dense models are bandwidth-bound on the Spark. MTP closes the gap significantly (~17 tok/s).
+- The fine-tuning was done with DoRA on 64 trading/finance/decision-science books. The quality benchmarks reflect domain-specific evaluation — your results will depend on your fine-tuning data and evaluation criteria.
 - These notes may become outdated as vLLM, TRT-LLM, and the eugr wheels evolve. Check the dates and test on your setup.
 - We are not affiliated with any of the projects mentioned. Just a user sharing what worked.
 
