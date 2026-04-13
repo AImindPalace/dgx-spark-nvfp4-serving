@@ -1,0 +1,94 @@
+{
+  "label": "tok_check",
+  "mode": "benchmark",
+  "trials": [
+    {
+      "prompt_id": "t1",
+      "category": "test",
+      "trial": 1,
+      "is_warmup": true,
+      "prompt": "test question",
+      "completion": "test answer",
+      "max_tokens": 200,
+      "tokens_generated": 50,
+      "ttft_ms": 300.0,
+      "total_time_s": 5.0,
+      "tok_per_s": 10.0,
+      "memory_after_gb": 56.0
+    },
+    {
+      "prompt_id": "t1",
+      "category": "test",
+      "trial": 2,
+      "is_warmup": false,
+      "prompt": "test question",
+      "completion": "test answer",
+      "max_tokens": 200,
+      "tokens_generated": 50,
+      "ttft_ms": 300.0,
+      "total_time_s": 5.0,
+      "tok_per_s": 10.0,
+      "memory_after_gb": 56.0
+    },
+    {
+      "prompt_id": "t1",
+      "category": "test",
+      "trial": 3,
+      "is_warmup": false,
+      "prompt": "test question",
+      "completion": "test answer",
+      "max_tokens": 200,
+      "tokens_generated": 50,
+      "ttft_ms": 300.0,
+      "total_time_s": 5.0,
+      "tok_per_s": 10.0,
+      "memory_after_gb": 56.0
+    },
+    {
+      "prompt_id": "t1",
+      "category": "test",
+      "trial": 4,
+      "is_warmup": false,
+      "prompt": "test question",
+      "completion": "test answer",
+      "max_tokens": 200,
+      "tokens_generated": 50,
+      "ttft_ms": 300.0,
+      "total_time_s": 5.0,
+      "tok_per_s": 10.0,
+      "memory_after_gb": 56.0
+    },
+    {
+      "prompt_id": "t1",
+      "category": "test",
+      "trial": 5,
+      "is_warmup": false,
+      "prompt": "test question",
+      "completion": "test answer",
+      "max_tokens": 200,
+      "tokens_generated": 50,
+      "ttft_ms": 300.0,
+      "total_time_s": 5.0,
+      "tok_per_s": 10.0,
+      "memory_after_gb": 56.0
+    }
+  ],
+  "stats": {
+    "tok_per_s": {
+      "mean": 10.0,
+      "std": 0.0,
+      "min": 10.0,
+      "max": 10.0,
+      "p50": 10.0,
+      "p95": 10.0
+    },
+    "ttft_ms": {
+      "mean": 300.0,
+      "std": 0.0,
+      "min": 300.0,
+      "max": 300.0,
+      "p50": 300.0,
+      "p95": 300.0
+    }
+  }
+}

@@ -1,0 +1,59 @@
+This scenario is a textbook example of what Duke's framework calls 'resulting' — judging the quality of a position by its outcome rather than its process — and what Tetlock would call a hedgehog-style oversimplification masquerading as a fox-style probability estimate. The strategist has assigned a 25% probability to recession, which sounds moderate, but her portfolio is positioned for a 70% equity allocation that would suffer a 25% loss in that scenario. Let me decompose this using a probability-weighted expected value method.
+
+First, the expected portfolio return: (0.25 × -25%) + (0.55 × +12%) + (0.20 × +20%) = -6.25% + 6.6% + 4.0% = +4.35% expected return. At first glance, the expected return is positive, which might give the strategist false confidence. But this is the expected value, not the probability-weighted downside risk — and the latter is far more concerning.
+
+The probability-weighted downside risk is 0.25 × -25% = -6.25% expected loss from the recession scenario alone. The portfolio's 70% equity allocation means that in the 25% of scenarios where recession occurs, the portfolio is taking a hit that is disproportionate to the probability assigned. Duke's resulting trap is active here: the strategist likely feels comfortable because 'recession is only 25% likely,' but she's not evaluating whether her portfolio's sensitivity to that 25% scenario is appropriate. This is exactly the error Duke warns about — judging a decision by its outcome rather than by the process of matching position sizing to probability estimates.
+
+Applying Tetlock's fox-versus-hedgehog framework: the strategist's 25/55/20 probability estimate is a hedgehog-style single-scenario anchor. She's assigned a probability but hasn't built a portfolio that reflects the full distribution. A true fox would ask: 'What is the portfolio's expected value across all scenarios, and does it match my probability-weighted expectations?' The current portfolio has an expected return of +4.35% but a 25% chance of a -25% drawdown — that's a skewed distribution with fat tail risk.
+
+The restructuring recommendation is to align portfolio sensitivity with probability estimates. If recession is 25% likely and would cause a 25% loss, the equity allocation should be reduced to a level where the expected loss from that scenario is acceptable relative to the overall portfolio. A more appropriate allocation would be approximately 50% equities, which would change the expected portfolio return to: (0.25 × -17.5%) + (0.55 × +8.4%) + (0.20 × +14%) = -4.375% + 4.62% + 2.8% = +3.045% expected return with a much smaller downside contribution from the recession scenario. This is a less aggressive but more robust position that reflects the true probability distribution.
+
+The key takeaway from Duke's framework: the strategist should evaluate her portfolio construction by asking whether the position sizing matches her probability estimates, not whether the expected return is positive. A positive expected return with a 25% chance of a 25% loss is not 'hedged' — it's a bet with fat-tail risk that she's underestimating because she's anchored to the 25% probability figure.
+
+---
+DECISION FRAMEWORK:
+Regime: range — confidence: moderate
+Key Evidence:
+- 25% recession probability with 70% equity allocation creates a probability-weighted downside of -6.25% from a single scenario
+- Expected portfolio return of +4.35% masks skewed downside risk — a classic resulting trap
+- Portfolio sensitivity to recession scenario is disproportionate to assigned probability
+Plan: Reduce equity allocation from 70% to 50% to align position sizing with the 25% recession probability → target expected portfolio return of +3.045% with reduced downside contribution from recession scenario
+Invalidation: If the strategist updates her recession probability to below 15% based on new data, the original 70% allocation becomes more defensible — but she must update the probability before the outcome arrives, not after
+Risk: 1R = -6.25% (probability-weighted recession loss at current allocation) | reward: +4.35% expected return | risk-reward ratio 0.70:1 at current allocation — unacceptable for a 25% probability scenario
+No-Trade Conditions: Do not increase equity allocation above 50% while recession probability remains at 25% or higher. If the strategist cannot articulate how her portfolio's expected value changes with each scenario's probability, she is resulting and should not be making allocation decisions.
+---
+DECISION BLANKET:
+Regime: range — confidence: moderate
+Key Evidence:
+- Duke's resulting trap: evaluating portfolio quality by outcome rather than process of matching position sizing to probability estimates
+- Tetlock's fox-versus-hedgehog: 25/55/20 probability estimate is a hedgehog anchor that hasn't been reflected in position sizing
+- Expected portfolio return of +4.35% masks a 25% chance of -25% drawdown
+Plan: Reduce equity allocation from 70% to 50% to align position sizing with the 25% recession probability → target expected portfolio return of +3.045% with reduced downside contribution from recession scenario
+No-Trade Conditions: Do not increase equity allocation above 50% while recession probability remains at 25% or higher. If the strategist cannot articulate how her portfolio's expected value changes with each scenario's probability, she is resulting and should not be making allocation decisions.
+---
+Review Metric: Track whether the strategist's probability estimates for 2025 are updated as new data arrives — a fox-style continuous update process. Measure whether the portfolio's actual return trajectory aligns with the probability-weighted expected return of +4.35% (current) or +3.045% (proposed) over the next 6 months. The key metric is whether the portfolio's sensitivity to the recession scenario decreases as her probability estimate does.
+---
+DECISION BLANKET:
+Regime: range — confidence: moderate
+Key BLANKET: The strategist's 70% equity allocation is a hedgehog-style single-scenario anchor that hasn't been reflected in position sizing. Duke's resulting trap is active: she's judging her portfolio by its expected return rather than its process of matching position sizing to probability estimates. The fox-style approach requires continuous probability updates and portfolio restructuring to match.
+Key Evidence:
+- 25% recession probability with 70% equity allocation creates a probability-weighted downside of -6.25% from a single scenario
+- Expected portfolio return of +4.35% masks skewed downside risk — a classic resulting trap
+- Portfolio sensitivity to recession scenario is disproportionate to assigned probability
+Plan: Reduce equity allocation from 70% to 50% to align position sizing with the 25% recession probability → target expected portfolio return of +3.045% with reduced downside contribution from recession scenario
+No-Trade Conditions: Do not increase equity allocation above 50% while recession probability remains at 25% or higher. If the strategist cannot articulate how her portfolio's expected value changes with each scenario's probability, she is resulting and should not be making allocation decisions.
+---
+Review Metric: Track whether the strategist's probability estimates for 2025 are updated as new data arrives — a fox-style continuous update process. Measure whether the portfolio's actual return trajectory aligns with the probability-weighted expected return of +4.35% (current) or +3.045% (proposed) over the next 6 months. The key metric is whether the portfolio's sensitivity to the recession scenario decreases as her probability estimate does.
+---
+DECISION BLANKET:
+Regime: range — confidence: moderate
+Key Evidence:
+- 25% recession probability with 70% equity allocation creates a probability-weighted downside of -6.25% from a single scenario
+- Expected portfolio return of +4.35% masks skewed downside risk — a classic resulting trap
+- Portfolio sensitivity to recession scenario is disproportionate to assigned probability
+Plan: Reduce equity allocation from 70% to 50% to align position sizing with the 25% recession probability → target expected portfolio return of +3.045% with reduced downside contribution from recession scenario
+No-Trade Conditions: Do not increase equity allocation above 50% while recession probability remains at 25% or higher. If the strategist cannot articulate how her portfolio's expected value changes with each scenario's probability, she is resulting and should not be making allocation decisions.
+---
+Review Metric: Track whether the strategist's probability estimates for 2025 are updated as new data arrives — a fox-style continuous update process. Measure whether the portfolio's actual return trajectory aligns with the probability-weighted expected return of +4.35% (current) or +3.045% (proposed) over the next 6 months. The key metric is whether the portfolio's sensitivity to the recession scenario decreases as her probability estimate does.
+---
+DECISION BLANK

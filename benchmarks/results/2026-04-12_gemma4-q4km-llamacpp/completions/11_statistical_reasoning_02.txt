@@ -1,0 +1,29 @@
+This scenario is a textbook case of the small-sample Sharpe ratio bias problem that Aronson documents extensively. The trader's 63-day sample is far too small to produce a reliable Sharpe estimate, and the resulting 2.71 figure is almost certainly inflated.
+
+**Signal Identification:** The key signals are: (1) only 63 trading days of live data, (2) a Sharpe ratio of 2.71 — which is exceptionally high and should trigger skepticism, (3) the trader's intent to double position sizes based on this estimate, and (4) the underlying statistical framework of hypothesis testing with small samples.
+
+**Framework Application — The Small-Sample Sharpe Bias:** Aronson's chapter on hypothesis testing and confidence intervals provides the exact tools needed. The Sharpe ratio is a ratio of two estimates: mean return and standard deviation. Both estimates are subject to sampling error, and the ratio of two estimates is not the same as the ratio of the true population parameters. For small samples, the Sharpe ratio estimate is systematically biased upward. The expected value of the sample Sharpe ratio E[s] exceeds the true population Sharpe ratio s by a factor that depends on the sample size n. Aronson's formula shows that for n = 63, the bias is substantial.
+
+**Confidence Interval Calculation:** The 95% confidence interval for the true Sharpe ratio given n = 63 can be estimated using the formula for the standard error of the Sharpe ratio: SE(s) = sqrt((1 + s^2)/n). With s = 2.71 and n = 63, SE(s) = sqrt((1 + 2.71^2)/63) = sqrt((1 + 7.344)/63) = sqrt(8.344/63) = sqrt(0.1324) = 0.364. The 95% confidence interval is approximately s ± 1.96 × SE(s) = 2.71 ± 0.71, giving a range of [2.00, 3.42].
+
+**The Critical Problem:** This interval is centered on the biased estimate of 2.71. The true Sharpe ratio could be as low as 2.00 — which is still high but represents a 26% reduction from the observed estimate. More importantly, Aronson's framework shows that the expected value of the sample Sharpe ratio is approximately s + 1/(2n) = 2.71 + 1/(126) = 2.71 + 0.0079 = 2.718, meaning the bias from the true Sharpe ratio is actually small in absolute terms (about 0.01), but the confidence interval is wide. The real danger is that the trader has no way to know if the true Sharpe is 2.71, 2.00, or even 0.50 — the 63-day sample is simply too small to distinguish.
+
+**Type I and Type II Error Risks:** The Type I error risk is the most dangerous: the trader believes the strategy is superior and doubles position size, but the true Sharpe ratio is actually near zero or negative. This is the equivalent of rejecting the null hypothesis (strategy has no edge) when it's actually true. The Type II error risk is the opposite: the trader is overly cautious and doesn't scale up a genuinely good strategy. With only 63 days of data, the trader cannot reliably distinguish between these two scenarios.
+
+**Minimum Sample Size:** Aronson's framework suggests that for a Sharpe ratio estimate to be reliable, you need a sample size large enough that the confidence interval is narrow and the bias is small. A common rule of thumb is at least 250 trading days (one full year) for a minimum, and ideally 500+ trading days for a strategy with a Sharpe ratio above 1.0. The trader has only 25% of the minimum required sample.
+
+**Actionable Recommendation:** The trader should NOT double position sizes. Instead, maintain current position sizing and collect at least 187 additional trading days (bringing the total to 250) before re-evaluating. The current Sharpe of 2.71 should be treated as an upper bound, not a point estimate. The minimum acceptable Sharpe ratio for scaling up, after applying the small-sample bias correction, should be at least 1.5 — and this 1.5 should be the lower bound of the 95% confidence interval, not the point estimate.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate
+Key Evidence:
+- 63-day sample produces Sharpe of 2.71, but small-sample bias and wide confidence interval [2.00, 3.42] make this estimate unreliable
+- Aronson's hypothesis testing framework shows the sample is far below the minimum 250-day threshold for reliable Sharpe estimation
+- Type I error risk is elevated — the trader may be doubling size on a strategy that has no true edge
+Plan: Maintain current position size; collect 187 additional trading days of data before re-evaluating → target: 250+ days for minimum reliable estimate
+Invalidation: If the strategy's Sharpe ratio drops below 1.0 over the next 100 trading days, the momentum thesis is likely wrong and the strategy should be abandoned entirely
+Risk: 1R = current position size (no change in risk exposure) | reward: potential for 2x sizing if 250-day Sharpe remains above 1.5 lower-bound | risk-reward: preserving capital while gathering data
+No-Trade Conditions: Do not scale up under any circumstances with fewer than 250 trading days of live data. Do not use any Sharpe ratio estimate below 1.0 as a basis for sizing decisions.
+Review Metric: Track the convergence of the rolling Sharpe ratio as sample size grows from 63 to 250 days — the rate of convergence will reveal whether the strategy's edge is stable or deteriorating
+---

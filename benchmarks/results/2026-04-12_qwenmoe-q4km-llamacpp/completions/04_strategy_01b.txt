@@ -1,0 +1,30 @@
+<think>
+This is a position sizing problem that directly invokes Tharp's R-multiples framework and his extensive work on Kelly sizing. The trader has a 58% win rate, +4.2% average winner, -2.8% average loser, and a full-Kelly fraction of approximately 29%. Let me apply Tharp's framework for why fractional Kelly is superior and determine the appropriate fraction.
+
+Tharp's core argument against full-Kelly is that it assumes the R-multiple distribution is known with certainty, when in reality it is estimated from a finite sample. He demonstrates that full-Kelly sizing is "too aggressive" because it ignores estimation error in the R-multiple distribution. The Kelly formula requires precise knowledge of the probability distribution of returns, but in live markets, the distribution is estimated from a limited sample and is subject to sampling error, regime changes, and structural shifts.
+
+The 5-year backtest provides a sample of perhaps 1,500-2,500 trades (depending on how many S&P 500 constituents the trader monitors and how frequently they trade). Even with this sample, the estimated R-multiple distribution has substantial uncertainty. Tharp's research shows that full-Kelly sizing produces a maximum drawdown that is approximately 2-3x larger than the drawdown at the optimal fraction (roughly 50% of Kelly), and the probability of a catastrophic drawdown is significantly higher at full-Kelly.
+
+For a swing trader with a 58% win rate and +4.2% / -2.8% R-multiples, the R-multiple distribution is likely somewhat skewed — the +4.2% average winner suggests occasional large winners, while the -2.8% average loser suggests relatively contained losses. This is a favorable distribution, but the estimation error in the tail behavior is substantial.
+
+Tharp's practical recommendation is to use a fraction between 25% and 50% of full-Kelly. The specific fraction depends on the trader's risk tolerance and the quality of the R-multiple distribution estimate. For a swing trader with a 5-year backtest (a solid but not exhaustive sample), I recommend 33% of full-Kelly. This yields a position size of approximately 9.7% of equity per trade, which is aggressive but manageable.
+
+The R-multiple distribution should inform ongoing position-size adjustments through Tharp's method of tracking the R-multiple distribution as new trades accumulate. Each new trade provides a data point that updates the empirical distribution. As the sample grows, the estimate becomes more precise, and the trader can gradually increase toward a higher fraction of Kelly. Conversely, if the R-multiple distribution deteriorates — for example, if average winners shrink to +2.5% while losers remain at -2.8% — the full-Kelly fraction drops to approximately 14%, and the trader should reduce position sizes accordingly.
+
+The critical insight from Tharp is that position sizing is not a one-time calculation but a continuous process. The Kelly fraction should be recalculated quarterly as the R-multiple distribution is updated with new trade data. This adaptive approach acknowledges that the optimal fraction changes as the trader's edge evolves.
+
+---
+DECISION FRAMEWORK:
+Regime: range — confidence: moderate
+Key Evidence:
+- Full-Kelly fraction of 29% is derived from a 5-year backtest with likely 1,500-2,500 trades, introducing substantial estimation error in the R-multiple distribution
+- Tharp's framework shows full-Kelly produces drawdowns 2-3x larger than the optimal fraction (approximately 50% of Kelly)
+- R-multiple distribution of +4.2% / -2.8% is favorable but tail behavior is poorly estimated from finite samples
+Plan: Apply 33% of full-Kelly → position size of approximately 9.7% of equity per trade ($24,250 at $250,000 equity) → trade sizing rule: risk no more than 1R per trade, where 1R = $2,425
+Invalidation: If the R-multiple distribution shifts such that average winner falls below +3.0% or average loser exceeds -3.5%, the full-Kelly fraction drops below 18% and position sizes must be reduced proportionally
+Risk: 1R = $2,425 per trade | reward: 1.5R average ($3,637.50) | risk-reward ratio: 1:1.5
+No-Trade Conditions: Do not increase above 33% of Kelly until the R-multiple distribution has been estimated from at least 3,000 trades with stable statistics across two full market regimes (bull and bear). Do not trade when the trader is experiencing a drawdown exceeding 15% of equity — reduce to 25% of Kelly during drawdowns.
+Review Metric: Track the R-multiple distribution quarterly and compute the updated full-Kelly fraction. Compare the actual drawdown experienced at 33% Kelly against the theoretical drawdown at full-Kelly (approximately 2-3x larger). If the 33% Kelly drawdown exceeds 20% of equity, reduce to 25% of Kelly.
+---
+</think>
+

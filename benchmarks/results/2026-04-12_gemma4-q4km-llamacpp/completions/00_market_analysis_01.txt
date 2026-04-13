@@ -1,0 +1,27 @@
+This is a high-quality continuation setup that requires careful entry timing rather than immediate action. Let me work through the pattern geometry, volume characteristics, and entry framework systematically.
+
+**Pattern Geometry Assessment:** The cup-and-handle pattern has a well-defined structure. The cup rim high at $142.60 and the handle low at $132.80 create a handle depth of $9.80, which is 6.9% of the cup rim high — well within the ideal range of 5-10% for handle depth. The 61.8% Fibonacci retracement of the handle range is a textbook consolidation level; the handle is retracing exactly what a healthy pullback should. The 50-day SMA at $126.10 is rising and positioned below the handle, providing a structural floor that supports the bullish thesis. The 7-week formation time is appropriate — not too compressed (which would suggest a spike-and-fade) and not too extended (which would suggest momentum exhaustion).
+
+**Volume Characteristics:** The 38% volume decline on the last three up-days within the handle is a positive signal. Applying Murphy's volume confirmation method: declining volume during a pullback within a continuation pattern is the correct volume signature. It indicates that sellers are not aggressively pushing the price down — the handle is a pause, not a distribution. This is consistent with the principle that volume should confirm the pattern's directional bias.
+
+**Measured Price Target:** The cup-and-handle measured move method calculates the target by taking the cup's depth ($142.60 - $98.40 = $44.20) and adding it to the breakout level. The breakout level is the cup rim high at $142.60. Target = $142.60 + $44.20 = $186.80. This gives a 31.4% upside from the handle low of $132.80.
+
+**Entry Framework:** The handle has not yet broken out — the price is still at $132.80, below the cup rim high of $142.60. This is a pre-breakout setup, not an active trade. The entry trigger is a daily close above $142.60 on volume exceeding 1.5x the 20-day average. The stop loss should be placed below the handle low at $132.80, specifically at $131.50 to allow for a buffer below the handle's support level. This gives a risk of $11.10 per share ($142.60 entry - $131.50 stop). The risk-reward from entry at $142.60 to target at $186.80 is $44.20 / $11.10 = 4.0:1.
+
+**Position Sizing:** At 1% portfolio risk on a $500,000 account ($5,000 risk), the position size is $5,000 / $11.10 = 450 shares, representing $64,170 in notional value — approximately 12.8% of the portfolio. This is a concentrated position but justified by the high-quality pattern and favorable risk-reward.
+
+**Confidence:** High — the pattern geometry is textbook, volume is confirming, and the risk-reward is exceptional. The primary risk is a failed breakout where price retests the handle low.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: high
+Key Evidence:
+- Cup-and-handle pattern with 6.9% handle depth and 61.8% Fibonacci retracement — textbook continuation geometry
+- 38% volume decline on pullback within handle — volume confirms healthy consolidation
+- Rising 50-day SMA at $126.10 provides structural support below the pattern
+Plan: Enter long on daily close above $142.60 on volume > 1.5x 20-day average → target $186.80
+Invalidation: Daily close below $131.50 (below handle low) on any volume level
+Risk: 1R = $11.10 | reward: 4.0R | risk-reward 4.0:1
+No-Trade Conditions: If price breaks below $132.80 before triggering the breakout entry, the handle has failed and the cup-and-handle thesis is invalidated — do not enter. Also stand down if broader market (SPY) breaks below its 50-day SMA, as the macro backdrop would undermine the continuation thesis.
+Review Metric: Track whether the 61.8% Fibonacci retracement level within the handle reliably predicts the breakout direction — build a database of handle retracement levels and breakout success rates.
+---

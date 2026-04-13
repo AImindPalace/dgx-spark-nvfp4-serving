@@ -1,0 +1,88 @@
+This is a rich multi-layered question that combines Elder's Triple Screen system (technical), position sizing (money management), and trading psychology (mind). Let me work through each layer systematically.
+
+**Screen 1 — Weekly (Tide):** Weekly MACD histogram turned up from -1.8 two bars ago. This is the primary trend signal — the tide is turning bullish. Per Elder's Triple Screen method, this is the foundational signal that determines direction. The histogram turning up from negative territory means the weekly momentum is shifting from bearish to bullish. This is the 'tide' in Elder's ocean metaphor.
+
+**Screen 2 — Daily (Wave):** Daily Force Index 2-day EMA dropped below zero to -42,000 while the weekly trend is up. This is the exact setup Elder describes: when the weekly trend is up, look for the daily Force Index to dip below zero as a buying opportunity. The wave is pulling back against the tide, creating the entry opportunity. This is the 'wave' in Elder's metaphor.
+
+**Screen 3 — Intraday (Timing):** Buy-stop at $188.50 above today's high. This is the timing mechanism — Elder's third screen uses intraday price action to time the entry. The buy-stop ensures you only enter if the market confirms the setup by breaking above the day's high.
+
+The technical setup across all three screens is aligned and clean. This is a textbook Triple Screen buy signal.
+
+**Position Sizing Calculation:**
+- Account: $150,000
+- Risk per trade: 2% = $3,000
+- Entry: $188.50
+- Stop: $181.20
+- Risk per share: $188.50 - $181.20 = $7.30
+- Position size: $3,000 / $7.30 = 411 shares
+- Position value: 411 × $188.50 = $77,473.50 (51.6% of account)
+
+**Psychological Diagnosis — The Three M's Framework:**
+Elder's three M's are Mind, Method, and Money. The psychological issue here is the 'revenge trading' impulse — the urge to make back losses quickly after three consecutive stops. This is a classic cognitive distortion that Elder addresses in his trading psychology work.
+
+The specific psychological threats to this trade:
+1. **Loss aversion escalation:** After three stops, the trader feels the accumulated pain and wants to 'get back' — this creates pressure to size up beyond the 2% rule.
+2. **Confirmation bias:** The Triple Screen setup is valid, but the trader may be unconsciously seeking validation for the setup because they need to win. This can lead to ignoring warning signs.
+3. **Overconfidence after a 'clean' setup:** The alignment of all three screens may create false confidence that this trade 'has to work,' leading to oversized positions.
+
+The correct response is to execute the trade at the calculated 411 shares — no more, no less. The Triple Screen method provides the edge; the position sizing rule provides the risk management; the psychological awareness provides the discipline to follow both.
+
+**Risk Assessment:**
+- 1R = $7.30 per share
+- If the target is not specified, I'll use a conservative 2:1 risk-reward: $188.50 + $14.60 = $203.10
+- The weekly MACD histogram turning up suggests a multi-week move, so a 2:1 target is conservative
+- Confidence: moderate-high on the setup quality, but the psychological state introduces execution risk
+
+**Key Risk:** The stop at $181.20 is $7.30 below entry — that's a 3.9% move. If the daily Force Index continues declining and the weekly MACD histogram reverses back down, the trade thesis is invalidated.
+</think>
+
+This is a textbook Triple Screen setup with a significant psychological overlay that must be addressed before execution.
+
+**Triple Screen Technical Analysis:**
+
+Screen 1 (weekly tide): MACD histogram turning up from -1.8 two bars ago is the foundational bullish signal. The weekly momentum is shifting from bearish to bullish — the tide is turning. This is the primary directional filter.
+
+Screen 2 (daily wave): Force Index 2-day EMA at -42,000 below zero while the weekly trend is up. This is the exact buying opportunity Elder's second screen identifies — the wave pulling back against the tide. The daily pullback is the entry trigger.
+
+Screen 3 (intraday timing): Buy-stop at $188.50 above today's high. This ensures the market confirms the setup by breaking above the day's range before you enter.
+
+All three screens are aligned. This is a high-quality Triple Screen buy signal.
+
+**Position Sizing — Money Management:**
+- Account: $150,000
+- Risk per trade: 2% = $3,000
+- Entry: $188.50, Stop: $181.20
+- Risk per share: $7.30
+- Position size: $3,000 / $7.30 = 411 shares
+- Position value: $77,473.50 (51.6% of account)
+
+**Psychological Diagnosis — The Three M's:**
+Elder's three M's framework (Mind, Method, Money) identifies the critical issue: your mind is compromised by the revenge trading impulse. Three consecutive stops have created loss aversion escalation — you're not thinking about this trade on its merits, you're thinking about recovering losses. This is the exact psychological trap Elder warns about. The Triple Screen method is sound, but your mind is threatening to override the money management rule.
+
+The specific distortion risk: you may be tempted to size up to 600-700 shares ($4,380-$5,110 risk, 2.9-3.4% of account) to 'make back' the losses faster. This is the single most dangerous impulse in trading.
+
+**Trade Parameters:**
+- Entry: $188.50 (buy-stop above today's high)
+- Stop: $181.20
+- Target: $203.10 (2:1 risk-reward, conservative given the weekly MACD histogram's bullish turn)
+- Position: 411 shares at 2% risk
+- Confidence: moderate-high on setup quality; moderate on execution given psychological state
+- Risk: 1R = $7.30/share, total risk = $3,000
+
+**Invalidation:** Daily Force Index continues declining below -60,000 while weekly MACD histogram reverses back down — this would mean the tide has turned back bearish and the wave is no longer a pullback but a new downtrend.
+
+**Critical Execution Rule:** Execute at exactly 411 shares. No more. If the urge to size up arises, write it down and wait 15 minutes before acting. The Triple Screen method provides the edge; your job is to let the method work without psychological interference.
+
+---
+DECISION FRAMEWORK:
+Regime: transition (weekly MACD histogram turning bullish from -1.8) — confidence: moderate
+Key Evidence:
+- Triple Screen alignment: weekly MACD histogram up, daily Force Index below zero, intraday buy-stop at $188.50
+- Position sizing at 2% risk = 411 shares, $3,000 total risk
+- Revenge trading impulse identified as primary psychological risk requiring active management
+Plan: Buy-stop at $188.50 for 411 shares → target $203.10 (2:1 risk-reward)
+Invalidation: Daily Force Index below -60,000 combined with weekly MACD histogram reversing back down — exit immediately at $181.20 stop
+Risk: 1R = $7.30/share ($3,000 total) | reward: 2.0R ($2,953) | risk-reward 1:2.0
+No-Trade Conditions: If the urge to size above 411 shares cannot be suppressed, do not trade — the psychological state is too compromised to execute the method correctly
+Review Metric: Track whether the position was sized at exactly 411 shares or deviated — this is the primary process metric, not the P&L outcome
+---

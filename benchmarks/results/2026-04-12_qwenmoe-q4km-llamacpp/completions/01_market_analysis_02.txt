@@ -1,0 +1,38 @@
+<think>
+This is a classic credit-cycle positioning question that requires synthesizing multiple macro indicators through the lens of the yield curve's recession-prediction model and the credit-tightening transmission mechanism. The framework here draws from the chapter's discussion of how the 2s10s inversion signals future recessions, combined with the credit channel framework from the chapter on credit cycles.
+
+**Signal Assessment:**
+
+The 2s10s moving from -108 bps to +22 bps represents a complete un-inversion. The chapter's framework is explicit: "the recession typically arrives not during inversion but in the 6–18 months following re-steepening." The re-steepening from -108 to +22 bps (a 130 bps swing) occurred over approximately 12 months. Applying the 6–18 month lag rule, the recession window opens approximately 6 months from now and extends through roughly 18 months from the re-steepening date.
+
+The supporting evidence is compelling. Core PCE at 2.8% YoY means the Fed has limited room to cut rates — the 4.50% Fed Funds rate is already restrictive. The ISM Manufacturing PMI at 48.3 is in contraction territory (below 50), and the JOLTS ratio falling from 2.0x to 1.1x over 18 months shows the labor market tightening in a way that directly transmits credit tightening to the real economy. The JOLTS ratio below 1.5x historically correlates with recession onset within 6–12 months.
+
+**Credit Cycle Phase:**
+
+This is late-cycle with credit tightening in transmission. The chapter's discussion of the credit cycle emphasizes that the real economy responds to credit conditions with a lag — the 2s10s inversion signals the tightening, the re-steepening signals the tightening is working, and the recession arrives when the tightening has fully transmitted through business investment, consumer spending, and employment.
+
+**Sector Rotation Framework:**
+
+In late-cycle credit tightening, the historical outperformers are: (1) defensive sectors — consumer staples, healthcare, utilities — because demand is relatively inelastic; (2) cash-rich large-cap companies with low debt-to-equity ratios that can withstand the tightening; (3) short-duration fixed income as rates begin to fall. Underperformers: (1) cyclicals — industrials, materials, consumer discretionary — because they depend on credit-fueled demand; (2) highly leveraged companies; (3) long-duration bonds as the yield curve normalizes.
+
+**Soft-Landing Conditions:**
+
+The thesis would shift toward a soft landing if: (1) core PCE drops below 2.3% YoY while the Fed Funds rate remains at 4.50% — this would indicate the tightening is working without overshooting; (2) JOLTS ratio stabilizes above 1.5x — indicating labor demand remains robust; (3) ISM Manufacturing PMI recovers above 50 — indicating the manufacturing contraction is a temporary cycle trough rather than a leading indicator of broader weakness. The chapter's discussion of the 1990s soft landing is instructive: the 2s10s inverted, but the recession was shallow because the tightening was gradual and the economy had structural advantages (productivity gains, fiscal discipline).
+
+**Confidence:** Moderate-to-high (65%). The credit-tightening transmission framework is well-established, but the timing of recession onset is notoriously uncertain — the chapter notes that the 2s10s inversion has been wrong about the timing of recessions even when it correctly predicted the direction.
+
+**Plan:**
+- Entry: Begin rotating 30% of equity exposure from cyclicals to defensive sectors (consumer staples, healthcare, utilities) over the next 4 weeks
+- Entry: Increase allocation to short-duration Treasuries (1–3 year) from 15% to 25% of fixed income
+- Stop: If core PCE drops below 2.0% YoY, the recession is likely already underway — shift to 60% cash and 40% short-duration Treasuries
+- Target: Defensive sector outperformance of 8–12% over the next 12 months versus cyclicals
+- Risk: 1R = 5% portfolio drawdown from current levels if recession hits within 6 months
+- Confidence: 65% that the credit-tightening transmission will produce a recession within 6–18 months
+- Invalidated: If JOLTS ratio recovers above 1.5x AND core PCE drops below 2.3% YoY within 3 months — this combination would indicate the tightening is working without overshooting, consistent with a soft landing
+- Review: Monthly — track JOLTS ratio, core PCE, and ISM Manufacturing PMI as the three leading indicators of credit-cycle phase
+- Key lesson: The 2s10s inversion is a leading indicator of recession direction, not timing — the re-steepening narrows the window but the exact timing remains uncertain
+- Key lesson: The credit-tightening transmission mechanism has a 6–18 month lag from re-steepening to recession — use this window to rotate into defensive positioning before the damage is visible in lagging indicators
+- Key lesson: A soft landing requires the tightening to be gradual enough that the JOLTS ratio doesn't fall below 1.5x — this is the single most important threshold to monitor
+
+</think>
+

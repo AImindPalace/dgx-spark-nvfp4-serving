@@ -1,0 +1,60 @@
+This is a multi-timeframe alignment scenario that requires synthesizing signals across weekly, daily, and 4-hour charts. The symmetrical triangle on the weekly chart is a continuation pattern — the direction of the breakout depends on the resolution. The daily bull engulfing above the 20-day EMA on 1.8x volume is a bullish signal. The 4-hour chart shows a clean base with no overhead supply until $521. Let me apply a systematic multi-timeframe framework.
+
+**Weekly (strategic):** The 14-week symmetrical triangle between $492 and $521 is a significant consolidation. The measured move from a symmetrical triangle projects approximately the widest point of the triangle ($521 - $492 = $29) from the breakout point. If the breakout is upward, the target would be $521 + $29 = $550. If downward, $492 - $29 = $463. The weekly timeframe sets the strategic direction.
+
+**Daily (tactical):** The bull engulfing bar closing above the 20-day EMA at $514.30 on 1.8x volume is a strong bullish signal. This is the tactical trigger. The daily chart is aligning with a potential weekly upside breakout.
+
+**4-hour (execution):** The clean base at $516.40 with no overhead supply until $521 gives a clear execution window. This is the operational timeframe.
+
+**Multi-timeframe alignment assessment:** All three timeframes are aligned bullish — weekly is poised for an upside breakout, daily confirmed with a bull engulfing on volume, and 4-hour provides a clean entry zone. This is the highest-conviction alignment configuration.
+
+**Trade plan construction:**
+
+Entry trigger: Buy on a 4-hour close above $516.40 (the 4-hour base high), which is above the daily 20-day EMA at $514.30. This ensures both daily and 4-hour confirmation.
+
+Stop level: Below the daily 20-day EMA at $514.30, with a buffer to $513.00. This gives the trade room to breathe while protecting against a failed breakout. Risk per share: $516.40 - $513.00 = $3.40.
+
+Target 1 (partial exit): $521.00 — the weekly symmetrical triangle resistance. This is the first major supply zone. Risk-reward to T1: ($521 - $516.40) / $3.40 = 1.35:1. Exit 50% of position here.
+
+Target 2 (trailing): $550.00 — the symmetrical triangle measured move projection ($521 + $29). Trail the remaining 50% with a stop at the 10-day EMA, which should be rising as price advances.
+
+Position sizing: 1% of $100,000 = $1,000 risk. At $3.40 risk per share, that's 294 shares. On SPY at ~$516, that's approximately $151,704 notional — which is 1.5x the account. For a $100,000 account, this is aggressive. I'd recommend 150 shares ($510,000 notional, 5.1x account) — wait, that's wrong. 150 shares × $516 = $77,400, which is 77% of the account. That's reasonable for a high-conviction multi-timeframe alignment trade. Risk: 150 × $3.40 = $510, which is 0.51% of the account. To hit 1% risk, I'd use 294 shares, but that's $151,704 notional (1.5x account). I'll recommend 200 shares as a compromise: $103,200 notional (1.03x account), risk = $680 (0.68% of account).
+
+Confidence: High — all three timeframes aligned. The VIX at 17 is supportive (options reasonably priced, no fear premium distorting the picture).
+
+Invalidation: A daily close below $513.00 would kill the thesis. Also, if the weekly triangle resolves downward (weekly close below $492), the entire setup is dead.
+</think>
+
+This is a textbook multi-timeframe alignment setup. The weekly symmetrical triangle provides the strategic framework, the daily bull engulfing provides the tactical trigger, and the 4-hour chart provides the execution precision. All three timeframes are aligned bullish — this is the highest-conviction configuration in the multi-timeframe method.
+
+**Trade Plan:**
+
+**Entry Trigger:** Buy 200 shares on a 4-hour close above $516.40 (the 4-hour base high). This level is above the daily 20-day EMA at $514.30, confirming both daily and 4-hour bullish alignment. Entry price: $516.40.
+
+**Stop Level:** $513.00 — below the daily 20-day EMA with a $1.30 buffer. Risk per share: $3.40. Total risk: 200 × $3.40 = $680 (0.68% of $100,000 account).
+
+**Target 1 (Partial Exit):** $521.00 — the weekly symmetrical triangle resistance. Exit 100 shares (50% of position). Profit: 100 × ($521 - $516.40) = $460. Risk-reward to T1: 1.35:1.
+
+**Target 2 (Trailing):** $550.00 — the symmetrical triangle measured move projection ($521 + $29 widest point). Trail the remaining 100 shares with a stop at the 10-day EMA. If the 10-day EMA is at $525 when price reaches $535, trail the stop to $525.
+
+**Position Size:** 200 shares ($103,200 notional, 1.03x account). This is aggressive but justified by the triple-timeframe alignment. For a more conservative approach, use 150 shares ($77,400 notional, 0.77x account, risk = $510, 0.51% of account).
+
+**Confidence:** High. The weekly, daily, and 4-hour timeframes are all aligned. VIX at 17 confirms a calm market environment where technical patterns tend to resolve cleanly. The 1.8x volume on the daily bull engulfing bar confirms institutional participation.
+
+**Invalidation:** A daily close below $513.00 kills the trade. A weekly close below $492 (the triangle's lower boundary) would indicate the triangle resolved downward — the opposite of the thesis.
+
+**Risk Management:** Maximum loss = $680 (0.68% of account). If Target 1 is hit, the trade is already profitable on 50% of the position. The trailing stop on the remaining 50% ensures the trade can't turn into a loss after T1 is hit.
+
+---
+DECISION FRAMEWORK:
+Regime: transition — confidence: high (weekly triangle resolving, daily confirming upside)
+Key Evidence:
+- Weekly symmetrical triangle (14 weeks) with measured move target of $550 on upside resolution
+- Daily bull engulfing above 20-day EMA at $514.30 on 1.8x volume — institutional confirmation
+- 4-hour clean base at $516.40 with no overhead supply until $521 — precise execution zone
+Plan: Entry $516.40 on 4-hour close → Target 1 at $521 (exit 50%) → Target 2 at $550 (trail remaining 50%)
+Invalidation: Daily close below $513.00; weekly close below $492 (triangle resolves down)
+Risk: 1R = $3.40/share ($680 total) | Reward: 1.35R to T1, 7.8R to T2 | Risk-reward 1:7.8 on full measured move
+No-Trade Conditions: If VIX spikes above 25 before entry triggers, the calm market assumption is violated — reduce position to 100 shares. If the daily bull engulfing bar is reversed by a bearish close the next session, the trigger is invalidated.
+Review Metric: Track whether triple-timeframe alignment (weekly + daily + 4-hour) produces higher win rates than single-timeframe setups — build a calibration dataset for future alignment trades.
+---

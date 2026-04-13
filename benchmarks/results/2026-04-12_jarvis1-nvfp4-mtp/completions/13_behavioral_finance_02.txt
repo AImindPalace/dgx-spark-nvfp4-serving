@@ -1,0 +1,64 @@
+This is a textbook disposition effect case study, and the numbers are stark enough to diagnose with high confidence. Let me apply Shefrin and Statman's framework, then connect it to prospect theory, and finally build a concrete correction protocol.
+
+The core diagnosis: the trader's 4.2-day average holding time for winners versus 11.7-day average for losers is the disposition effect in its purest form. He cuts winners short (realizing gains quickly to lock in the psychological reward of being "right") and holds losers too long (avoiding the psychological pain of realizing a loss). This creates a negative expectancy of -$77 per trade despite a 62% win rate — the classic "winning the battle but losing the war" pattern that Marks describes.
+
+Prospect theory's utility function explains the mechanism precisely. The value function has three key properties: (1) it is defined over changes in wealth (gains and losses), not absolute wealth; (2) it is concave for gains (diminishing marginal utility — the 10th dollar of gain feels less valuable than the 1st); (3) it is convex for losses (the pain of the 10th dollar lost feels less intense than the 1st dollar lost); and (4) it is steeper for losses than gains (loss aversion, typically 2:1). The trader's behavior maps directly: the concave gain region means each additional dollar of unrealized gain feels less rewarding, so he sells early to "bank" the gain. The convex loss region means each additional dollar of unrealized loss feels less painful, so he holds hoping the loss will reverse. The 14 trades where he took profits that subsequently ran 15–30% further are the empirical evidence of premature profit-taking.
+
+The 62% win rate with -$890 average loss versus +$420 average gain produces a risk-reward ratio of 0.47:1 (reward/risk) — meaning he needs to be right more than 68% of the time just to break even, and he's only right 62%. The expectancy calculation: (0.62 × $420) + (0.38 × -$890) = $260.40 - $338.20 = -$77.80 per trade.
+
+The correction protocol needs to be structured, mechanical, and pre-committed — because the disposition effect is a System 1 bias that cannot be corrected by System 2 awareness alone. The trader needs to externalize the decision-making process.
+</think>
+
+This trader exhibits the disposition effect in its most damaging form, and the numbers tell the full story.
+
+**Diagnosis via Shefrin-Statman Disposition Effect Framework:**
+
+The 4.2-day average holding time for winners versus 11.7-day for losers is the behavioral signature of the disposition effect — the tendency to sell winners too soon and hold losers too long. Shefrin and Statman's model explains this through prospect theory's utility function: the trader's gain region is concave (each additional dollar of profit feels less rewarding, so he sells early to "bank" the gain), while his loss region is convex (each additional dollar of loss feels less painful, so he holds hoping for recovery). The 14 trades where he took profits that subsequently ran 15–30% further are the empirical proof — he's systematically selling into the most profitable portion of his trades.
+
+The expectancy math is devastating: (0.62 × $420) + (0.38 × -$890) = -$77.80 per trade. He's losing money despite winning 62% of the time because his winners are 2.12x smaller than his losers. This is the exact pattern Marks describes: the trader is "right" on direction but "wrong" on magnitude.
+
+**Prospect Theory Utility Function — Why This Happens:**
+
+The trader's implicit utility function has the classic S-shape: steep and concave for gains (rapidly diminishing marginal utility), steep and convex for losses (rapidly diminishing marginal disutility). At the moment of entry, the reference point is the entry price. As the trade moves in his favor, the concave gain curve means the psychological reward of holding for an additional $100 of profit diminishes — so he sells. As the trade moves against him, the convex loss curve means the psychological pain of holding for an additional $100 of loss diminishes — so he holds. The loss aversion ratio (typically 2:1) means he needs to feel a $1,780 gain to offset the pain of a $890 loss — but his average gain is only $420. He's trapped in a utility function that makes losing trades feel less painful than they are and winning trades feel less rewarding than they could be.
+
+**Structured Correction Protocol — Pre-Defined Exit Framework:**
+
+The disposition effect cannot be corrected by awareness alone — it requires mechanical rules that externalize the decision. Here is the protocol:
+
+**Rule 1 — Pre-Define Both Exits Before Entry:**
+Before every trade, write down: (a) the stop-loss level (hard exit on loss), and (b) the trailing stop or target level (hard exit on gain). Both must be set before entry. No exceptions. This eliminates the System 1 impulse to "hold a little longer" on losers or "take the money" on winners.
+
+**Rule 2 — Minimum Risk-Reward of 2:1:**
+Every trade must have a minimum reward-to-risk ratio of 2:1. With an average loss of $890, the minimum target is $1,780. This forces the trader to only take trades where the potential gain is at least twice the potential loss — directly counteracting the concave gain curve that makes early profit-taking feel satisfying.
+
+**Rule 3 — Trailing Stop Method for Winners:**
+Instead of a fixed target, use a trailing stop that locks in a minimum profit. Example: enter at $50, stop at $48 (risk = $2/share). Once the trade reaches $52 (1R), move the stop to $50 (breakeven). Once it reaches $54 (2R), trail the stop at $52 (locking in 1R). This converts the concave gain curve into a convex gain curve — the trader now has a mechanical incentive to hold winners longer because the trailing stop only moves in his favor.
+
+**Rule 4 — Time-Based Hard Stop for Losers:**
+If a trade is underwater by 1R (the stop-loss distance) and has been held for more than 3 days without reaching breakeven, close it at market. This addresses the 11.7-day average holding time on losers. The disposition effect causes time-based holding — the longer you hold a loser, the more you hope. A time-based hard stop breaks this cycle.
+
+**Rule 5 — Post-Trade Review with the "What If" Method:**
+For every trade closed, calculate what the outcome would have been if the pre-defined trailing stop had been followed. Track this for 50 trades. The gap between actual and hypothetical outcomes quantifies the disposition effect's cost.
+
+**Implementation Checklist:**
+- [ ] Write stop and target levels before every entry
+- [ ] Verify risk-reward ≥ 2:1 before entry
+- [ ] Set trailing stop at breakeven once 1R is reached
+- [ ] Set time-based hard stop at 3 days for underwater trades
+- [ ] Log "what if" outcomes for 50 trades
+
+**Expected Outcome:** If the trader's 62% win rate is maintained but winners average $1,780 (2R) instead of $420, expectancy becomes: (0.62 × $1,780) + (0.38 × -$890) = $1,103.60 - $338.20 = +$765.40 per trade. The same win rate, completely different outcome.
+
+---
+DECISION FRAMEWORK:
+Regime: N/A (behavioral diagnosis, not market regime) — confidence: high
+Key Evidence:
+- 4.2-day winner holding vs. 11.7-day loser holding — textbook disposition effect
+- 62% win rate with -$77.80 expectancy — winning the battle, losing the war
+- 14 trades where profits were taken 15–30% before the move completed — empirical proof of premature profit-taking
+Plan: Implement 5-rule pre-defined exit framework with trailing stops and time-based hard stops → target expectancy improvement from -$77.80 to +$765.40 per trade
+Invalidation: If the trader cannot follow pre-defined exits for 30 consecutive trades, the behavioral bias is too deep for self-correction — consider switching to a systematic strategy with no discretionary override
+Risk: The primary risk is that the trader will override the mechanical rules during emotionally charged trades — this is the most common failure mode in behavioral correction protocols
+No-Trade Conditions: Do not take any trade where the pre-defined risk-reward is below 2:1, regardless of how "good" the setup feels — the feeling is the disposition effect talking
+Review Metric: After 50 trades, compare actual P&L to hypothetical P&L if all trailing stops had been followed — the gap quantifies the disposition effect's cost and validates the correction protocol
+---

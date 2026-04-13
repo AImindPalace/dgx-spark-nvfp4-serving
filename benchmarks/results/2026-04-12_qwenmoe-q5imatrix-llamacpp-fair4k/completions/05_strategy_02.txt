@@ -1,0 +1,63 @@
+<think>
+This is a multi-timeframe breakout setup that requires applying a layered decision framework — combining the weekly trend context, daily momentum confirmation, and 4-hour precision entry. The multi-timeframe alignment method is central to how top traders like those described by Schwager structure their entries: they don't trade in isolation but ensure all timeframes are telling the same story.
+
+Let me analyze each timeframe:
+
+**Weekly (14-week symmetrical triangle):** The coiling pattern between $492 and $521 represents a compression of volatility — a classic setup where energy builds before release. The triangle's apex is approaching, and the breakout direction is determined by which boundary is breached. The bull engulfing on the daily chart suggests the upward breakout is more likely.
+
+**Daily (bull engulfing above 20-day EMA at $514.30 on 1.8x volume):** This is the confirmation signal. A bull engulfing bar that closes above the 20-day EMA on nearly double-average volume is a high-probability momentum signal. The 1.8x volume confirms institutional participation rather than retail noise.
+
+**4-hour (base at $516.40, no overhead supply until $521):** This is the precision entry zone. The clean base means there's no supply overhead between the entry and the weekly resistance — a clean path to the breakout level.
+
+**Trade Plan Construction:**
+
+**Entry:** $516.80 — just above the 4-hour base at $516.40. This ensures we're buying the breakout of the intraday consolidation, not the daily candle itself.
+
+**Stop:** $512.50 — below the 20-day EMA at $514.30 with a $1.80 buffer. If price falls back below the EMA after a bull engulfing close on 1.8x volume, the signal has failed. Risk per share: $516.80 - $512.50 = $4.30.
+
+**Target 1 (partial exit):** $521.00 — the weekly triangle resistance. This is the first logical target where a portion of the position should be taken off the table. Reward: $521.00 - $516.80 = $4.20. Risk-reward to T1: $4.20 / $4.30 = 0.98:1 (roughly 1:1).
+
+**Target 2 (trailing):** $533.00 — measured move from the triangle. The triangle height is $521 - $492 = $29. Adding $29 to the breakout level ($521) gives $550, but I'll use a conservative $533 as the trailing target, representing approximately a 50% extension of the triangle height. Reward: $533.00 - $516.80 = $16.20. Risk-reward to T2: $16.20 / $4.30 = 3.77:1.
+
+**Position sizing:** $100,000 account, 1% risk = $1,000. Shares = $1,000 / $4.30 = 232 shares. Dollar exposure: 232 × $516.80 = $119,900.
+
+**Confidence:** Moderate-high. The multi-timeframe alignment is clean, volume is confirming, and the setup has a defined risk-reward structure. The VIX at 17 is neutral — not compressing (which would favor a large move) nor elevated (which would suggest caution).
+
+**Invalidation:** If the daily close falls back below $512.50 (below the EMA with buffer), the bull engulfing signal has failed. Also, if the weekly triangle resolves downward (a break below $492), the entire thesis is wrong regardless of the daily signal.
+
+**Risk:** 1R = $4.30 per share. Maximum loss on 232 shares = $997.60 (within the 1% account risk budget).
+
+</think>
+
+This is a textbook multi-timeframe alignment setup, and applying the layered decision framework — where each timeframe confirms the others rather than conflicting — produces a high-conviction trade plan.
+
+**Weekly Context (14-week symmetrical triangle, $492-$521):** The coiling pattern represents volatility compression. Each successive weekly candle closing tighter means the market is building energy for a directional resolution. The bull engulfing on the daily chart suggests the upward breakout is more likely, but the weekly timeframe alone is neutral — it needs the daily confirmation to resolve direction.
+
+**Daily Confirmation (bull engulfing above 20-day EMA at $514.30 on 1.8x volume):** This is the signal that resolves the weekly ambiguity. A bull engulfing bar closing above the 20-day EMA on nearly double-average volume is one of the highest-probability momentum signals in technical analysis. The 1.8x volume confirms institutional participation rather than retail noise. This timeframe provides the directional conviction.
+
+**4-Hour Precision (base at $516.40, no overhead supply until $521):** This is the entry trigger zone. The clean base means there's no supply overhead between the entry and the weekly resistance — a clean path to the breakout level. Using the precision entry method, we don't chase the daily candle; we wait for the 4-hour base to resolve.
+
+**Trade Plan:**
+- **Entry:** $516.80 — just above the 4-hour base at $516.40, confirming the intraday breakout
+- **Stop:** $512.50 — below the 20-day EMA at $514.30 with a $1.80 buffer. If price falls back below the EMA after a bull engulfing close on 1.8x volume, the signal has failed
+- **Target 1 (partial exit):** $521.00 — weekly triangle resistance. Take 50% off here. Reward: $4.20/share
+- **Target 2 (trailing):** $533.00 — conservative measured move (50% of triangle height added to breakout level). Trail the remaining 50% with a stop at the 20-day EMA
+- **Position size:** $1,000 risk / $4.30 per share = 232 shares. Dollar exposure: $119,900
+- **Risk-reward:** 0.98:1 to T1 (partial exit), 3.77:1 to T2 (trailing). Blended risk-reward approximately 2.4:1
+- **Confidence:** Moderate-high — clean multi-timeframe alignment, volume confirmation, defined risk structure
+
+**Invalidation:** Daily close below $512.50 invalidates the bull engulfing signal. Weekly close below $492 invalidates the entire triangle thesis.
+
+---
+DECISION FRAMEWORK:
+Regime: transition — confidence: moderate-high (weekly compression resolving to daily breakout)
+Key Evidence:
+- 14-week symmetrical triangle compression on weekly chart resolving via daily bull engulfing above 20-day EMA on 1.8x volume
+- 4-hour base at $516.40 provides clean entry with no overhead supply until weekly resistance at $521
+- Multi-timeframe alignment: weekly (compression), daily (directional signal), 4-hour (entry precision) all confirm upward breakout
+Plan: Enter long at $516.80 → partial exit 50% at $521.00 (weekly resistance) → trail remaining 50% with stop at 20-day EMA toward $533.00
+Invalidation: Daily close below $512.50 (below 20-day EMA with buffer); weekly close below $492 (triangle breakdown)
+Risk: 1R = $4.30/share | reward to T1: 0.98R | reward to T2: 3.77R | blended ~2.4R
+No-Trade Conditions: If VIX spikes above 25 before entry, the implied volatility expansion suggests a larger-than-expected move — either way, the risk-reward framework becomes unreliable. Also stand aside if the 4-hour base breaks down before entry triggers.
+Review Metric: Track whether the multi-timeframe alignment method (weekly context + daily signal + 4-hour entry) produces higher win rates than single-timeframe entries. Measure the proportion of trades where the 4-hour base resolved in the direction of the daily signal.
+---

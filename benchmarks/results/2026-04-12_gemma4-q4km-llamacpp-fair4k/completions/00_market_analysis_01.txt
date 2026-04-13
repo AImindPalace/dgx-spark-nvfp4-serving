@@ -1,0 +1,25 @@
+This is a high-quality continuation setup that requires careful entry timing and stop placement. Let me work through the pattern geometry and volume characteristics systematically.
+
+**Pattern Geometry Assessment:** The cup-and-handle pattern is a continuation pattern, and Murphy's framework treats it as a bullish continuation of an uptrend. The cup's left-rim high of $114.26 and right-rim high of $142.60 show an upward trend in the pattern's structure — the right rim is higher than the left, which is a bullish continuation characteristic. The handle at $132.80 is 7.6% below the right rim, which is within the acceptable range (typically 5-15% below the rim). The handle's 61.8% Fibonacci retracement of the handle range is a strong-but-not-extreme pullback — it shows healthy consolidation without excessive selling. The 50-day SMA at $126.10 rising and providing a floor is a key support level that confirms the intermediate trend is intact.
+
+**Volume Analysis:** The 38% decline below the 50-day average on the last three up-days inside the handle is a mixed signal. On one hand, declining volume during a pullback is constructive — it suggests selling pressure is drying up. On the other hand, the volume is declining on up-days, which means buyers are not aggressively stepping in. Ideally, you'd want to see volume expand on the first up-day after the handle completes. The current volume pattern suggests a pattern that's still forming, not one ready to trigger.
+
+**Measured Price Target:** Using the cup-and-handle measurement method — the cup height is $142.60 - $98.40 = $44.20. Adding this to the handle's high of $142.60 gives a target of $186.80. However, this is the full-height target. A more conservative approach uses the handle's low as the base: $142.60 - $132.80 = $9.80 added to $142.60 = $152.40. I'd use the conservative target of $152.40 as the primary objective and the $186.80 as a secondary target if momentum accelerates.
+
+**Entry and Stop Placement:** The entry trigger is a breakout above $142.60 on volume exceeding 1.5x the 50-day average. The stop should be placed below the handle low at $132.80, but to avoid being stopped out by noise, I'd use $130.50 — roughly 1.7% below the handle low. This gives a risk of $12.10 per share. The risk-reward to the conservative target is $10.00 / $12.10 = 0.83:1 — which is below my minimum 1.5:1 threshold. To improve the risk-reward, I'd need a tighter stop at $134.50 (just below the handle's mid-point), which gives risk of $8.10 and reward of $10.00 = 1.23:1 — still below the 1.5:1 threshold. This tells me the pattern is not yet ready for entry.
+
+**Conclusion:** The setup has good structural characteristics but the risk-reward at current price levels doesn't meet my minimum threshold. I'd wait for the handle to complete and look for a breakout above $142.60 with volume confirmation. If the handle breaks out, I'd re-evaluate with the breakout price as the new entry — the risk-reward improves as the breakout occurs.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: high
+Key Evidence:
+- Cup-and-handle continuation pattern with upward-sloping rims ($114.26 left, $142.60 right) — bullish continuation structure
+- 50-day SMA at $126.10 rising and providing support — intermediate trend intact
+- Handle volume declining on up-days (38% below average) — pattern still forming, not yet ready to trigger
+Plan: Stand down — risk-reward below 1.5:1 threshold at current levels; wait for breakout above $140.60 on volume >1.5x 50-day average
+Invalidation: N/A (no position)
+Risk: N/A (no position)
+No-Trade Conditions: Current conditions ARE the no-trade condition — risk-reward at 0.83:1 to 1.23:1 is below the 1.5:1 minimum. Also no trade if breakout occurs on volume below 1.5x the 50-day average.
+Review Metric: Track whether the cup-and-handle breakout above $142.60 occurred and whether the conservative target of $152.40 was reached — calibrates the pattern's reliability in this market regime.
+---

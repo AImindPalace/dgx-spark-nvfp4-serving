@@ -1,0 +1,57 @@
+This is a multi-layered problem that combines Elder's Triple Screen technical method with his psychological framework — specifically the 3 M's (Mind, Method, Money) and the concept of the 'three M's' of trading psychology. The technical setup is valid, but the psychological state introduces a critical sizing risk that must be addressed before the trade is executed.
+
+**Triple Screen Technical Assessment:**
+
+Screen 1 (weekly MACD histogram): The histogram turned up from -1.8 two bars ago, signaling a bullish trend change on the weekly chart. This is the primary trend signal — the tide is turning bullish. This screen is in alignment with a long bias.
+
+Screen 2 (daily Force Index): The 2-day EMA of Force Index dropped below zero to -42,000 yesterday, creating the buying opportunity Elder's second screen looks for. This is a pullback within the weekly uptrend — the tide is turning back to bullish on the daily chart. This screen is in alignment with the weekly signal.
+
+Screen 3 (intraday): The buy-stop entry at $188.50 is above today's high, which is the correct intraday signal for a long entry.
+
+All three screens are aligned for a long entry. This is a high-quality Triple Screen setup. The weekly trend is turning bullish, the daily is pulling back, and the intraday is breaking out.
+
+**Position Sizing Calculation:**
+
+Entry: $188.50
+Stop: $181.20
+Risk per share: $188.50 - $181.20 = $7.30
+Account: $150,000
+Risk budget (2%): $3,000
+Shares: $3,000 / $7.30 = 410.96 → 410 shares
+Dollar risk: 410 × $7.30 = $2,993
+Position value: 410 × $188.50 = $77,285 (51.5% of account)
+
+This is a textbook position size. The risk is exactly 2% of the account, the stop is clearly defined, and the entry is well-structured.
+
+**Psychological Diagnosis — The 3 M's Framework:**
+
+The critical issue is the psychological state. You've been stopped out on your last three trades and feel an urgency to 'make back' losses quickly. This is a clear violation of Elder's 3 M's framework — specifically the 'Mind' M. The urgency to recover losses is a form of revenge trading, which Elder identifies as one of the most destructive psychological patterns.
+
+Elder's 3 M's framework (Mind, Method, Money) is hierarchical: the Mind must be right first. When you're in a loss-recovery mindset, you're likely to:
+1. Size up to recover losses faster (violating the Money M)
+2. Tighten stops to reduce the dollar risk of a larger position (violating the Method M)
+3. Enter earlier than the system dictates (violating the Method M)
+4. Ignore the risk management rule entirely
+
+The fact that you've identified this feeling is actually a positive sign — it means the Mind M is partially self-aware. But the correct action is not to proceed with the trade at all until the psychological state is addressed. Elder's work on the 3 M's emphasizes that the Mind must be right before the Method can work. A technically perfect Triple Screen setup executed from a loss-recovery mindset is still a compromised trade.
+
+**Recommendation:**
+
+The technical setup is excellent — all three screens aligned with a valid buy signal. The position sizing calculation is correct at 410 shares. But the psychological state introduces a risk that cannot be quantified in the position sizing model.
+
+The correct action is to pass on this trade. Not because the setup is bad — it's actually one of the best setups you could find — but because your psychological state will likely cause you to size up or tighten stops, which would invalidate the 2% risk rule. Elder's framework requires the Mind M to be right before the Method M can function.
+
+Wait until you've had 2-3 clean trades (even if they're small) to reset your psychological state. The Triple Screen system will generate another setup — it's a systematic method that produces signals regularly. The next setup, executed with a clear mind, will be far more valuable than this one executed under duress.
+
+---
+DECISION FRAMEWORK:
+Regime: transition — confidence: high
+Key Evidence:
+- All 3 Triple Screen levels aligned bullish: weekly MACD histogram turned up, daily Force Index below zero, intraday buy-stop above today's high
+- Psychological state: loss-recovery urgency after 3 consecutive stops, violating Elder's Mind M requirement for the 3 M's framework
+Plan: Stand down — psychological state compromises execution integrity despite excellent technical setup
+Invalidation: N/A (no position)
+Risk: N/A (no position)
+No-Trade Conditions: Current conditions ARE the no-trade condition — loss-recovery mindset after 3 consecutive stops. Re-evaluate when: (a) 2+ consecutive trades have been executed without stops, (b) the trader can articulate the 3 M's framework and confirm each M is in alignment, (c) the next Triple Screen buy signal appears with the same quality
+Review Metric: Track whether the next Triple Screen setup (when it appears) is executed at the correct size and with the correct stop — this measures whether the psychological reset worked and whether the 3 M's framework is being applied correctly
+---

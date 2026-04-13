@@ -1,0 +1,5 @@
+Experiment: tok_check (independent)
+Date: 2026-04-02
+Throughput: 10.0 tok/s (±0.0)
+TTFT: 300.0ms (±0.0)
+Memory: 56.0 GB

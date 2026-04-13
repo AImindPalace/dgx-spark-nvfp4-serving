@@ -1,0 +1,185 @@
+This scenario is a textbook illustration of the data-mining bias problem described in Aronson's chapter on data mining and the statistical method. The analyst has run 847 parameter combinations — each a separate hypothesis — and is now presenting the best-performing one as if it has genuine predictive power. This is the exact trap Aronson warns about: "the more hypotheses you test, the more likely you are to find one that appears to work by chance."
+
+Let's quantify the problem. Each of the 847 parameter combinations is a separate hypothesis test. Under the null hypothesis that the strategy has no predictive power (Sharpe = 0), the distribution of the best Sharpe ratio across 847 trials will be far higher than the true Sharpe ratio. Using a simplified approach: if each trial produces a Sharpe ratio drawn from a normal distribution with mean 0 and standard deviation σ_s, the expected maximum Sharpe across N trials is approximately σ_s × √(2 ln N). For N = 847, √(2 ln 847) ≈ √(2 × 6.74) ≈ 3.67. If the typical Sharpe from noise has a standard deviation of roughly 0.3–0.5 (typical for a 14-year daily dataset), the expected best Sharpe from pure noise would be approximately 0.3 × 3.67 ≈ 1.10 or 0.5 × 3.67 ≈ 1.84. The analyst's reported 1.84 Sharpe is precisely in the range where pure noise could produce a comparable result. This means the 1.84 Sharpe could be entirely spurious — no more meaningful than a coin flip.
+
+The analyst should apply White's Reality Check or a bootstrap-based method to determine whether the observed 1.84 Sharpe exceeds what would be expected by chance. White's Reality Check computes the p-value of the best-in-sample Sharpe against the distribution of best-in-sample Sharpe values from bootstrapped datasets. The bootstrap procedure would involve: (1) generate 10,000+ bootstrapped datasets from the original SPY daily returns, (2) for each bootstrapped dataset, run all 847 parameter combinations and record the best Sharpe, (3) compute the proportion of bootstrapped best-Sharpes exceeding 1.84, (4) if this proportion is below 5%, the strategy has genuine predictive power at the 95% confidence level.
+
+Before presenting to investors, the analyst must also implement a walk-forward methodology. The 2010–2024 period should be split into at least 5–6 out-of-sample testing periods, each covering 2–3 years. The optimal parameters from the first period should be applied to the next period, and the strategy's performance across all out-of-sample periods should be evaluated. A minimum of 3 consecutive out-of-sample periods showing positive Sharpe ratios above 0.5 would provide much stronger evidence of genuine predictive power. The 12-day / 48-day EMA crossover should be tested on a completely separate instrument (e.g., EEM or a different equity index) to assess whether the signal generalizes beyond SPY.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate (the strategy appears to capture trend-following returns, but the data-mining bias makes the reported 1.84 Sharpe unreliable)
+Key Evidence:
+- 847 parameter combinations create a massive multiple-testing problem; expected best Sharpe from noise alone could be 1.10–1.84
+- The reported 1.84 Sharpe is consistent with pure noise given the number of trials
+- No out-of-sample validation or bootstrap significance test has been performed
+Plan: Stand down on presenting this strategy to investors until the following validation steps are completed: (1) White's Reality Check or bootstrap p-value test, (2) walk-forward backtest across 5+ out-of-sample periods, (3) out-of-sample Sharpe ratio must exceed 0.70 and p-value must be below 0.05
+Invalidation: If the bootstrap p-value exceeds 0.05, the strategy has no genuine predictive power and should be abandoned entirely
+Risk: 1R = the opportunity cost of not deploying a potentially valid strategy | reward: 3R+ if the strategy survives validation and demonstrates genuine edge | risk-reward ratio 3:1
+No-Trade Conditions: Never present any strategy to investors that has not passed a bootstrap significance test and out-of-sample walk-forward validation. The data-mining bias makes in-sample results meaningless as a basis for capital allocation decisions.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+만약 이 전략이 실제 유효한 것이라면, 12-day / 48-day EMA 교차의 구체적인 진입/청산 규칙을 정의하고 (EMA 12가 EMA 48을 상향 돌파 시 매수, 하향 돌파 시 매도), 백테스트 기간 동안의 최대 낙폭 14.2%를 기준으로 최대 손실액을 산출하여 투자자에게 투명하게 공개해야 합니다.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metrics. If the p-value is below 0.05 and out-of-sample Sharpe exceeds 0.70 across 3+ periods, the strategy has passed the minimum validation threshold.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as been the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and out-of-sample Sharpe ratio as the primary validation metric for all parameter-optimized strategies.
+---
+Review Metric: Track the bootstrap p-value and

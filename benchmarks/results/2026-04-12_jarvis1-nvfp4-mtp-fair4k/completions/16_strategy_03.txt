@@ -1,0 +1,69 @@
+This is a comprehensive Triple Screen application that also requires psychological self-assessment — Elder's three M's framework (Mind, Method, Money) is directly relevant. Let me work through each screen systematically, then address the sizing and psychological components.
+
+Screen 1 — Weekly MACD Histogram (Tide): The histogram turned up two bars ago from -1.8. This is a buy signal indicating the weekly trend is turning bullish. The histogram was negative (bearish) and is now rising — this is the 'tide' turning in our favor. This screen gives the directional bias: look for long setups.
+
+Screen 2 — Daily Force Index (Wave): The 2-day EMA of Force Index dropped below zero to -42,000 while the weekly trend is up. This is the classic Triple Screen buying opportunity — a pullback within an uptrend. The Force Index below zero means selling pressure is present, but since the weekly trend is bullish, this pullback is a buying opportunity, not a sell signal. This screen confirms the timing is right for a long entry.
+
+Screen 3 — Intraday Entry (Ripple): Buy-stop at $188.50 above today's high. This is the ripple — the precise entry trigger. The stop at $181.20 gives a per-share risk of $7.30 ($188.50 - $181.20).
+
+Position sizing: 2% of $150,000 = $3,000 maximum risk. $3,000 / $7.30 = 410 shares. This is the mathematically correct size.
+
+Now the psychological diagnosis. The trader has three consecutive losses and feels urgency to 'make back' losses. This is the exact psychological trap Elder warns about in his three M's framework. The Mind (psychology) is compromised — the trader is in a revenge-trading mindset. This threatens to distort the Method (Triple Screen system) and the Money (position sizing).
+
+The specific risk: a trader with three losses who feels urgency will likely:
+1. Increase position size beyond the 2% rule to 'make back' losses faster
+2. Move the stop further away to avoid another loss (widening risk per share)
+3. Abandon the Triple Screen system's discipline in favor of impulsive entries
+4. Potentially take the trade even if Screen 2 or Screen 3 signals were weaker
+
+The correct response is to recognize the psychological state and either: (a) trade at the calculated 410 shares with full discipline, or (b) reduce size to 1% ($755 risk, ~103 shares) as a 'recovery trade' to rebuild confidence, or (c) skip the trade entirely if the emotional state is too compromised.
+
+The technical setup itself is clean — all three screens align. The problem is purely psychological.
+</think>
+
+This is a clean Triple Screen setup compromised by a dangerous psychological state. Let me separate the technical analysis from the psychological diagnosis, then integrate both.
+
+**Triple Screen Technical Analysis:**
+
+Screen 1 (Weekly MACD Histogram — Tide): The histogram turning up from -1.8 two bars ago is a confirmed buy signal. The weekly trend is transitioning from bearish to bullish. This is the foundational tide — it says 'look for longs.'
+
+Screen 2 (Daily Force Index — Wave): The 2-day EMA of Force Index at -42,000 (below zero) while the weekly trend is up is the textbook Triple Screen buying opportunity. Elder's framework specifically identifies this as the ideal entry condition: a pullback (Force Index below zero) within an uptrend (weekly MACD histogram rising). The wave is pulling back so the tide can carry it higher.
+
+Screen 3 (Intraday — Ripple): Buy-stop at $188.50 above today's high is the precise entry trigger. This is the ripple — the final confirmation that the pullback is ending and the uptrend is resuming.
+
+All three screens align. This is a high-quality Triple Screen setup.
+
+**Position Sizing (Money):**
+- Account: $150,000
+- Risk per trade: 2% = $3,000
+- Entry: $188.50, Stop: $181.20
+- Per-share risk: $7.30
+- Position size: $3,000 / $7.30 = 410 shares
+- Dollar exposure: 410 × $188.50 = $77,285 (51.5% of account)
+- Risk-reward: If target is $195.00 (next resistance), reward = $6.50/share, risk-reward = 1:0.89. If target is $200.00, reward = $11.50/share, risk-reward = 1:1.58.
+
+**Psychological Diagnosis (Mind):**
+The three consecutive losses have created a revenge-trading mindset. Elder's three M's framework (Mind, Method, Money) identifies this as the most dangerous state a trader can be in. The 'urgency to make back losses' is a classic cognitive distortion — it's the same psychological mechanism that drives gamblers to chase losses. The specific distortions to watch for:
+
+1. **Size inflation**: The urge to trade 600-800 shares instead of 410 to 'make back' the losses faster. This violates the 2% rule and compounds the risk.
+2. **Stop-widening**: Moving the stop from $181.20 to $178.00 to 'give the trade room,' which increases per-share risk to $10.50 and total risk to $4,305 (2.87% of account).
+3. **System abandonment**: The urge to take the trade even if Screen 2 or Screen 3 signals were ambiguous.
+
+**Integrated Recommendation:**
+The technical setup is valid. The psychological state is not. The correct response is to trade the setup at the calculated 410 shares — no more, no less. If the emotional state is too compromised to execute with discipline, reduce to 1% risk (103 shares, $755 risk) as a 'recovery trade' to rebuild confidence. The Triple Screen system is the Method — it doesn't care about your emotional state. The Mind must serve the Method, not override it.
+
+Confidence: High on the technical setup (all three screens aligned). Low on the execution quality given the psychological state — this is the real risk factor.
+
+---
+DECISION FRAMEWORK:
+Regime: transition — confidence: moderate (weekly MACD histogram turning up from -1.8, but still in early recovery phase)
+Key Data:
+- Triple Screen alignment: weekly MACD histogram rising (buy), daily Force Index at -42,000 (pullback buy opportunity), intraday buy-stop at $188.50
+- Position size: 410 shares at 2% risk ($3,000), stop $181.20, per-share risk $7.30
+- Psychological state: revenge-trading mindset from 3 consecutive losses — highest risk factor in the trade
+Plan: Buy-stop at $188.50 → target $200.00 (risk-reward 1:1.58) → if psychological state is too compromised, reduce to 103 shares (1% risk) as recovery trade
+Invalidation: Daily close below $181.20 — exit immediately. Also invalidated if weekly MACD histogram reverses back to declining before entry triggers.
+Risk: 1R = $3,000 (410 shares × $7.30) | reward: $4,715 (410 × $11.50) | risk-reward 1:1.58
+No-Trade Conditions: If the trader cannot commit to the 410-share size and $181.20 stop without modification, skip the trade entirely. A compromised trader executing a good setup is worse than a disciplined trader skipping a good setup.
+Review Metric: Track whether the 2% position sizing was maintained exactly as calculated — any deviation (larger size, wider stop, early exit) indicates the psychological state overrode the system, and the trade should be logged as a process failure regardless of P&L outcome.
+---

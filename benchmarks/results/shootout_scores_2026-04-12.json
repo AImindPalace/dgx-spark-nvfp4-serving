@@ -1,0 +1,882 @@
+{
+  "timestamp": "2026-04-12T15:39:34Z",
+  "reference": "2026-04-03_deepseek-reasoner",
+  "candidates": [
+    "jarvis1-nvfp4-mtp",
+    "gemma4-q4km-llamacpp",
+    "qwenmoe-q4km-llamacpp"
+  ],
+  "n_prompts_scored": 19,
+  "summary": {
+    "jarvis1-nvfp4-mtp": {
+      "avg_total": 49.8,
+      "min": 41,
+      "max": 55,
+      "n_scored": 19
+    },
+    "gemma4-q4km-llamacpp": {
+      "avg_total": 42.1,
+      "min": 32,
+      "max": 53,
+      "n_scored": 19
+    },
+    "qwenmoe-q4km-llamacpp": {
+      "avg_total": 43.8,
+      "min": 36,
+      "max": 52,
+      "n_scored": 15
+    }
+  },
+  "win_counts": {
+    "jarvis1-nvfp4-mtp": 15,
+    "gemma4-q4km-llamacpp": 3,
+    "qwenmoe-q4km-llamacpp": 1
+  },
+  "per_prompt": [
+    {
+      "prompt_id": "market_analysis_01",
+      "category": "market_analysis",
+      "scores": {
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 4,
+          "depth": 6,
+          "reasoning": 5,
+          "specificity": 7,
+          "domain_knowledge": 5,
+          "actionability": 6,
+          "total": 33,
+          "brief_note": "Major errors in measured move calculation (adds cup depth to handle low instead of rim high, getting $177 instead of $186.80) and incorrectly identifies $132.80 as the breakout level rather than the rim high at $142.60, fundamentally misunderstanding the cup-and-handle breakout mechanics."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 9,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 9,
+          "domain_knowledge": 9,
+          "actionability": 9,
+          "total": 54,
+          "brief_note": "Correctly calculates the measured move target at $186.80, properly identifies the breakout level at $142.60, places stop below handle low with buffer, and provides thorough risk-reward analysis closely matching the reference response."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate B closely mirrors the reference in all key calculations and analysis, including the $186.80 target, $142.60 breakout level, and stop placement logic. Candidate A makes fundamental errors by using the handle low as the breakout point and miscalculating the measured move target.",
+      "label_map": {
+        "A": "gemma4-q4km-llamacpp",
+        "B": "jarvis1-nvfp4-mtp"
+      }
+    },
+    {
+      "prompt_id": "market_analysis_02",
+      "category": "market_analysis",
+      "scores": {
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 7,
+          "domain_knowledge": 6,
+          "actionability": 8,
+          "total": 42,
+          "brief_note": "Solid synthesis with concrete portfolio allocation percentages and clear invalidation criteria, but lacks depth on financials benefiting from steepening and misses some nuance in the credit cycle mechanics."
+        },
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 7,
+          "domain_knowledge": 6,
+          "actionability": 7,
+          "total": 41,
+          "brief_note": "Good evidence chain structure and clear soft-landing conditions, but has an error calling 7-10 year Treasuries 'short-duration' and the 3:1 risk-reward seems optimistic; also misses financials benefiting from steepening."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 8,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 8,
+          "domain_knowledge": 7,
+          "actionability": 8,
+          "total": 47,
+          "brief_note": "Most thorough and nuanced analysis with real rate calculations, specific JOLTS thresholds (1.2-1.3x), historical relative outperformance ranges (3-7%), and hedging suggestions; closest to reference quality with good discussion of the un-inversion mechanism."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "gemma4-q4km-llamacpp",
+        "qwenmoe-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate C comes closest to the reference in depth and nuance, particularly in discussing the credit transmission mechanism and providing specific thresholds. All candidates miss the reference's important point about financials potentially benefiting from the steepening curve. The reference's discussion of SLOOS, consumer retrenchment signals, and the Sahm-rule-like unemployment trigger is more comprehensive than any candidate. Candidate C's inclusion of real rate calculations and hedging strategies adds value beyond what A and B provide.",
+      "label_map": {
+        "A": "gemma4-q4km-llamacpp",
+        "B": "qwenmoe-q4km-llamacpp",
+        "C": "jarvis1-nvfp4-mtp"
+      }
+    },
+    {
+      "prompt_id": "market_analysis_03",
+      "category": "market_analysis",
+      "scores": {
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 7,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 8,
+          "domain_knowledge": 7,
+          "actionability": 8,
+          "total": 46,
+          "brief_note": "Strong overall analysis with good risk management details, but incorrectly treats XLU entering Leading as a sell signal rather than recognizing it as a confirmed defensive rotation; good DXY integration and concrete position sizing."
+        },
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 6,
+          "depth": 6,
+          "reasoning": 6,
+          "specificity": 6,
+          "domain_knowledge": 6,
+          "actionability": 6,
+          "total": 36,
+          "brief_note": "Reasonable high-level framework but lacks depth in intermarket analysis, overly optimistic risk-reward ratios (4:1 to 6:1 seems unrealistic), and the allocation percentages (50%, 75%, 100% target) are vague and don't clearly define portfolio construction."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 6,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 9,
+          "domain_knowledge": 6,
+          "actionability": 7,
+          "total": 42,
+          "brief_note": "Excellent specificity with concrete price levels and stops, but contains errors in RRG mechanics (XLF rotating from Leading to Improving is wrong\u2014it goes Leading to Weakening), small 1.5% position sizes seem overly conservative, and risk-reward ratios of 1.5-2:1 are modest."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "gemma4-q4km-llamacpp",
+        "qwenmoe-q4km-llamacpp"
+      ],
+      "reference_comparison": "The reference response is significantly more comprehensive than all candidates, particularly in its intermarket analysis connecting DXY to sector behavior, its nuanced treatment of XLU as a defensive confirmation rather than a sell signal, and its sophisticated week-by-week sequencing with clear contingency planning. Candidate A comes closest in analytical depth and reasoning quality but misreads the XLU signal. Candidate C offers the best specificity with price levels but has RRG mechanical errors. Candidate B is the weakest overall with less depth and questionable risk-reward claims.",
+      "label_map": {
+        "A": "jarvis1-nvfp4-mtp",
+        "B": "qwenmoe-q4km-llamacpp",
+        "C": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "strategy_02",
+      "category": "strategy",
+      "scores": {
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 6,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 8,
+          "domain_knowledge": 6,
+          "actionability": 7,
+          "total": 41,
+          "brief_note": "Enters before the weekly breakout at $516.40 rather than waiting for a close above $521, which means the first target IS the resistance level\u2014yielding only 1.35:1 R/R on T1; position sizing math is muddled (294 shares exceeds account, then arbitrarily settles on 200 at 0.68% risk instead of the requested 1%)."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 6,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 8,
+          "domain_knowledge": 6,
+          "actionability": 7,
+          "total": 41,
+          "brief_note": "Also enters before the weekly breakout at $516.50 with T1 just below resistance giving only 1:1 R/R; T2 at $532 is oddly conservative vs the $550 measured move; position sizing correctly identifies 250 shares but then reduces to 200 without adjusting risk to 1%, landing at 0.8% instead."
+        }
+      },
+      "ranking": [
+        "gemma4-q4km-llamacpp",
+        "jarvis1-nvfp4-mtp"
+      ],
+      "reference_comparison": "Both candidates enter before the weekly breakout (at the 4-hour base ~$516) rather than waiting for a confirmed close above $521 as the reference does, which weakens the breakout thesis and compresses the R/R on the first target. Neither achieves the reference's clean 1:2 R/R to PT1. Both also fail to hit the exact 1% risk target ($1,000), whereas the reference nails it at 144 shares \u00d7 $6.90. The reference is also richer in trade management rules, invalidation criteria, and execution checklists.",
+      "label_map": {
+        "A": "jarvis1-nvfp4-mtp",
+        "B": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "risk_management_01",
+      "category": "risk_management",
+      "scores": {
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 9,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 9,
+          "domain_knowledge": 8,
+          "actionability": 9,
+          "total": 53,
+          "brief_note": "Excellent quantification with concrete dollar amounts, specific option strategies (25-delta put spreads), and well-structured decision framework with clear invalidation criteria and risk-reward ratios."
+        },
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 7,
+          "domain_knowledge": 7,
+          "actionability": 7,
+          "total": 42,
+          "brief_note": "Provides daily volatility numbers but the 4.3%/6.9% figures appear without clear derivation; buying deep ITM VIX calls is questionable advice (expensive, not asymmetric); says 2 positions overlap but prompt says 3; overall less precise and some logical gaps."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 6,
+          "domain_knowledge": 7,
+          "actionability": 6,
+          "total": 40,
+          "brief_note": "Correct 53% volatility increase calculation but uses a more convoluted derivation path; hedging actions are somewhat generic (OTM puts, long VIX) without specific strikes, sizing, or cost estimates; less actionable than A."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "qwenmoe-q4km-llamacpp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate A closely matches the reference in structure, accuracy, and depth, while adding more specific dollar amounts and option strategy details. Candidate B introduces some inaccuracies (2 vs 3 positions, questionable deep ITM VIX call recommendation) and less rigorous quantification. Candidate C gets the core math right but lacks the specificity and actionability of both the reference and Candidate A.",
+      "label_map": {
+        "A": "jarvis1-nvfp4-mtp",
+        "B": "qwenmoe-q4km-llamacpp",
+        "C": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "risk_management_02",
+      "category": "risk_management",
+      "scores": {
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 9,
+          "domain_knowledge": 7,
+          "actionability": 9,
+          "total": 49,
+          "brief_note": "Well-structured with clear actionable plan, good volatility scaling math, reasonable stop-out thresholds, though DePrado/HRP discussion could be deeper"
+        },
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 8,
+          "domain_knowledge": 7,
+          "actionability": 8,
+          "total": 46,
+          "brief_note": "More aggressive Day 1 cut to 4.0% heat is defensible given proximity to limit, good point about recomputing covariance matrix, but slippage estimates seem low for $480M book and response appears truncated"
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 8,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 9,
+          "domain_knowledge": 8,
+          "actionability": 9,
+          "total": 52,
+          "brief_note": "Most thorough analysis with excellent heat absorption capacity calculations, multi-tier stop-out framework, strong operational risk discussion including correlation spikes and effective heat multiplier, though also appears slightly truncated at end"
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "gemma4-q4km-llamacpp",
+        "qwenmoe-q4km-llamacpp"
+      ],
+      "reference_comparison": "No reference response provided for comparison. All three candidates demonstrate strong understanding of volatility-scaled position sizing and drawdown management. Candidate C provides the most rigorous quantitative framework with heat absorption ratios and tiered stop-out levels. Candidate A offers the most complete decision framework with explicit invalidation criteria. Candidate B is most aggressive in risk reduction but appears truncated.",
+      "label_map": {
+        "A": "gemma4-q4km-llamacpp",
+        "B": "qwenmoe-q4km-llamacpp",
+        "C": "jarvis1-nvfp4-mtp"
+      }
+    },
+    {
+      "prompt_id": "decision_science_01",
+      "category": "decision_science",
+      "scores": {
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 7,
+          "reasoning": 8,
+          "specificity": 8,
+          "domain_knowledge": 7,
+          "actionability": 8,
+          "total": 46,
+          "brief_note": "Concise and well-structured with specific sizing (25-30% of existing position) and entry tactics (pullback to gap-fill level), though less detailed in the Bayesian framework than the reference."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 8,
+          "depth": 8,
+          "reasoning": 9,
+          "specificity": 8,
+          "domain_knowledge": 8,
+          "actionability": 8,
+          "total": 49,
+          "brief_note": "Strong Bayesian framework with explicit 5-step process, good probability adjustments (38% to 45-50%), concrete sizing rule tied to base rate, and well-defined exit criteria including time stops."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 9,
+          "domain_knowledge": 8,
+          "actionability": 9,
+          "total": 50,
+          "brief_note": "Most actionable response with explicit decision framework including 60% sizing rule, $2.50 stop, 1:1.2 risk-reward ratio, no-trade conditions, and review metrics \u2014 closest to a tradeable plan."
+        }
+      },
+      "ranking": [
+        "gemma4-q4km-llamacpp",
+        "jarvis1-nvfp4-mtp",
+        "qwenmoe-q4km-llamacpp"
+      ],
+      "reference_comparison": "All three candidates cover the core concepts (base-rate neglect, availability heuristic, planning fallacy) well. Candidate C edges ahead with the most structured and actionable decision framework including specific risk parameters. Candidate B provides the strongest Bayesian reasoning process. Candidate A is solid but less detailed. None fully match the reference's comprehensive three-scenario expected value calculation, but C and B come closest in overall quality.",
+      "label_map": {
+        "A": "qwenmoe-q4km-llamacpp",
+        "B": "jarvis1-nvfp4-mtp",
+        "C": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "decision_science_02",
+      "category": "decision_science",
+      "scores": {
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 6,
+          "reasoning": 7,
+          "specificity": 7,
+          "domain_knowledge": 6,
+          "actionability": 7,
+          "total": 40,
+          "brief_note": "Solid Bayesian framework with reasonable probability estimates and actionable plan, but less rigorous in showing the actual Bayes calculation and somewhat lighter on depth compared to others."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 9,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 8,
+          "domain_knowledge": 9,
+          "actionability": 9,
+          "total": 53,
+          "brief_note": "Rigorous Bayesian calculation with explicit formula, excellent distinction between invalidation and noise, strong references to Aronson/Kahneman/Tetlock, and a well-structured graduated response with clear re-add and exit conditions."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 5,
+          "depth": 6,
+          "reasoning": 5,
+          "specificity": 6,
+          "domain_knowledge": 5,
+          "actionability": 5,
+          "total": 32,
+          "brief_note": "Contains notable errors: starting prior at 100% is unrealistic for Bayesian updating, the stop at 1.0880 is above entry not below, the invalidation conditions are backwards (NFP below 200K would support the original thesis, not invalidate it), and the risk-reward analysis is confused."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "qwenmoe-q4km-llamacpp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate B most closely matches the reference in rigor, structure, and quality, though with a lower prior (55% vs 70%) leading to a more aggressive posterior drop (20% vs 34%). Candidate A is reasonable but less detailed. Candidate C has significant logical errors that undermine its analysis, particularly the inverted invalidation conditions and confused risk-reward framing.",
+      "label_map": {
+        "A": "qwenmoe-q4km-llamacpp",
+        "B": "jarvis1-nvfp4-mtp",
+        "C": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "statistical_reasoning_01",
+      "category": "statistical_reasoning",
+      "scores": {
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 6,
+          "depth": 6,
+          "reasoning": 7,
+          "specificity": 7,
+          "domain_knowledge": 7,
+          "actionability": 7,
+          "total": 40,
+          "brief_note": "Mentions Aronson and White's Reality Check correctly but the expected max Sharpe calculation using \u221a(2 log N) formula gives 3.8 which is incorrect for annualized Sharpe (confuses z-scores with Sharpe ratios, ignoring standard error scaling); walk-forward recommendations are reasonable but OOS length of 6 years is overly aggressive given 14-year dataset."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 7,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 7,
+          "domain_knowledge": 8,
+          "actionability": 7,
+          "total": 45,
+          "brief_note": "Most thorough treatment with correct standard error calculation (~0.265), reasonable expected max Sharpe range of 1.5-1.9, proper WRC procedure description, and sensible OOS split recommendations; slightly imprecise on independence estimation but overall closest to reference quality."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 5,
+          "depth": 6,
+          "reasoning": 6,
+          "specificity": 6,
+          "domain_knowledge": 6,
+          "actionability": 6,
+          "total": 35,
+          "brief_note": "Treats 847 combinations as fully independent without discussing correlation/effective trials, describes White's Reality Check procedure incorrectly (conflating in-sample/out-of-sample steps rather than bootstrap resampling), and recommends only 12-18 months OOS which is too short; expected max Sharpe range of 1.5-1.7 is reasonable but derivation is hand-waved."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "qwenmoe-q4km-llamacpp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate B comes closest to the reference in depth and accuracy, particularly in computing standard error and expected max Sharpe, though none match the reference's detailed treatment of effective independent trials (~42) or the nuanced walk-forward methodology. Candidate A has a significant error in the expected max Sharpe calculation. Candidate C mischaracterizes the WRC bootstrap procedure and doesn't address parameter correlation.",
+      "label_map": {
+        "A": "qwenmoe-q4km-llamacpp",
+        "B": "jarvis1-nvfp4-mtp",
+        "C": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "statistical_reasoning_02",
+      "category": "statistical_reasoning",
+      "scores": {
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 6,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 7,
+          "domain_knowledge": 6,
+          "actionability": 8,
+          "total": 41,
+          "brief_note": "Uses the correct SE formula and computes CI correctly, but the CI [2.18, 3.24] is suspiciously narrow for a 63-day sample and the candidate doesn't adequately question whether an annualized Sharpe of 2.71 could plausibly have a lower bound of 2.18; Type I error probability estimates of 15-25% are vaguely stated without derivation; good actionable recommendations but lacks depth on serial correlation and effective sample size issues."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 5,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 6,
+          "domain_knowledge": 6,
+          "actionability": 8,
+          "total": 39,
+          "brief_note": "Starts with the simplified 1/sqrt(N) SE formula then abandons it for a wider CI of [1.2, 4.2] without rigorous derivation; the Type I error claim that a true Sharpe of 0 produces observed 2.71 with 15-20% probability is incorrect given the test statistic would be ~21; good practical recommendations but mathematically inconsistent and contains errors."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 7,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 8,
+          "domain_knowledge": 9,
+          "actionability": 7,
+          "total": 49,
+          "brief_note": "Most thorough and technically rigorous analysis; correctly computes SE and CI, then critically examines the assumptions including serial correlation reducing effective sample size, references both Aronson and Lopez de Prado, computes the test statistic and explains why it's misleading for momentum strategies, discusses bias correction formula, and appropriately notes bootstrap would be more reliable for small samples."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "qwenmoe-q4km-llamacpp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "No reference response was provided. Candidate C provides the most comprehensive and technically accurate analysis, correctly applying the SE formula while also critically examining assumptions about independence and normality. Candidate A is solid but less deep. Candidate B contains mathematical inconsistencies, particularly the unsupported wide CI and incorrect Type I error probability claim.",
+      "label_map": {
+        "A": "qwenmoe-q4km-llamacpp",
+        "B": "gemma4-q4km-llamacpp",
+        "C": "jarvis1-nvfp4-mtp"
+      }
+    },
+    {
+      "prompt_id": "behavioral_finance_01",
+      "category": "behavioral_finance",
+      "scores": {
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 8,
+          "domain_knowledge": 7,
+          "actionability": 8,
+          "total": 44,
+          "brief_note": "Provides concrete trade parameters and decision framework but some historical statistics appear fabricated; the repeated Marks quote is a minor flaw; good actionability with specific position sizing and invalidation criteria."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 8,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 9,
+          "domain_knowledge": 8,
+          "actionability": 9,
+          "total": 52,
+          "brief_note": "Most rigorous and well-structured response with clear table formatting, specific forward return distributions, concrete hedge structure with dollar costs and payoff calculations, and well-defined trigger levels for adjusting positions."
+        },
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 7,
+          "domain_knowledge": 8,
+          "actionability": 7,
+          "total": 46,
+          "brief_note": "Strong conceptual framework with good integration of Marks and Shiller, prudent emphasis on not shorting prematurely, but slightly less specific on trade mechanics compared to B; the 3.4:1 risk-reward calculation seems loosely derived."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "qwenmoe-q4km-llamacpp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate B most closely matches the reference in structure, depth, and rigor, while adding more specific trade mechanics. Candidate C captures the analytical framework well but is less actionable. Candidate A is the most trade-focused but has some accuracy concerns with cited statistics and a repetitive Marks quote.",
+      "label_map": {
+        "A": "gemma4-q4km-llamacpp",
+        "B": "jarvis1-nvfp4-mtp",
+        "C": "qwenmoe-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "behavioral_finance_02",
+      "category": "behavioral_finance",
+      "scores": {
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 9,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 9,
+          "domain_knowledge": 9,
+          "actionability": 9,
+          "total": 54,
+          "brief_note": "Comprehensive and well-structured diagnosis with accurate prospect theory explanation, concrete 5-rule protocol with trailing stops and time-based exits, and excellent expected outcome calculation showing the transformation potential."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 7,
+          "domain_knowledge": 7,
+          "actionability": 7,
+          "total": 42,
+          "brief_note": "Covers the core concepts adequately but less organized, contains a questionable $150K-$420K opportunity cost estimate without sufficient basis, the disposition effect 'score' metric is novel but the ratio interpretation is inverted (lower = worse, which is counterintuitive), and the protocol lacks the depth and clarity of Candidate A."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate A closely mirrors the reference in structure, depth, and actionability, with similarly detailed prospect theory explanation and a well-defined exit framework. Candidate B covers the same territory but with less precision, weaker organization, and some questionable calculations (the opportunity cost estimate and the disposition effect score metric).",
+      "label_map": {
+        "A": "jarvis1-nvfp4-mtp",
+        "B": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "general_reasoning_01",
+      "category": "general_reasoning",
+      "scores": {
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 7,
+          "reasoning": 8,
+          "specificity": 8,
+          "domain_knowledge": 7,
+          "actionability": 7,
+          "total": 45,
+          "brief_note": "Concise and well-structured with specific numbers (Sharpe 1.0-1.5, hours/week, minimum edge percentages), but lacks the depth and layered analysis of the reference; good point about critical failure mode of overconfidence."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 8,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 8,
+          "domain_knowledge": 8,
+          "actionability": 8,
+          "total": 50,
+          "brief_note": "Strong four-filter model closely mirrors reference quality; excellent integration of Grossman-Stiglitz, Dalio, and Aronson with concrete testing criteria and scale-specific recommendations; well-organized and actionable."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 5,
+          "depth": 6,
+          "reasoning": 6,
+          "specificity": 6,
+          "domain_knowledge": 6,
+          "actionability": 5,
+          "total": 34,
+          "brief_note": "Contains a significant factual error claiming S&P 500's 50-year return was not statistically significant (misrepresenting Aronson's work); the massive repetition of the decision framework section suggests a generation error; core analysis is reasonable but undermined by inaccuracies and poor formatting."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "qwenmoe-q4km-llamacpp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate B comes closest to the reference in depth, structure, and integration of all three intellectual frameworks, though the reference remains more comprehensive in its ecosystem synthesis. Candidate A is solid but more compressed. Candidate C has factual errors and severe formatting issues that significantly detract from otherwise reasonable analysis.",
+      "label_map": {
+        "A": "qwenmoe-q4km-llamacpp",
+        "B": "jarvis1-nvfp4-mtp",
+        "C": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "general_reasoning_02",
+      "category": "general_reasoning",
+      "scores": {
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 9,
+          "depth": 8,
+          "reasoning": 9,
+          "specificity": 9,
+          "domain_knowledge": 8,
+          "actionability": 9,
+          "total": 52,
+          "brief_note": "Strong actionable response with specific price levels, risk-reward calculations, and a clear decision framework; slightly aggressive on the reversal trade but well-reasoned with proper invalidation criteria."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 9,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 8,
+          "domain_knowledge": 9,
+          "actionability": 8,
+          "total": 52,
+          "brief_note": "Excellent identification of five cognitive biases with countermeasures, strong McChrystal integration, and good risk parameters; slightly less specific on exact price levels but thorough on the framework application."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 7,
+          "reasoning": 8,
+          "specificity": 5,
+          "domain_knowledge": 7,
+          "actionability": 6,
+          "total": 41,
+          "brief_note": "Solid OODA walkthrough but lacks specificity in price levels and position sizing; the 'stand aside' recommendation is defensible but less decisive than the reference, and the decision framework section shows N/A for risk-reward which reduces actionability."
+        }
+      },
+      "ranking": [
+        "qwenmoe-q4km-llamacpp",
+        "jarvis1-nvfp4-mtp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Both A and B closely match the reference in quality \u2014 A excels in specificity with concrete price levels and risk-reward ratios, B excels in bias identification depth with countermeasures. C captures the core logic but is notably less specific and less actionable, defaulting to a conservative 'stand aside' rather than the decisive exit emphasized by the reference.",
+      "label_map": {
+        "A": "qwenmoe-q4km-llamacpp",
+        "B": "jarvis1-nvfp4-mtp",
+        "C": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "strategy_03",
+      "category": "strategy",
+      "scores": {
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 9,
+          "depth": 8,
+          "reasoning": 9,
+          "specificity": 9,
+          "domain_knowledge": 9,
+          "actionability": 9,
+          "total": 53,
+          "brief_note": "Thorough and well-structured analysis covering all three screens, correct position sizing (410 shares), strong psychological diagnosis with practical advice including reviewing past three trades for systematic issues, and a complete decision framework with no-trade conditions."
+        },
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 9,
+          "domain_knowledge": 8,
+          "actionability": 9,
+          "total": 50,
+          "brief_note": "Correct position sizing and solid technical assessment; adds valuable risk-reward analysis with $203.10 target for 2:1 ratio, but the initial $195 target appears arbitrary and the suggestion to reduce to 1% risk is a good addition though the psychological diagnosis is less detailed than others."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 9,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 9,
+          "domain_knowledge": 9,
+          "actionability": 9,
+          "total": 54,
+          "brief_note": "Excellent comprehensive analysis with correct sizing (411 shares), detailed psychological diagnosis identifying three specific cognitive distortions (loss aversion escalation, confirmation bias, overconfidence), concrete examples of distorted sizing (600-700 shares), practical execution rules, and well-defined invalidation criteria."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "gemma4-q4km-llamacpp",
+        "qwenmoe-q4km-llamacpp"
+      ],
+      "reference_comparison": "All three candidates closely match the reference in technical assessment and position sizing calculations. Candidate C most closely mirrors the reference's depth of psychological analysis and actionable prescriptions, including the specific example of calculating oversized positions. Candidate A adds the valuable suggestion of reviewing past trades. Candidate B uniquely contributes risk-reward ratio analysis and the suggestion to reduce to 1% risk if psychological state persists, but has slightly less depth in the psychological diagnosis.",
+      "label_map": {
+        "A": "gemma4-q4km-llamacpp",
+        "B": "qwenmoe-q4km-llamacpp",
+        "C": "jarvis1-nvfp4-mtp"
+      }
+    },
+    {
+      "prompt_id": "risk_management_03",
+      "category": "risk_management",
+      "scores": {
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 6,
+          "depth": 7,
+          "reasoning": 7,
+          "specificity": 7,
+          "domain_knowledge": 7,
+          "actionability": 7,
+          "total": 41,
+          "brief_note": "Solid structure and convexity ranking but contains errors: 6,000 SPY put contracts at $10/contract would cost $6M not $600K (each contract controls 100 shares so premium is $1,000 per contract), and the payoff math on SPY puts is inconsistent; the convexity ranking placing biotech above SPY puts is reasonable but the bounded-upside argument for puts is weak since SPY can drop far below strike."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 8,
+          "domain_knowledge": 8,
+          "actionability": 8,
+          "total": 47,
+          "brief_note": "More nuanced analysis with practical Natenberg skew considerations (checking skew premium levels before entry), better risk management framework with explicit invalidation conditions and no-trade conditions, more realistic contract pricing ($1.50/contract), and stronger reasoning about why distressed debt ranks higher than biotech in convexity \u2014 though the $1.50 put premium for 20% OTM 6-month SPY puts seems low."
+        }
+      },
+      "ranking": [
+        "gemma4-q4km-llamacpp",
+        "jarvis1-nvfp4-mtp"
+      ],
+      "reference_comparison": "No reference response provided; Candidate B demonstrates stronger practical application of Natenberg's skew framework, more realistic position sizing, better-defined risk management criteria, and a more actionable decision framework compared to Candidate A.",
+      "label_map": {
+        "A": "jarvis1-nvfp4-mtp",
+        "B": "gemma4-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "decision_science_03",
+      "category": "decision_science",
+      "scores": {
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 7,
+          "reasoning": 8,
+          "specificity": 6,
+          "domain_knowledge": 8,
+          "actionability": 7,
+          "total": 44,
+          "brief_note": "Solid application of both frameworks with correct identification of loops, but lacks the quantitative specificity of other candidates and the conditional trade parameters are somewhat vague."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 9,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 9,
+          "domain_knowledge": 9,
+          "actionability": 8,
+          "total": 53,
+          "brief_note": "Excellent quantitative analysis with specific dilution math, concrete conditional trade parameters with entry/stop/target levels, and strong integration of both Soros and Meadows frameworks with a well-structured decision framework."
+        },
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 8,
+          "domain_knowledge": 8,
+          "actionability": 6,
+          "total": 46,
+          "brief_note": "Thorough analysis with good quantitative detail and correct framework application, but becomes excessively verbose and repetitive in the trade parameters section, with some contradictory elements (long entry at $22 with target at $18 is a short, not a long) that undermine actionability."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "qwenmoe-q4km-llamacpp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate B comes closest to the reference in depth and structure, adding more quantitative specificity with dilution calculations and concrete trade parameters. Candidate C matches the reference's analytical depth but suffers from verbosity and a confusing trade setup. Candidate A captures the key concepts but lacks the granularity and structured decision framework of both the reference and Candidate B.",
+      "label_map": {
+        "A": "gemma4-q4km-llamacpp",
+        "B": "jarvis1-nvfp4-mtp",
+        "C": "qwenmoe-q4km-llamacpp"
+      }
+    },
+    {
+      "prompt_id": "behavioral_finance_03",
+      "category": "behavioral_finance",
+      "scores": {
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 9,
+          "depth": 8,
+          "reasoning": 9,
+          "specificity": 8,
+          "domain_knowledge": 8,
+          "actionability": 8,
+          "total": 50,
+          "brief_note": "Strong analysis with correct math, good Tetlock/Duke application, and clear restructuring plan, though the proposed portfolio's return calculations could use more detail on asset-level assumptions."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 7,
+          "reasoning": 8,
+          "specificity": 7,
+          "domain_knowledge": 7,
+          "actionability": 7,
+          "total": 44,
+          "brief_note": "Correct expected return calculation and solid framework application, but the restructured portfolio analysis is less detailed\u2014recession scenario loss of -10.1% is computed but the full expected return derivation across all scenarios is hand-waved at ~2.8%."
+        },
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 9,
+          "depth": 9,
+          "reasoning": 9,
+          "specificity": 10,
+          "domain_knowledge": 9,
+          "actionability": 9,
+          "total": 55,
+          "brief_note": "Exceptional specificity with a five-asset restructured portfolio including concrete return assumptions per scenario, showing improved expected return (+4.65%) alongside dramatically reduced drawdown (-8.6%), plus strong behavioral framework integration and a thoughtful invalidation condition."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "qwenmoe-q4km-llamacpp",
+        "gemma4-q4km-llamacpp"
+      ],
+      "reference_comparison": "Candidate C exceeds the reference by providing a more granular restructured portfolio with specific asset-level return assumptions across all scenarios, achieving both higher expected return and lower drawdown. Candidate A matches the reference quality closely with good specificity and framework application. Candidate B is adequate but less detailed in its restructuring math and offers a weaker risk-reward tradeoff than the other candidates.",
+      "label_map": {
+        "A": "qwenmoe-q4km-llamacpp",
+        "B": "gemma4-q4km-llamacpp",
+        "C": "jarvis1-nvfp4-mtp"
+      }
+    },
+    {
+      "prompt_id": "general_reasoning_03",
+      "category": "general_reasoning",
+      "scores": {
+        "jarvis1-nvfp4-mtp": {
+          "accuracy": 8,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 8,
+          "domain_knowledge": 7,
+          "actionability": 8,
+          "total": 47,
+          "brief_note": "Strong multi-framework analysis with concrete position sizing and clear invalidation criteria, though Kelly criterion application has some issues and could go deeper on semiconductor-specific knowledge."
+        },
+        "qwenmoe-q4km-llamacpp": {
+          "accuracy": 7,
+          "depth": 5,
+          "reasoning": 7,
+          "specificity": 6,
+          "domain_knowledge": 6,
+          "actionability": 5,
+          "total": 36,
+          "brief_note": "Truncated response that covers frameworks adequately but lacks completeness \u2014 Framework 4 is cut off, missing final synthesis, concrete position sizing recommendation, and actionable trade plan."
+        },
+        "gemma4-q4km-llamacpp": {
+          "accuracy": 8,
+          "depth": 8,
+          "reasoning": 8,
+          "specificity": 8,
+          "domain_knowledge": 7,
+          "actionability": 8,
+          "total": 47,
+          "brief_note": "Well-structured analysis with clear synthesis across frameworks, concrete entry/exit levels, and thoughtful position sizing at 5% reflecting uncertainty, though slightly less conservative than the reference's recommendation."
+        }
+      },
+      "ranking": [
+        "jarvis1-nvfp4-mtp",
+        "gemma4-q4km-llamacpp",
+        "qwenmoe-q4km-llamacpp"
+      ],
+      "reference_comparison": "Both A and C approach the reference's quality with strong multi-model analysis and concrete recommendations, though neither matches the reference's probabilistic expected value calculation showing negative EV at $67. A recommends 3% (closer to reference's 1-3%) while C recommends 5%. B is significantly weaker due to truncation and lack of a complete recommendation. The reference stands out for its explicit EV calculation demonstrating the stock is overpriced relative to risk-weighted outcomes.",
+      "label_map": {
+        "A": "jarvis1-nvfp4-mtp",
+        "B": "qwenmoe-q4km-llamacpp",
+        "C": "gemma4-q4km-llamacpp"
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+This is a concrete Kelly Criterion application with real backtest statistics. Let me work through the calculations systematically and then address the practical implications.
+
+**Step 1: Calculate the Kelly fraction**
+
+The Kelly Criterion formula for a binary outcome is:
+f* = (p × b - q) / b
+
+Where:
+- p = probability of winning = 0.58
+- q = probability of losing = 1 - p = 0.42
+- b = payoff ratio = average win / average loss = 4.2% / 2.8% = 1.5
+
+f* = (0.58 × 1.5 - 0.42) / 1.5
+f* = (0.87 - 0.42) / 1.5
+f* = 0.45 / 1.5
+f* = 0.30
+
+So the full-Kelly fraction is 30% of equity per trade.
+
+**Step 2: Optimal bet size in dollars**
+
+With $250,000 equity and 30% Kelly fraction:
+Full-Kelly bet = $250,000 × 0.30 = $75,000 per trade
+
+**Step 3: Drawdown during 9 consecutive losses**
+
+This is where it gets interesting. With full Kelly, each loss reduces equity by 2.8% of the current equity (since the bet is 30% of equity and the loss is 2.8% of the bet).
+
+Wait — I need to be careful here. The average loser is -2.8%, which is the percentage loss on the position. If I bet 30% of equity and lose 2.8% on the position, the equity impact is 0.30 × 0.028 = 0.84% per loss.
+
+Let me trace through 9 consecutive losses:
+- Starting equity: $250,000
+- After loss 1: $250,000 × (1 - 0.0084) = $247,900
+- After loss 2: $247,900 × (1 - 0.0084) = $245,817
+- After loss 3: $245,817 × (1 - 0.0084) = $243,750
+- After loss 4: $243,750 × (1 - 0.0084) = $241,699
+- After loss 5: $241,699 × (1 - 0.0084) = $239,663
+- After loss 6: $239,663 × (1 - 0.0084) = $237,642
+- After loss 7: $237,642 × (1 - 0.0084) = $235,636
+- After loss 8: $235,636 × (1 - 0.0084) = $233,645
+- After loss 9: $233,645 × (1 - 0.0084) = $231,668
+
+Total drawdown: ($250,000 - $231,668) / $250,000 = 7.33%
+
+That's actually not catastrophic — but this is the drawdown from the position losses alone. The more important consideration is what happens when the Kelly fraction is recalculated after each loss (since Kelly is dynamic — you bet a percentage of current equity, not initial equity).
+
+Actually, let me recalculate more precisely. With dynamic Kelly, after each loss the equity shrinks, so the next bet is smaller. The compounding effect means the drawdown is slightly less severe than a static calculation.
+
+But the real problem isn't the dollar drawdown — it's the psychological and practical implications. A 7.33% drawdown on $250,000 is $18,332. For a discretionary trader, watching $18,000 evaporate over 9 consecutive losing trades is psychologically devastating. More critically, the Kelly Criterion assumes you can maintain the exact fraction through the drawdown — but a discretionary trader experiencing 9 consecutive losses will almost certainly deviate from the model, either by reducing bet sizes (under-Kelly) or by abandoning the strategy entirely.
+
+**Step 4: Why full-Kelly is impractical for discretionary traders**
+
+Several reasons:
+
+1. **Estimation error**: The backtest parameters (58% win rate, 4.2% avg win, 2.8% avg loss) are estimates from 5 years of data. If the true parameters are even slightly worse — say 55% win rate instead of 58% — the Kelly fraction drops to (0.55 × 1.5 - 0.45) / 1.5 = 0.20 or 20%. Betting 30% when the true Kelly is 20% means you're overbetting by 50%, which dramatically increases drawdown risk.
+
+2. **Parameter instability**: The 5-year backtest includes 2020 (COVID crash), 2021 (bull market), 2022 (bear market), and 2023-2024 (recovery). The strategy's parameters likely vary significantly across these regimes. A single Kelly fraction based on blended statistics is misleading.
+
+3. **Discretionary execution**: A discretionary trader doesn't execute with machine precision. The backtest assumes perfect execution at the exact signal price. Real execution involves slippage, partial fills, and timing errors that degrade the edge.
+
+4. **Psychological sustainability**: Even a 7.33% drawdown is psychologically difficult for a discretionary trader. The Kelly Criterion was designed for institutional bettors with infinite patience and no emotional response to drawdowns.
+
+5. **Correlated signals**: The strategy fires 3–5 signals per week. If these signals are correlated (e.g., all mean-reversion signals fire during the same market regime), the effective Kelly fraction should be reduced further because the losses compound faster than the independent-loss model assumes.
+
+**Practical recommendation**: Use quarter-Kelly (7.5% of equity per trade) or half-Kelly (15%) as a starting point. Quarter-Kelly reduces the maximum drawdown during 9 consecutive losses to approximately 1.8% of equity ($4,500), which is psychologically manageable.
+</think>
+
+This is a concrete Kelly Criterion application that reveals why the theoretical optimum is rarely the practical optimum for discretionary traders.
+
+**Full-Kelly Calculation:**
+
+Using the Kelly formula f* = (p × b - q) / b:
+- p = 0.58 (win rate)
+- q = 0.42 (loss rate)
+- b = 4.2% / 2.8% = 1.5 (payoff ratio)
+
+f* = (0.58 × 1.5 - 0.42) / 1.5 = 0.30
+
+Full-Kelly fraction: **30% of equity per trade**
+Dollar bet size: $250,000 × 0.30 = **$75,000 per trade**
+
+**Drawdown During 9 Consecutive Losses:**
+
+With dynamic Kelly (betting 30% of current equity each time), each loss reduces equity by 0.30 × 0.028 = 0.84% of current equity. Tracing through 9 consecutive losses:
+
+- Starting: $250,000
+- After 9 losses: approximately $231,668
+- Drawdown: **7.33% ($18,332)**
+
+**Why Full-Kelly Is Impractical for Discretionary Traders:**
+
+1. **Estimation Error Amplification**: The Kelly fraction is extremely sensitive to parameter estimates. If the true win rate is 55% instead of 58% (a 3-percentage-point estimation error), the true Kelly drops to 20%. Betting 30% when the true Kelly is 20% means you're overbetting by 50%, which increases drawdown risk exponentially. The Kelly Criterion's edge is razor-thin — small estimation errors produce large position-sizing errors.
+
+2. **Parameter Instability Across Regimes**: The 5-year backtest spans a COVID crash, a bull market, a bear market, and a recovery. Mean-reversion strategies typically perform differently in trending vs. range-bound regimes. A single blended Kelly fraction ignores this regime variation.
+
+3. **Signal Correlation**: With 3–5 signals per week, if these signals are correlated (e.g., all fire during the same market regime), the effective Kelly fraction should be reduced. Correlated losses compound faster than the independent-loss model assumes.
+
+4. **Psychological Sustainability**: A discretionary trader watching $18,000 evaporate over 9 consecutive losses will almost certainly deviate from the model — either by reducing bet sizes

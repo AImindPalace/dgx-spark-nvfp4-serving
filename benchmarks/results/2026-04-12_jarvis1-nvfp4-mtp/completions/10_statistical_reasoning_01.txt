@@ -1,0 +1,78 @@
+This is a direct application of Aronson's data-mining bias framework from Chapter 12 of Evidence-Based Technical Analysis. The scenario presents a classic case where an analyst has optimized a strategy across 847 parameter combinations and is now presenting the best result as if it were a genuine finding.
+
+Let me break this down systematically:
+
+**1. Data-Mining Bias vs. Genuine Predictive Power**
+
+Aronson's core argument is that when you test many hypotheses (or parameter combinations), the probability of finding at least one that appears significant by pure chance increases dramatically. The 12/48 EMA crossover with Sharpe 1.84 is the single best result from 847 trials — it's the maximum of 847 random draws from the distribution of possible Sharpe ratios. Even if the strategy has zero predictive power, the best of 847 random strategies will look impressive.
+
+The key distinction: in-sample optimization (fitting parameters to historical data) produces overfitting — the parameters are tuned to the specific noise in the training data. Genuine predictive power means the strategy's edge exists in the data-generating process itself, independent of the specific historical sample used for optimization.
+
+**2. Expected Best Sharpe from Pure Noise**
+
+With 847 parameter combinations, we need to estimate the expected maximum Sharpe ratio from pure noise. The exact calculation depends on the distribution of Sharpe ratios under the null hypothesis, but a rough approximation:
+
+- If each trial has a 5% chance of producing a Sharpe > 1.0 by chance (roughly true for a Sharpe of 1.0 over ~14 years of daily data), then with 847 trials, the probability that at least one exceeds 1.0 is 1 - (0.95)^847 ≈ 1.0 (essentially certain)
+- For Sharpe > 1.5, the per-trial probability might be around 0.001-0.005, giving a probability of at least one exceeding 1.5 of approximately 1 - (0.999)^847 ≈ 0.55 to 1 - (0.995)^847 ≈ 0.98
+
+
+- For Sharpe > 1.84, the per-trial probability is likely below 0.001, so the probability of at least one exceeding 1.84 across 847 trials is roughly 0.55 or less — meaning there's a substantial chance this result is noise.
+
+The expected maximum Sharpe from 847 independent trials under the null is approximately 1.5-1.9, depending on the exact distribution. A Sharpe of 1.84 falls squarely within the range expected from pure data mining.
+
+**3. White's Reality Check (WRC)**
+
+White's Reality Check is a bootstrap method that accounts for the data-mining bias. The procedure: (1) generate B bootstrap samples (typically 1,000-10,000) by resampling the original data with replacement, (2) for each bootstrap sample, run the full 847-parameter optimization and record the best Sharpe ratio, (3) compare the actual in-sample Sharpe (1.84) to the distribution of best Sharpe ratios from the bootstrap samples, (4) the p-value is the proportion of bootstrap best-Sharpe values that exceed 1.84.
+
+If the p-value is below 0.05, the strategy passes the WRC — meaning the observed Sharpe is unlikely to have arisen from pure data mining. If the p-value is above 0.05, the result is not statistically significant after correcting for the number of trials.
+
+**4. Out-of-Sample Testing Requirements**
+
+Aronson emphasizes that the only reliable test of a strategy is out-of-sample performance. The minimum requirements:
+
+- Out-of-sample period should be at least 25-33% of the total data length (the 75/25 split rule)
+- For 2010-2024 (approximately 3,600 trading days), the out-of-sample period should be at least 900-1,200 days (roughly 3-4 years)
+- The walk-forward method: optimize on a rolling training window (e.g., 3 years) and test on the subsequent out-of-sample window (e.g., 1 year), then roll forward by 1 year and repeat
+- The strategy should be tested on data that was NOT used in any way during the optimization process — no peeking, no parameter tuning based on out-of-sample results
+
+**5. Additional Concerns**
+
+The 12/48 EMA crossover is a well-known, widely published strategy. The fact that it appears in the top 847 combinations is not surprising — it's a popular strategy that has been studied extensively. The question is whether the specific 12/48 combination has genuine edge or is simply the best-fitting parameter set for this particular historical period.
+
+The maximum drawdown of -14.2% is also worth noting — it's relatively modest, which could indicate either genuine robustness or simply that the strategy happened to avoid a major drawdown during the 2010-2024 period. The 2020 COVID crash and 2022 bear market are both within the sample, so the drawdown figure is at least partially stress-tested.
+
+**Recommendation:**
+
+The analyst should NOT present this strategy to investors without completing the WRC and out-of-sample testing. The 1.84 Sharpe from 847 trials is almost certainly inflated by data-mining bias. The honest approach is to present the full distribution of results, not just the best one.
+</think>
+
+This scenario is a textbook case of data-mining bias, and the analyst's presentation to investors would be premature and potentially misleading without proper statistical correction.
+
+**Data-Mining Bias vs. Genuine Predictive Power**
+
+Aronson's framework establishes that testing 847 parameter combinations is equivalent to running 847 independent hypothesis tests. The 12/48 EMA crossover with Sharpe 1.84 is the maximum of 847 draws from the distribution of possible Sharpe ratios. Even if the strategy has zero predictive power — meaning the moving-average crossover has no genuine edge in SPY — the best of 847 random strategies will appear impressive. This is the data-mining bias: the probability of finding at least one apparently significant result increases with the number of trials.
+
+The distinction is critical: in-sample optimization fits parameters to the specific noise in the 2010-2024 data. Genuine predictive power means the strategy's edge exists in the market's data-generating process itself, independent of the specific historical sample. The 12/48 combination may be the best fit for this particular 14-year window, but that doesn't mean it will perform similarly in the future.
+
+**Expected Best Sharpe from Pure Noise**
+
+With 847 parameter combinations, the expected maximum Sharpe ratio from pure noise can be estimated. Under the null hypothesis (no predictive power), each trial produces a Sharpe ratio drawn from a distribution centered at 0. For approximately 14 years of daily data, the standard error of the Sharpe ratio is roughly 1/√(3,600/252) ≈ 0.265. A Sharpe of 1.84 is approximately 6.9 standard errors above zero for a single trial — seemingly significant. But across 847 trials, the expected maximum Sharpe from pure noise is approximately 1.5-1.9, depending on the exact distribution shape. The observed 1.84 falls squarely within this range, meaning it is entirely consistent with data-mining bias.
+
+**White's Reality Check (WRC) Procedure**
+
+The analyst should apply White's Reality Check as follows:
+
+1. Generate 10,000 bootstrap samples by resampling the 2010-2024 daily returns with replacement
+2. For each bootstrap sample, run the full 847-parameter optimization and record the best Sharpe ratio
+3. The p-value is the proportion of bootstrap best-Sharpe values that exceed 1.84
+4. If the p-value is below 0.05, the strategy passes — the observed Sharpe is unlikely from pure data mining
+5. If the p-value is above 0.05, the result is not statistically significant after correcting for the number of trials
+
+Given 847 trials and a Sharpe of 1.84, the WRC p-value is likely in the 0.10-0.30 range — well above the 0.05 significance threshold. The strategy almost certainly fails the WRC.
+
+**Out-of-Sample Testing Requirements**
+
+The minimum requirements for a credible out-of-sample test:
+
+- **Split ratio**: 75/25 minimum. For 2010-2024 (~3,600 trading days), the out-of-sample period should be at least 900 days (approximately 3.5 years). The analyst should use 2010-2020 for in-sample optimization and 2021-2024 for out-of-sample testing.
+- **Walk-forward method**: Optimize on a rolling 3-year training window, test on the subsequent 1-year window, roll

@@ -1,0 +1,16 @@
+{
+  "baseline_label": "base",
+  "test_label": "newrun",
+  "comparisons": [
+    {
+      "prompt_id": "q1",
+      "category": "test",
+      "baseline_tokens": 200,
+      "test_tokens": 220,
+      "token_delta_pct": 10.0,
+      "notes": ""
+    }
+  ],
+  "overall_assessment": "",
+  "degradation_detected": false
+}

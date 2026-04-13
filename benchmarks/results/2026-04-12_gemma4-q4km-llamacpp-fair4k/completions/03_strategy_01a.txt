@@ -1,0 +1,44 @@
+This scenario combines Kelly Criterion sizing with drawdown risk management — a critical intersection for any trader evaluating whether a backtested edge is practical at full leverage.
+
+**Kelly Criterion Calculation:**
+The Kelly formula for a simple win/loss strategy is: f* = (p × b) - (1 - p), where p = win probability, b = odds (average winner / average loser), and f* is the full-Kelly fraction.
+Here, p = 0.58, b = 4.2% / 2.8% = 1.5, and (1 - p) = 0.42.
+f* = (0.58 × 1.5) - 0.42 = 0.87 - 0.42 = 0.45, or 45% of equity per trade.
+At full-Kelly, the trader would risk 45% of the $250,000 account per signal, which is $112,500 per trade.
+
+**Drawdown During Maximum Consecutive Losses:**
+The maximum consecutive losses of 9 is the critical stress test. Under Kelly, each loss reduces the account by the bet fraction, compounding the drawdown.
+Starting equity: $250,000
+After 1 loss: $250,000 × (1 - 0.45) = $137,500
+After 2 losses: $137,500 × 0.55 = $75,625
+After 3 losses: $75,625 × 0.55 = $41,594
+After 4 losses: $41,594 × 0.55 = $22,877
+After 5 losses: $22,877 × 0.55 = $12,582
+After 6 losses: $12,582 × 0.55 = $6,920
+After 7 losses: $6,920 × 0.55 = $3,806
+After 8 losses: $3,806 × 0.55 = $2,093
+After 9 losses: $2,093 × 0.55 = $1,151
+The drawdown from $250,000 to $1,151 is a 99.5% decline. The trader has lost 99.5% of their capital.
+
+**Why Full-Kelly Is Impractical:**
+Three reasons from the Kelly framework and practical trading experience:
+1. **Psychological Unacceptability:** No discretionary trader can execute a strategy while their account is down 99.5%. The Kelly formula assumes the bettor will continue to bet the calculated fraction regardless of emotional state — but real traders experience the sunk cost fallacy, loss aversion, and the urge to abandon the strategy during drawdowns. The 9-loss streak would almost certainly trigger abandonment before the 9th loss.
+2. **Parameter Uncertainty:** The Kelly fraction is extremely sensitive to the win rate estimate. If the true win rate is 54% instead of 58%, the Kelly fraction drops to 0.21 (21%). A full-Kelly bettor at 45% would be overbetting by more than double the true Kelly fraction, accelerating ruin. Half-Kelly (22.5%) provides a buffer against this estimation error.
+3. **Discretionary Execution Risk:** The Kelly formula assumes perfect execution. A discretionary trader may miss signals, enter late, or exit early — each of which degrades the realized edge. The backtested 58% win rate reflects perfect execution; the live win rate will likely be lower.
+
+**Practical Recommendation:**
+Use half-Kelly at 22.5% of equity ($56,250 per trade) as a starting point. This reduces the 9-loss drawdown from 99.5% to approximately 88.7% (ending equity ~$29,500), which is still severe but survivable. More conservatively, a 1/4-Kelly approach at 11.25% ($28,125 per trade) would produce a 77.6% drawdown during the same streak — still painful but within the realm of a trader who can psychologically endure.
+
+---
+DECISION FRAMEWORK ELEMENTS:
+Regime: range — confidence: high (mean-reversion strategy in a range-bound backtest period)
+Key Evidence:
+- Kelly Criterion yields 45% full-Kelly fraction, but 9-loss streak produces 99.5% drawdown — mathematically correct but practically ruinous
+- Half-Kelly (22.5%) and quarter-Kelly (11.25%) provide meaningful buffers against both drawdown severity and parameter uncertainty
+Plan: Trade at 1/4-Kelly (11.25% of equity, ~$28,125 per signal) → target 4.2% average winner → stop at 2.8% average loser → re-evaluate Kelly fraction quarterly
+Target: Maintain 58% win rate with 1.5:1 risk-reward ratio → target 4.2% average winner per trade
+Invalidation: If win rate drops below 54% over any 50-trade rolling window, the edge is deteriorating — reduce to 1/8-Kelly or halt
+Risk: 1R = 2.8% per trade at 11.25% allocation | reward: 1.5R | risk-reward 1.5:1
+No-Trade Conditions: If the backtest period shows the strategy's win rate was concentrated in a single year (e.g., 2020's volatility), the edge may be regime-dependent rather than structural — do not deploy full size
+Review Metric: Track the actual win rate and average win/loss ratio in live trading vs. backtest — any divergence of more than 5 percentage points in win rate triggers a full strategy review
+---

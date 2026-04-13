@@ -1,0 +1,90 @@
+## **SPY Breakout Trade Plan**  
+*Based on Multi-Timeframe Alignment & Risk-First Framework*
+
+---
+
+### **1. TRADE THESIS**  
+- **Weekly (Trend/Context):** 14-week symmetrical triangle between $492 (rising trendline support) and $521 (descending trendline resistance). Coiling indicates building energy; a breakout above $521 signals continuation of prior uptrend.  
+- **Daily (Timing/Confirmation):** Monday’s bull engulfing candle closed above the 20-day EMA ($514.30) on elevated volume (1.8x avg). This suggests institutional buying and supports an upside bias.  
+- **4-hour (Execution/Precision):** Base formed at $516.40 with no overhead supply until $521. Clean structure reduces friction near breakout level.  
+- **Volatility Context:** VIX at 17 offers relatively cheap options (strategic advantage for defined-risk positions).
+
+---
+
+### **2. TRADE MECHANICS**  
+
+#### **A. Entry Trigger**  
+- **Primary Condition:** Wait for a **4-hour close above $521.00** (weekly triangle resistance).  
+- **Secondary Confirmation:** Volume on breakout should exceed Monday’s volume (1.8x avg daily) to validate momentum.  
+- **Order:** Buy stop limit order at **$521.10** (limit $521.50) after first 4-hour candle tests $521.
+
+#### **B. Stop Loss**  
+- **Location:** $514.20 (just below Monday’s bull engulfing low and the 20-day EMA).  
+- **Rationale:** A drop below this level invalidates the daily structure and suggests failed breakout.  
+- **Distance:** $6.90 risk per share from entry ($521.10 – $514.20).
+
+#### **C. Profit Targets**  
+- **PT1 (Partial Exit – Measured Move):** $534.80  
+  - Calculated from triangle height: $521 – $492 = $29 projected move above breakout.  
+  - $521 + $29 = $550 full target, but first resistance near 1/2 height at ~$534–535 (prior weekly highs).  
+  - Exit 50% of position here.
+
+- **PT2 (Trailing Stop – Momentum Capture):**  
+  - After PT1 hit, trail remaining position with a **daily close below the 5-day SMA**.  
+  - Alternatively, use a 2-bar low on the 4-hour chart (e.g., close below prior two 4-hour candle lows) for tighter exit.
+
+---
+
+### **3. POSITION SIZING & RISK MANAGEMENT**  
+- **Account Risk:** 1% of $100,000 = **$1,000 max loss**.  
+- **Per-Share Risk:** $6.90 (entry – stop).  
+- **Shares to Buy:**  
+  \[
+  \frac{\$1,000}{\$6.90} \approx 144 \text{ shares}
+  \]
+- **Capital Required:** 144 shares × $521.10 ≈ **$75,038** (75% account allocation).  
+  *Note:* High allocation reflects high-probability setup with tight stop; consider using long calls to reduce capital outlay if desired.
+
+- **Alternate Options Strategy (If Preferring Leverage/Less Capital):**  
+  Buy July 2024 $521 calls (45–60 DTE). Size using delta-equivalent shares (e.g., delta 0.60) and ensure premium at risk ≤ $1,000.
+
+---
+
+### **4. TRADE MANAGEMENT RULES**  
+- **If breakout occurs on low volume (<1.5x avg),** reduce position size by 30% (higher false-breakout risk).  
+- **If VIX spikes above 20 on breakout,** consider wider stop (e.g., $513) due to increased volatility.  
+- **If PT1 reached quickly (<3 days),** trail remainder aggressively (switch to 4-hour 5-period EMA).  
+- **Monitor SPY sector leadership:** Confirm participation of tech (XLK) and financials (XLF) for sustainability.
+
+---
+
+### **5. KEY INVALIDATION LEVELS**  
+- **Daily close below 20-day EMA ($514.30)** before entry → cancel trade.  
+- **Weekly close back inside triangle** after entry → exit immediately.
+
+---
+
+### **6. PLAN RECAP**  
+| Component | Detail |  
+|-----------|--------|  
+| **Instrument** | SPY shares |  
+| **Direction** | Long breakout |  
+| **Entry** | $521.10 (4-hour close > $521) |  
+| **Stop Loss** | $514.20 (daily invalidation) |  
+| **PT1** | $534.80 (50% position) |  
+| **PT2** | Trailing stop (5-day SMA/daily close) |  
+| **Position Size** | 144 shares |  
+| **Max Risk** | $1,000 (1% account) |  
+| **Risk/Reward (PT1)** | 1:2.0 |  
+| **Timeframe** | 2–6 weeks for full move |  
+
+*“The best traders combine patience for signals with aggression when the alignment is clear.”* – Adaptation from Schwager’s *Market Wizards*.  
+
+---
+**Execution Checklist:**  
+✅ Wait for 4-hour close above $521  
+✅ Confirm volume > 1.8x average  
+✅ Enter with stop limit order  
+✅ Set PT1 limit order at $534.80  
+✅ Activate trailing stop after PT1 hit  
+✅ Monitor daily close for invalidation

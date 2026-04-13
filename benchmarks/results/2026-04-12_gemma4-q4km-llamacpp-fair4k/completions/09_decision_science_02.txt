@@ -1,0 +1,29 @@
+This scenario requires applying Aronson's Bayesian updating framework to a discretionary macro thesis, then distinguishing between signal and noise in the new data to determine whether the thesis is invalidated or merely temporarily challenged.
+
+**Step 1: Establish the prior.** The original thesis had three components: US deceleration (prior probability ~60% based on the trader's analysis), Fed cuts 3x (prior ~50%), ECB holds longer (prior ~70% — this was the most certain). The joint probability of the full thesis was approximately 0.60 × 0.50 × 0.70 = 21%. The position was entered at 1.0820 with a target of approximately 1.0650 (a 170-pip move), representing a risk-reward of roughly 1:1.6. The position is currently at 1.0940, +120 pips.
+
+**Step 2: Evaluate the new evidence using Bayesian updating.** The NFP print of +312,000 versus +175,000 consensus is a 1.78x surprise — this is not noise; it's a significant data point. Average hourly earnings at +4.1% YoY confirms the wage acceleration component. The GDPNow revision to 3.4% provides a third independent data point confirming acceleration. Using Aronson's approach, we update the probability of each component:
+
+- US deceleration: The prior of 60% now drops to approximately 35% given three independent pieces of evidence all pointing in the opposite direction.
+- Fed cuts 3x: Fed funds futures pricing only 1.2 cuts means the market is now 88% sure of 1 or fewer cuts. This is a direct market-implied update.
+- ECB holds longer: This component remains unchanged at 70% — the new data doesn't affect this leg.
+
+The updated joint probability: 0.35 × 0.12 × 0.70 = 2.9%. The original thesis has been compressed from 21% to 2.9% probability — an 86% reduction in the likelihood of the full thesis playing out.
+
+**Step 3: Signal vs. noise distinction.** The key question is whether this data represents a permanent shift or a temporary spike. The NFP print is a single-month data point — it could be driven by seasonal effects, timing of reporting, or a one-time event. However, the combination of NFP, wage acceleration, and GDPNow all pointing in the same direction makes the noise explanation less plausible. The Bayesian framework demands we treat this as a signal until proven otherwise.
+
+**Step 4: Actionable decision.** The position is currently at 1.0940, +120 pips. The original target was 1.0650. The updated thesis probability of 2.9% means the original target is now highly unlikely. However, the position is still profitable. The correct action is to cut the position by 75% immediately — reducing from full size to 25% of original. The remaining 25% position should be held with a revised stop at 1.0980 (a new level of resistance that the strong data suggests will hold) and a reduced target of 1.0880 (a modest fade of the recent move). This preserves the profit while acknowledging the thesis has been severely damaged. The original 1.0650 target is abandoned.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate (the trend has shifted from bearish to bullish on the USD/EUR pair, but the broader macro regime is uncertain)
+Key Evidence:
+- NFP +312,000 vs +175,000 consensus, wage acceleration +4.1%, GDPNow 3.4% — three independent data points all contradicting the US deceleration thesis
+- Fed funds futures pricing only 1.2 cuts by year-end, directly updating the probability of the Fed cuts 3x component from 50% to 12%
+- Bayesian joint probability of full thesis compressed from 21% to 2.9% — an 86% reduction in thesis viability
+Plan: Cut 75% of position at 1.0940 (current price) → hold remaining 25% with revised target of 1.0880 and stop at 1.0980
+Invalidation: If USD/EUR breaks above 1.1000 on sustained volume, the entire thesis is dead — exit remaining 25% immediately. If the next NFP print reverts to below +180,000, the deceleration thesis may be recoverable.
+Risk: 1R = 40 pips (1.0940 to 1.0980 stop) | reward: 60 pips (1.0940 to 1.0880 target) | risk-reward 1:1.5 on reduced position
+No-Trade Conditions: Do not add to the position at any price. Do not re-enter the full short position until at least two consecutive months of US data confirm deceleration. Do not hold the remaining 25% if the ECB announces any dovish policy change.
+Review Metric: Track whether the Bayesian updating method (calculating joint probability updates from multiple data points) produced a more accurate decision than a simple stop-loss trigger. Also measure whether the 75% reduction size was appropriate — would 50% or 100% have been better?
+---

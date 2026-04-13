@@ -1,0 +1,23 @@
+This scenario combines DePrado's hierarchical risk parity framework with practical drawdown management and the operational challenges of volatility-scaled position sizing. The fund is 3.8 percentage points from its hard stop-out limit (-11.2% vs -15%), with 8.3% portfolio heat currently deployed.
+
+**DePrado's Hierarchical Risk Parity and Position Sizing Framework:** DePrado's work on hierarchical risk parity (HRP) and the broader risk parity framework provides the theoretical foundation for this situation. The core principle is that position sizing should be inversely proportional to volatility, ensuring each position contributes a roughly equal risk contribution to the portfolio. When the flagship S&P position's ATR has expanded 40% above its 20-day average, the volatility-targeting model must reduce that position's size by approximately 28.6% (1 - 1/1.40 = 0.286) to maintain constant risk contribution. This is not a discretionary decision — the model dictates it.
+
+**Dynamic Resizing Over Two Trading Days:** The fund should execute this reduction in two stages. Day 1: Reduce the S&P position by 15% (approximately half of the required reduction) during normal market hours. This avoids market impact and allows the fund to assess whether the volatility spike is transitory. The portfolio heat will drop from 8.3% to approximately 7.5%. Day 2: Reduce the remaining 15% reduction during the first 30 minutes of the session, when liquidity is typically highest. The target portfolio heat after both days is approximately 6.8%, providing a buffer below the current 8.3%.
+
+**Stop-Out Threshold:** The fund should trigger a full stop-out at portfolio heat of 12.5%, which corresponds to a projected drawdown of approximately -13.8% — leaving a 1.2 percentage point buffer below the -15% hard limit. This buffer is necessary because the drawdown limit is enforced at the high-water mark, not on a daily basis, and a sudden gap in the S&P futures could push the fund past -15% before the risk committee can act. The 12.5% heat threshold also accounts for the fact that the ATR expansion may continue, requiring further position reductions that could be executed at worse prices.
+
+**Operational Risks of Liquidating into Elevated Volatility:** This is the most critical practical concern. The fund's volatility-targeting model calls for reducing positions precisely when market impact costs are highest. The 40% ATR expansion means bid-ask spreads have widened, and the fund's own liquidation could contribute to further price deterioration. The risk committee should also consider the possibility that the volatility spike is a false signal — a single-day spike that mean-reverts — and that reducing positions now locks in a worse entry for the next re-entry. The operational risk is that the fund's systematic rules create a feedback loop: volatility triggers position reduction, which in a thin market contributes to further volatility.
+
+---
+DECISION FRAMEWORK:
+Regime: volatile — confidence: high
+Key Evidence:
+- Drawdown at -15% hard limit with only 3.8 percentage points remaining
+- S&P ATR expanded 40% above 20-day average, requiring position reduction per volatility-targeting model
+- Portfolio heat at 8.3% with 12.5% stop-out threshold providing 1.2 percentage point buffer
+Plan: Reduce S&P position by 15% on Day 1, remaining 15% on Day 2 → target portfolio heat 6.8% → full stop-out at 12.5% heat
+Invalidation: If S&P ATR contracts below 20-day average within 48 hours, the volatility spike may be transitory — the fund should not reduce beyond the first 15% and should reassess before the second reduction
+Risk: 1R = 1.2 percentage points of drawdown buffer (from 12.5% heat stop to 15% hard limit) | reward: preservation of 3.8 percentage points of drawdown room | risk-reward: 3.2:1
+No-Trade Conditions: Do not add any new positions until portfolio heat returns below 7.0% and S&P ATR normalizes — the fund is in drawdown management mode, not opportunity-seeking mode
+Review Metric: Track whether the two-stage reduction method reduced market impact costs versus a single-day liquidation — the 40% ATR expansion should be the benchmark for measuring execution quality
+---

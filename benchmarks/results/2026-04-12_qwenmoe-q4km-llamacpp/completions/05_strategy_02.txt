@@ -1,0 +1,43 @@
+<think>
+This is a multi-timeframe alignment setup that requires integrating weekly, daily, and 4-hour signals — exactly the kind of hierarchical analysis that Schwager describes as characteristic of top traders who "look at the big picture" before executing.
+
+**Multi-Timeframe Alignment Analysis:**
+
+The weekly chart shows a 14-week symmetrical triangle ($492-$521). Symmetrical triangles are continuation or reversal patterns that represent a period of decreasing volatility and indecision. The resolution of this pattern — a breakout above $521 or breakdown below $492 — is the primary signal. The daily chart's bull engulfing bar above the 20-day EMA ($514.30) on 1.8x volume is a potential breakout initiation signal. The 4-hour chart shows a clean base at $516.40 with no overhead supply until $521.
+
+The alignment is: weekly (triangle compression, approaching resolution), daily (bullish momentum initiating), 4-hour (clean base for entry). This is a high-quality multi-timeframe confluence.
+
+**Framework Application — Murphy's Multi-Timeframe Method:**
+Murphy's approach to multi-timeframe analysis involves using the higher timeframe to determine the trend and key levels, and the lower timeframe to time entries. The weekly triangle defines the breakout level at $521. The daily chart confirms bullish momentum. The 4-hour chart provides the precise entry trigger.
+
+**Trade Parameters:**
+
+- **Entry trigger:** A daily close above $521.00 (weekly triangle resistance) on volume exceeding 1.5x the 20-day average. The 4-hour base at $516.40 provides a reference for the pullback entry if price breaks $521 and retests.
+- **Stop:** $513.50 — below the daily EMA ($514.30) and below the 4-hour base ($516.40), giving a buffer of $2.90 from the EMA. This is $7.50 below the $521 breakout level.
+- **Target 1 (partial exit):** $535.00 — the measured move from the triangle: $521 - $492 = $29, added to $521 = $550, but given the 14-week compression, I'll use a conservative 50% of the measured move: $521 + $14.50 = $535.50. Round to $535.00.
+- **Target 2 (trailing):** $550.00 — full measured move. Trail the remaining position using a 20-day EMA method — exit when price closes below the 20-day EMA.
+- **Position size:** $100,000 account, 1% risk = $1,000. Risk per share = $521 - $513.50 = $7.50. Shares = $1,000 / $7.50 = 133 shares. At $521, that's $69,293 in notional.
+- **Risk-reward:** $7.50 risk for $14.00 reward to T1 = 1.87:1. To T2 = $29.00 reward = 3.87:1. Blended (50% at T1, 50% trailing) = approximately 2.87:1.
+- **Confidence:** High — multi-timeframe alignment, volume confirmation, clean technical structure.
+
+**Invalidation:** A daily close below $513.50 after the breakout, or a weekly close back inside the triangle below $521 on expanding volume.
+
+</think>
+
+This is a high-quality multi-timeframe alignment setup using Murphy's hierarchical timeframe method. The weekly triangle compression (14 weeks, $492-$521) is approaching resolution, the daily chart shows initiating bullish momentum (bull engulfing above 20-day EMA on 1.8x volume), and the 4-hour chart provides a clean base at $516.40 with no overhead supply until $521.
+
+**Trade Parameters:**
+- **Entry trigger:** Daily close above $521.00 on volume exceeding 1.5x the 20-day average. If price breaks $521 and pulls back to the $516.40-$521 zone, enter on a 4-hour bullish reversal candle.
+- **Stop:** $513.50 — below the 20-day EMA ($514.30) and 4-hour base ($516.40), providing $7.50 risk per share.
+- **Target 1:** $535.00 (partial exit of 50% of position) — conservative 50% of the $29 measured move.
+- **Target 2:** $550.00 (full measured move) with trailing stop using the 20-day EMA method.
+- **Position size:** 133 shares ($100,000 × 1% / $7.50 risk = $1,000 / $7.50). Notional: $69,293.
+- **Risk-reward:** 1.87:1 to T1, 3.87:1 to T2, blended approximately 2.87:1.
+- **Confidence:** High — all three timeframes align, volume confirms, and the symmetrical triangle has a well-defined measured move target.
+
+**Invalidation:** Daily close below $513.50 after breakout, or a weekly close back inside the triangle below $521 on expanding volume.
+
+---
+This analysis incorporates elements from Murphy's multi-timeframe method and the risk-reward framework. The key insight is that the weekly timeframe defines the trade (triangle breakout), the daily timeframe confirms momentum, and the 4-hour timeframe times the entry — each layer adds information without creating redundancy. The 1.8x volume on the daily bull engulfing bar is a critical confirmation because it demonstrates institutional participation in the breakout attempt.
+---
+The primary risk in this setup is a false breakout above $521 that quickly reverses — a common pattern in symmetrical triangles where the resolution can go either direction. The 14-week compression means the market has been in equilibrium for a long time, and the breakout direction is genuinely uncertain. The 1.8x volume on the daily bar is encouraging but not definitive; a true breakout typically sees 2.0x+ volume. This is why the 4-hour base at $516.40 is valuable — it provides a lower-risk entry if the breakout pulls back, rather than chasing above $521.

@@ -1,0 +1,35 @@
+This RRG configuration is rich with sector rotation signals that map directly to Murphy's framework for identifying market regimes and timing sector rotation entries. Let me layer the analysis.
+
+First, the macro regime: SPX sideways for 6 weeks with DXY up 3.2% is a critical signal. Murphy's sector rotation model shows that during sideways markets, the rotation cycle slows down and becomes more random — the clear leadership patterns of trending markets break down. The DXY strength is particularly important: a rising dollar historically favors defensive sectors (Utilities, Consumer Staples) and hurts cyclical sectors (Energy, Industrials). The fact that XLI and XLE are still in the Improving quadrant despite the DXY headwind suggests underlying momentum is strong enough to resist the dollar's pressure, but the sideways SPX means the rotation is likely to stall or reverse soon.
+
+The RRG quadrant analysis: XLU rotating from Improving into Leading is the most actionable signal. Murphy's framework shows that the transition from Improving to Leading is the highest-probability entry point for sector rotation trades — sectors that have just entered Leading from Improving are entering their peak momentum phase. XLU's entry into Leading aligns with the DXY headwind (defensive sector favored in a rising dollar environment). This is the highest-probability long entry.
+
+XLF in Leading but decelerating: this is a warning. XLF has been Leading for some time, and the decelerating momentum suggests it's approaching the Leading-to-Weakening transition. Murphy's model shows that the most profitable part of a sector rotation trade is the middle of the Leading phase — the beginning and end of Leading produce lower risk-reward. XLF is likely near the end.
+
+XLI and XLE in Improving with strong clockwise momentum: these sectors are in the early-to-mid phase of their rotation cycle. Clockwise momentum in the Improving quadrant means they're heading toward Leading. This is a moderate-probability setup — the direction is clear but the timing is uncertain given the sideways SPX.
+
+The actionable portfolio reallocation plan over 4 weeks:
+
+Week 1: Initiate XLU long (entering Leading quadrant). Target: hold through the Leading phase, exit when XLU rotates from Leading to Weakening. Stop: XLU drops from Leading back into Improving.
+
+Week 2: Monitor XLI and XLE. If XLI and XLE both enter Leading from Improving, initiate long positions in both. Stop: either sector rotates back into the Weakening quadrant.
+
+Week 3: Reduce XLF exposure. Sell 50% of XLF position as momentum decelerates. If XLF rotates from Leading to Weakening, sell the remainder.
+
+Week 4: Evaluate the entire rotation. If SPX breaks out above its 6-week range, the rotation cycle accelerates and the XLI/XLE/XLU positions should be held aggressively. If SPX breaks down, reduce all sector longs and shift toward defensive sectors (XLU, XLP).
+
+Confidence: moderate (60%). The RRG signals are clear but the sideways SPX introduces uncertainty about the timing and magnitude of the rotation. The DXY headwind is a real concern for the cyclical sectors.
+
+---
+DECISION FRAMEWORK:
+Regime: range — confidence: moderate
+Key Evidence:
+- XLU rotating from Improving to Leading — highest-probability sector rotation entry signal
+- XLF decelerating in Leading quadrant — approaching Weakening transition, reduce exposure
+- XLI/XLE in Improving with clockwise momentum — moderate-probability setup, timing uncertain
+Plan: Initiate XLU long (entering Leading quadrant) → reduce XLF by 50% → monitor XLI/XLE for Leading entry → evaluate SPX breakout/breakdown for timing adjustment
+Invalidation: XLU rotates from Leading back into Improving — exit XLU long. XLF rotates from Leading into Weakening — exit remaining XLF. SPX breaks below 6-week range — reduce all sector longs by 50%
+Risk: 1R = XLU entry price to XLU stop (Leading-to-Improving transition) | reward: 2.5R (holding through Leading phase) | risk-reward 2.5:1
+No-Trade Conditions: If SPX breaks out above its 6-week range, the rotation cycle accelerates and the RRG signals may become less reliable — reassess all positions. If DXY rallies another 2%+ above current level, the cyclical sector longs (XLI, XLE) become untenable
+Review Metric: Track whether XLU's entry into Leading from Improving held for at least 2 weeks before rotating out — validates the RRG entry timing signal. Also track whether XLI/XLE's clockwise momentum in Improving reliably preceded Leading entry.
+---

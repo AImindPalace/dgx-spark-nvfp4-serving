@@ -1,0 +1,128 @@
+[
+  {
+    "prompt_id": "market_analysis_01",
+    "category": "market_analysis",
+    "short_name": "nvda_cup_handle_entry",
+    "content": "NVDA has spent the last 7 weeks forming a classic cup-and-handle pattern on the daily chart. The cup low is $98.40, the left-side rim high is $142.60, and the handle has contracted to $132.80 on declining volume — a 61.8% Fibonacci retracement of the handle range. The 50-day SMA is rising and sits at $126.10, providing a natural floor. Volume on the last three up-days inside the handle averaged 38% below the 50-day average. Given the pattern geometry, the handle depth, and the volume characteristics, assess the quality of this technical setup. What is the measured price target, what confirmation signal would you require before entry, and what is an appropriate initial stop placement based on Murphy's rules for continuation patterns?"
+  },
+  {
+    "prompt_id": "market_analysis_02",
+    "category": "market_analysis",
+    "short_name": "yield_curve_uninversion_macro",
+    "content": "The 2s10s Treasury yield spread has moved from -108 bps in July 2023 to +22 bps today, completing a full un-inversion cycle. Historically, the recession typically arrives not during inversion but in the 6–18 months following re-steepening, as credit tightening works its way through the real economy. The Fed Funds rate remains at 4.50% while core PCE has re-accelerated to 2.8% YoY, limiting room for cuts. The ISM Manufacturing PMI printed 48.3 last month, and the JOLTS job-openings-to-unemployed ratio has fallen from 2.0x to 1.1x over 18 months. Synthesize these macro signals: what phase of the credit cycle does this evidence suggest, which equity sectors historically outperform in this phase, and what would change your thesis toward a soft-landing outcome?"
+  },
+  {
+    "prompt_id": "market_analysis_03",
+    "category": "market_analysis",
+    "short_name": "sector_rotation_relative_strength",
+    "content": "You are analyzing a relative-strength rotation chart (Relative Rotation Graph) as of this week. Technology (XLK) is in the Weakening quadrant with a heading further into Lagging; Industrials (XLI) and Energy (XLE) are in the Improving quadrant with strong clockwise momentum; Utilities (XLU) just rotated into Leading from Improving; and Financials (XLF) remain firmly in Leading with decelerating momentum. The SPX has been in a sideways chop for 6 weeks, while the DXY has rallied 3.2% over the same period. Using the relative-strength sector rotation framework outlined by Murphy, explain what this RRG configuration implies about the current market environment, which sectors present the highest-probability long entries, and how you would sequence a portfolio reallocation over the next 4 weeks."
+  },
+  {
+    "prompt_id": "strategy_01a",
+    "category": "strategy",
+    "short_name": "kelly_criterion_calculation",
+    "content": "A discretionary swing trader has backtested a mean-reversion strategy on S&P 500 constituents over 5 years (2019–2024) and obtained the following statistics: win rate 58%, average winner +4.2%, average loser -2.8%, maximum consecutive losses 9, and Calmar ratio 1.4. The trader's account is $250,000 and the strategy fires 3–5 signals per week. Using the Kelly Criterion, calculate the full-Kelly fraction and the optimal bet size in dollars. Then quantify the drawdown a full-Kelly bettor would experience during the observed maximum consecutive-loss run of 9, and explain why this makes full-Kelly impractical for a live discretionary trader."
+  },
+  {
+    "prompt_id": "strategy_01b",
+    "category": "strategy",
+    "short_name": "fractional_kelly_argument",
+    "content": "A swing trader's mean-reversion strategy has a 58% win rate, average winner of +4.2%, and average loser of -2.8% over a 5-year backtest on S&P 500 constituents, yielding a full-Kelly fraction of approximately 29%. The trader's account is $250,000. Referencing Tharp's R-multiples framework and his work on position sizing, argue why a fractional Kelly approach is almost universally preferable to full-Kelly in live markets. Recommend a specific fractional Kelly level for this trader, justify the fraction you chose, and describe how the R-multiple distribution should inform ongoing position-size adjustments as new trade data accumulates."
+  },
+  {
+    "prompt_id": "strategy_02",
+    "category": "strategy",
+    "short_name": "multi_tf_breakout_plan",
+    "content": "You are building a trade plan for a breakout in SPY. On the weekly chart, price has been coiling for 14 weeks in a symmetrical triangle between $492 and $521, with each successive weekly candle closing tighter. On the daily chart, Monday printed a strong bull engulfing bar that closed above the 20-day EMA at $514.30 on 1.8x average volume. The 4-hour chart shows a clean base at $516.40 with no overhead supply until the weekly resistance at $521. Implied volatility (VIX) is at 17, making options reasonably priced. Using a multi-timeframe alignment framework as described by Schwager in describing top traders' approaches, construct a complete trade plan: entry trigger, stop level, two profit targets (partial exit + trailing), and a position-size recommendation for a $100,000 account targeting 1% account risk."
+  },
+  {
+    "prompt_id": "risk_management_01",
+    "category": "risk_management",
+    "short_name": "correlation_spike_crisis",
+    "content": "A portfolio holds 12 equity positions across Technology, Healthcare, Energy, and Consumer Discretionary — each sized at approximately 8% of the $2M portfolio, with individual position correlations averaging 0.28 under normal conditions. A geopolitical shock hits overnight: VIX spikes from 18 to 42 in a single session. Historical data shows that in VIX regimes above 35, average pairwise correlations across S&P 500 sectors surge to 0.78, effectively eliminating diversification benefit. Three of the portfolio's positions are also held by the two largest volatility-targeting funds, creating additional forced-selling risk. Drawing on Taleb's work on correlation instability and fat-tail events, explain why the portfolio's perceived risk (based on normal-regime correlations) was a dangerous illusion, quantify the difference in portfolio volatility between the two correlation regimes, and describe three concrete hedging actions the trader should take now."
+  },
+  {
+    "prompt_id": "risk_management_02",
+    "category": "risk_management",
+    "short_name": "dynamic_sizing_drawdown_limit",
+    "content": "A systematic trend-following fund has a hard drawdown limit of 15% from the high-water mark, enforced by the risk committee. The fund is currently at -11.2% drawdown with $480M AUM. The current portfolio heat (sum of all open position risk as a fraction of NAV) is 8.3%, and the average true range of the flagship S&P futures position has expanded 40% above its 20-day average due to recent volatility. The fund's volatility-targeting model calls for scaling position sizes inversely proportional to realized volatility. Explain, referencing DePrado's work on hierarchical risk parity and the mechanics of volatility-scaled position sizing, how the fund should dynamically resize its book over the next two trading days, at what portfolio heat level it should consider a full stop-out to preserve the 15% limit, and what operational risks arise from liquidating positions into elevated volatility."
+  },
+  {
+    "prompt_id": "decision_science_01",
+    "category": "decision_science",
+    "short_name": "base_rate_neglect_earnings_beat",
+    "content": "MSFT reported Q2 earnings: EPS beat by $0.18 (4.2% above consensus), revenue beat by $1.1B, and Azure growth came in at 33% YoY versus the 29% expected. The stock gapped up 4.8% at the open on heavy volume. A trader is convinced this confirms the bull thesis and wants to add aggressively to an existing long position. However, the base rate for stocks that gap up more than 4% on earnings and sustain those gains through the following month is only 38%, and MSFT's forward P/E is now 36x versus its 5-year median of 30x. Applying Kahneman's concept of base-rate neglect and the planning fallacy, diagnose the cognitive error the trader is at risk of committing, explain how the availability heuristic is distorting the probability assessment, and recommend a structured decision process — including explicit base-rate anchoring — the trader should use before sizing the add."
+  },
+  {
+    "prompt_id": "decision_science_02",
+    "category": "decision_science",
+    "short_name": "bayesian_thesis_update_contradiction",
+    "content": "A macro trader entered a short USD / long EUR position at 1.0820 with a 6-month thesis: (1) US growth decelerates, (2) Fed cuts 3x before year-end, (3) ECB holds longer. The position is currently at 1.0940, +120 pips. New data arrives: US NFP prints +312,000 (consensus was +175,000), average hourly earnings accelerate to +4.1% YoY, and the Atlanta Fed GDPNow tracker revises Q2 growth to 3.4%. Fed funds futures now price only 1.2 cuts by year-end. Using Bayesian reasoning as described by Aronson and applied in disciplined discretionary trading, walk through how to formally update the prior thesis probability in light of this contradictory evidence, explain the difference between thesis invalidation and temporary noise, and specify the exact conditions under which the trader should cut the position versus maintain it with reduced size."
+  },
+  {
+    "prompt_id": "statistical_reasoning_01",
+    "category": "statistical_reasoning",
+    "short_name": "data_mining_bias_backtest",
+    "content": "A quant analyst has run 847 parameter combinations of a moving-average crossover strategy on SPY daily data from 2010–2024. The top-performing combination (12-day EMA / 48-day EMA) produced a Sharpe ratio of 1.84, CAGR of 18.3%, and maximum drawdown of -14.2%. The analyst is now preparing to present this strategy to investors. A colleague raises the concern of data-mining bias. Referencing Aronson's chapter on data mining and the statistical method, explain the difference between in-sample optimization and genuine predictive power, calculate approximately how many independent trials are implied by 847 parameter combinations and what this means for the expected best-Sharpe from pure noise, describe the White's Reality Check or similar bootstrap procedure the analyst should apply, and recommend a minimum out-of-sample test length and walk-forward methodology before the strategy should be considered viable."
+  },
+  {
+    "prompt_id": "statistical_reasoning_02",
+    "category": "statistical_reasoning",
+    "short_name": "small_sample_sharpe_ci",
+    "content": "A retail algorithmic trader has been live-trading a momentum strategy for 63 trading days (approximately 3 months). The strategy has generated 47 trades with a mean daily P&L of +$312, standard deviation of $1,840, and an annualized Sharpe ratio of 2.71 based on these 63 days. The trader believes this Sharpe is evidence of a genuinely superior strategy and wants to double position sizes. Using the statistical framework from Aronson's chapter on hypothesis testing and confidence intervals, calculate the 95% confidence interval for the true Sharpe ratio given this sample size, explain why small-sample Sharpe estimates are severely upward-biased and what the minimum sample size should be for a reliable estimate, and specify the Type I and Type II error risks the trader faces if they scale up based on this evidence alone."
+  },
+  {
+    "prompt_id": "behavioral_finance_01",
+    "category": "behavioral_finance",
+    "short_name": "contrarian_extreme_bullish_sentiment",
+    "content": "The AAII Investor Sentiment Survey shows 58.3% bulls — a 2.5 standard-deviation extreme above the historical mean. The Investors Intelligence Bull/Bear ratio is at 4.2x, its highest level since January 2018. Put/call ratios on SPX options have collapsed to a 5-year low of 0.72. Simultaneously, margin debt as a percentage of market cap has reached 2.8%, and cash allocations in the NAAIM Exposure Index have fallen to 3.2%. However, the 12-month forward EPS growth consensus remains +14%, and the Fed is in a cutting cycle. Drawing on Shiller's work on irrational exuberance, investor psychology, and the long-run equity risk premium, and Howard Marks' framework for identifying where we are in the market cycle, construct a rigorous contrarian analysis: what does the composite sentiment picture imply, what is the historical forward return distribution in this sentiment regime, and what would cause you to override the contrarian signal?"
+  },
+  {
+    "prompt_id": "behavioral_finance_02",
+    "category": "behavioral_finance",
+    "short_name": "disposition_effect_diagnosis_fix",
+    "content": "A discretionary trader reviews his 6-month trade log and notices the following pattern: average holding time for winning trades is 4.2 days; average holding time for losing trades is 11.7 days. His win rate is 62%, but his average winner is +$420 while his average loser is -$890, producing a negative expectancy of -$77 per trade despite a majority of trades being profitable. He also notes that he has taken profits on 14 trades that subsequently ran an additional 15–30% without him. Diagnose this trader's behavioral condition using Shefrin and Statman's disposition effect framework as synthesized by Marks and other behavioral finance researchers, explain the prospect-theory utility function that drives this asymmetric holding behavior, and provide a concrete structured protocol — including specific rules and a pre-defined exit framework — that would systematically correct the behavior."
+  },
+  {
+    "prompt_id": "general_reasoning_01",
+    "category": "general_reasoning",
+    "short_name": "grossman_stiglitz_efficiency_paradox",
+    "content": "A portfolio manager argues that since markets are informationally efficient (EMH), systematic active management cannot persistently generate alpha, and therefore all research and analysis is ultimately futile — the only rational choice is passive indexing. A colleague counters that if everyone indexed, prices would become uninformative and active managers would profit immediately, restoring the incentive to analyze. This is the Grossman-Stiglitz Paradox. Drawing on this paradox, Dalio's principles around radical truth-seeking, and the epistemological arguments in Aronson's work on the limits of technical analysis, construct a nuanced position on the following: Under what conditions can active management generate genuine alpha, what level of market inefficiency must exist for a given strategy's edge to be real rather than illusory, and what does this imply about the appropriate research intensity for a discretionary trader managing $5M versus a quant fund managing $5B?"
+  },
+  {
+    "prompt_id": "general_reasoning_02",
+    "category": "general_reasoning",
+    "short_name": "ooda_loop_intraday_adaptation",
+    "content": "An intraday trader planned a long breakout trade in QQQ at the open, anticipating a continuation of yesterday's strong close. At 9:35 AM, QQQ gaps up 0.8% but immediately reverses and prints a bearish engulfing bar on the 5-minute chart on 2.4x average volume. Simultaneously, a Fed speaker makes an unscheduled comment suggesting the committee is 'not in a rush to cut,' causing a spike in 2-year Treasury yields of 8 bps. The trader's original thesis is now challenged by both price action and macro news within 5 minutes of the open. Applying Boyd's OODA Loop (Observe, Orient, Decide, Act) framework as adapted for fast-paced decision-making environments — and referencing McChrystal's work on adaptive decision-making under uncertainty — walk through how this trader should cycle through the OODA loop in real time, what cognitive biases threaten to distort the Orient phase, and what the optimal decision is given the new information."
+  },
+  {
+    "prompt_id": "strategy_03",
+    "category": "strategy",
+    "short_name": "elder_triple_screen_psychology",
+    "content": "You are applying Elder's Triple Screen system to a trade in AMZN. Screen 1 (weekly MACD histogram): the histogram turned up two bars ago from -1.8, giving a buy signal — the tide is turning bullish. Screen 2 (daily Force Index): the 2-day EMA of Force Index dropped below zero yesterday to -42,000 while the weekly trend is up, creating the buying opportunity Elder's second screen looks for. Screen 3 (intraday): you plan a buy-stop entry at $188.50, just above today's high. Your account is $150,000 and you target 2% risk per trade. However, you notice your last three trades were stopped out, and you feel an urgency to 'make back' the losses quickly. Using Elder's framework for the Triple Screen system AND his work on trading psychology (the three M's: Mind, Method, Money), evaluate the technical setup, calculate proper position sizing given a stop at $181.20, and diagnose the psychological state that threatens to distort the sizing decision."
+  },
+  {
+    "prompt_id": "risk_management_03",
+    "category": "risk_management",
+    "short_name": "antifragile_barbell_construction",
+    "content": "A portfolio manager running a $10M account wants to construct a barbell portfolio as described by Taleb in Antifragile: 85-90% in extremely safe assets and 10-15% in highly speculative, convex bets with asymmetric payoff. The safe end holds short-term Treasuries yielding 4.8%. For the speculative end, the manager is considering: (A) deep OTM put options on SPY (6-month, 20% OTM), (B) call options on three pre-revenue biotech stocks with binary catalyst events, and (C) a basket of distressed-debt recovery plays at 30 cents on the dollar. Each candidate has a different convexity profile. Using Taleb's concept of antifragility, Bernstein's historical analysis of risk and uncertainty, and Natenberg's framework for evaluating option pricing and skew, evaluate which speculative candidates offer genuine positive convexity (small defined loss, large undefined gain), explain why the barbell survives Black Swan events that destroy traditionally diversified portfolios, and design the specific allocation with position sizes."
+  },
+  {
+    "prompt_id": "decision_science_03",
+    "category": "decision_science",
+    "short_name": "reflexivity_feedback_loops",
+    "content": "GameStop (GME) is trading at $28 after a 340% rally over 6 weeks driven by social media momentum and a short squeeze. Short interest has fallen from 140% to 45% of float but remains elevated. The company just announced a $1B at-the-market equity offering, taking advantage of the elevated stock price to raise capital it could never access at fundamental value. Simultaneously, options market makers' delta hedging is creating a gamma squeeze that amplifies upward price moves. The stock's fundamental value by any DCF model is $8-12. Using Soros's theory of reflexivity — where market prices don't merely reflect fundamentals but actively change them (the company now has $1B in new capital it wouldn't otherwise have) — and Meadows's framework for identifying reinforcing vs. balancing feedback loops in complex systems, analyze whether the reflexive feedback loop has genuinely altered GME's fundamental trajectory, identify which loops are self-reinforcing versus self-correcting, and determine whether a trade exists here or whether the correct decision is to stand aside entirely."
+  },
+  {
+    "prompt_id": "behavioral_finance_03",
+    "category": "behavioral_finance",
+    "short_name": "superforecasting_calibration",
+    "content": "A macro strategist assigns the following probabilities to 2025 scenarios: US recession 25%, soft landing 55%, re-acceleration 20%. She is long equities at 70% allocation and considers this positioning 'hedged' because she only assigns 25% to recession. However, her portfolio would lose approximately 25% in a recession scenario, gain 12% in soft landing, and gain 20% in re-acceleration. Applying Tetlock's superforecasting framework — specifically the distinction between hedgehog (one big idea) and fox (many small updates) thinking — and Duke's concept of 'resulting' (judging decision quality by outcomes rather than process), evaluate whether this strategist's portfolio construction actually reflects her stated probabilities, calculate the expected portfolio return and the probability-weighted downside risk, and recommend how she should restructure positions to achieve genuine probability-weighted optimization rather than false confidence from a seemingly moderate recession estimate."
+  },
+  {
+    "prompt_id": "general_reasoning_03",
+    "category": "general_reasoning",
+    "short_name": "mental_models_latticework",
+    "content": "A trader is evaluating whether to take a concentrated long position (15% of portfolio) in a mid-cap semiconductor company trading at $67. The bull case: AI demand is accelerating, the company's newest chip has 40% better performance/watt than competitors, insider buying increased 3x last quarter, and the stock is at a 52-week low due to sector-wide selling. The bear case: the company has $2.1B in debt maturing in 18 months, gross margins compressed from 52% to 41% over two quarters, and two activist investors have taken opposing positions. Using Munger's latticework of mental models — specifically inversion (what would make this fail?), circle of competence (what don't you understand about semiconductors?), and incentive analysis (why are insiders buying and what do activists want?) — combined with Page's many-model framework for aggregating diverse analytical lenses, evaluate this opportunity from at least four distinct analytical frameworks, identify where the models agree and disagree, and make a concrete recommendation with position sizing that reflects the model consensus and your remaining uncertainty."
+  }
+]

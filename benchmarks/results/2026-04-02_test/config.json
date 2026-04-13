@@ -1,0 +1,20 @@
+{
+  "label": "test",
+  "timestamp": "2026-04-02T14:30:40Z",
+  "phase": "independent",
+  "optimization": null,
+  "serve_flags": {
+    "gpu_memory_utilization": 0.4,
+    "enforce_eager": true,
+    "max_model_len": 4096,
+    "speculative_config": null
+  },
+  "environment": {
+    "vllm_version": "0.18.2",
+    "torch_version": "2.12.0",
+    "cuda_version": "13.0",
+    "memory_total_gb": 121.0,
+    "memory_before_gb": 55.0,
+    "git_commit": "abc1234"
+  }
+}

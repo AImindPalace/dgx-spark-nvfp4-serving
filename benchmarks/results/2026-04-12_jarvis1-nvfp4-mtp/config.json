@@ -1,0 +1,47 @@
+{
+  "label": "jarvis1-nvfp4-mtp",
+  "timestamp": "2026-04-12T19:56:30Z",
+  "phase": "shootout",
+  "optimization": "NVFP4+MTP",
+  "serve_flags": {
+    "gpu_memory_utilization": 0.4,
+    "enforce_eager": false,
+    "max_model_len": 4096,
+    "speculative_config": null
+  },
+  "environment": {
+    "vllm_version": "unknown",
+    "torch_version": "unknown",
+    "cuda_version": "unknown",
+    "memory_total_gb": 121.7,
+    "memory_before_gb": 96.3,
+    "git_commit": "5996ded"
+  },
+  "prompts": {
+    "count": 21,
+    "ids": [
+      "market_analysis_01",
+      "market_analysis_02",
+      "market_analysis_03",
+      "strategy_01a",
+      "strategy_01b",
+      "strategy_02",
+      "risk_management_01",
+      "risk_management_02",
+      "decision_science_01",
+      "decision_science_02",
+      "statistical_reasoning_01",
+      "statistical_reasoning_02",
+      "behavioral_finance_01",
+      "behavioral_finance_02",
+      "general_reasoning_01",
+      "general_reasoning_02",
+      "strategy_03",
+      "risk_management_03",
+      "decision_science_03",
+      "behavioral_finance_03",
+      "general_reasoning_03"
+    ],
+    "suite_hash": "9ba2f10952b3"
+  }
+}

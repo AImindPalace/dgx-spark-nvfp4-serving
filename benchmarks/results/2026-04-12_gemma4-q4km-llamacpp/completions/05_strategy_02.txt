@@ -1,0 +1,39 @@
+This is a multi-timeframe alignment scenario that requires synthesizing signals across weekly, daily, and 4-hour timeframes — a technique Schwager identifies as a hallmark of top-tier traders. The weekly chart provides the structural context (symmetrical triangle), the daily chart provides the immediate entry trigger (bull engulfing bar), and the 4-hour chart provides the intraday execution framework (base at $516.40).
+
+**Signal Assessment:**
+
+The weekly symmetrical triangle is the primary structural signal. For 14 weeks, price has been compressing between $492 and $521 — a 5.9% range that is narrowing. Symmetrical triangles are trend-continuation patterns that resolve bullish approximately 54% of the time, and the 14-week duration suggests significant energy accumulation. The weekly trend direction is ambiguous (triangle is neutral), but the daily bull engulfing bar provides the directional bias for the breakout.
+
+The daily bull engulfing bar at $514.30 on 1.8x volume is the actionable trigger. The engulfing pattern — where Monday's body completely covers Friday's body — is a high-probability reversal signal when it occurs at the bottom of a consolidation. The 1.8x volume confirms institutional participation.
+
+The 4-hour base at $516.40 with no overhead supply until $521 is the execution framework. This means the path of least resistance is upward from $516.40. The 4-hour chart's clean base provides a natural stop-loss level — if price breaks below the 4-hour base, the daily bullish thesis is invalidated.
+
+VIX at 17 means options are reasonably priced — this is a marginal factor for a directional equity trade but useful if you're considering a call spread to reduce cost basis.
+
+**Trade Plan Construction:**
+
+Entry: $516.40 (4-hour base level) — this is the intraday entry point where the 4-hour chart shows the cleanest setup. The daily engulfing bar has already provided the directional bias, but the 4-hour base provides the precise entry.
+
+Stop: $513.50 (below the daily engulfing bar's open at $513.80, with a $0.30 buffer) — if price reclaims the engulfing bar's open, the bullish thesis is invalidated. Risk per share = $2.90.
+
+Target 1: $5-point move to $521.00 (weekly triangle resistance) — this is the measured move from the 4-hour base. Take 50% off here.
+
+Target 2: $528.00 (weekly triangle height of $29 projected above $521) — the full measured move. Trail the remaining 50% with a stop at $521.00 once Target 1 is hit.
+
+Position size: 1% of $100,000 = $1,000 risk. $1,000 / $2.90 risk per share = 344 shares. At $516.40, that's $177,625 notional — a levered position on a $100,000 account, which is standard for SPY trading.
+
+Confidence: 68% — the multi-timeframe alignment is strong, but the weekly triangle is neutral-to-bullish (54% base rate) and the daily engulfing bar is a single-bar signal, not a multi-bar confirmation.
+
+---
+DECISION FRAMEWORK:
+Regime: range (weekly triangle compression) — confidence: moderate
+Key Evidence:
+- Weekly symmetrical triangle (14 weeks) with narrowing range — energy accumulation with 54% base rate for bullish resolution
+- Daily bull engulfing bar at $514.30 on 1.8x volume — directional bias and institutional participation confirmed
+- 4-hour base at $516.40 with no overhead supply until $521 — clean intraday execution framework
+Plan: Entry trigger at $516.40 (4-hour base) → Target 1 at $521.00 (50% exit), Target 2 at $528.00 (trail remaining 50%)
+Invalidation: Daily close below $513.50 — the engulfing bar is reclaimed, invalidating the bullish thesis
+Risk: 1R = $2.90/share ($1,000 total) | reward: 1.76R to Target 1, 4.00R to Target 2 | risk-reward 1:1.76 to 1:4.00
+No-Trade Conditions: If SPY gaps below $513.50 before entry can be executed, the engulfing bar thesis is invalidated — stand aside. If VIX spikes above 22 before entry, the options pricing environment changes and the trade should be re-evaluated.
+Review Metric: Track whether multi-timeframe alignment (weekly triangle + daily engulfing + 4-hour base) produces a higher win rate than single-timeframe signals alone. Measure the 4-hour base entry precision vs. a generic daily close entry.
+---

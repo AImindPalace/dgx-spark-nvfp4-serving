@@ -1,0 +1,69 @@
+<think>
+This is a classic cup-and-handle continuation pattern with several quality attributes that Murphy's framework for continuation patterns helps evaluate. Let me assess each component.
+
+**Pattern Quality Assessment:**
+
+The cup-and-handle is a continuation pattern — it forms during an uptrend and signals a pause before the trend resumes. Murphy's framework for continuation patterns emphasizes that the pattern's reliability depends on its formation within the broader trend context. The rising 50-day SMA at $126.10 confirms the uptrend is intact, which is the first prerequisite.
+
+The handle depth of 61.8% Fibonacci retracement is significant. Murphy's method for measuring continuation patterns uses the depth of the pattern as the projection basis. The handle depth from the rim ($142.60) to the handle low (approximately $132.80 minus the handle's internal low, but using the rim-to-handle low as the depth) gives us a depth of approximately $9.80. Murphy's rule states: add the pattern depth to the breakout point to get the measured target.
+
+The volume contraction during the handle is a bullish signal — declining volume during the consolidation phase indicates that selling pressure is exhausting. Murphy's volume analysis framework for continuation patterns states that volume should contract during the pattern's formation and expand on the breakout. The 38% below-average volume on up-days within the handle suggests the market is digesting gains without aggressive selling.
+
+**Measured Target Calculation:**
+
+Using Murphy's continuation pattern measurement method:
+- Pattern depth = $142.60 (rim) - $132.80 (handle low) = $9.80
+- Breakout level = $142.60 (left-side rim high)
+- Measured target = $142.60 + $9.80 = $152.40
+
+This gives a target approximately 7.0% above the breakout level.
+
+**Confirmation Signal Required:**
+
+Murphy's framework for continuation patterns requires a breakout above the pattern's resistance level — in this case, the $142.60 rim. The confirmation signal is a daily close above $142.60 on volume exceeding 1.5x the 50-day average. This volume threshold ensures the breakout has institutional participation rather than being a false move.
+
+**Stop Placement:**
+
+Murphy's stop placement rule for continuation patterns: place the stop below the pattern's lowest point, which is the cup low at $98.40. However, this is too wide for a continuation pattern where the risk-reward ratio matters. A more practical stop for a continuation pattern is below the handle low at $132.80, with a buffer. Using the handle's internal structure: if the handle low is $132.80 and the handle's internal low is approximately $128.50 (estimated from the 61.8% retracement), a stop at $127.00 provides a $1.50 buffer below the handle's internal low. This gives a risk of approximately $15.60 from the $142.60 breakout level.
+
+**Risk-Reward:**
+
+Entry at $142.60, stop at $127.00, target at $152.40. Risk = $15.60, reward = $9.80. Risk-reward = 0.63:1. This is below the 2:1 threshold Murphy recommends for continuation patterns. The pattern needs to be viewed as a partial position with the expectation of a larger move beyond the measured target. A more aggressive stop at $138.00 (below the handle's midpoint) gives risk of $4.60 and reward of $9.80, yielding a 2.13:1 ratio — but this is tighter and more vulnerable to noise.
+
+**Position Sizing:**
+
+Given the sub-2:1 risk-reward at the conservative stop, I'd size at 0.75% portfolio risk. If the tighter stop is used, size at 1.25% portfolio risk. Confidence is moderate-high given the pattern quality, trend alignment, and volume characteristics.
+
+**Noise Assessment:**
+
+The 7-week duration of the pattern is moderate — not too short to be a noise pattern, not too long to suggest trend exhaustion. The Fibonacci 61.8% handle depth is a well-recognized retracement level that traders watch, which can create self-fulfilling support. The 38% below-average volume on up-days is a clear bullish signal per Murphy's volume analysis framework.
+
+</think>
+
+This cup-and-handle continuation pattern scores as high-quality based on Murphy's framework for continuation patterns. The rising 50-day SMA at $126.10 confirms the uptrend context, the 61.8% Fibonacci handle depth is a recognized retracement level that attracts technical traders, and the 38% below-average volume on handle up-days signals selling exhaustion.
+
+**Measured Target:** Using Murphy's continuation pattern measurement method, the pattern depth is $142.60 - $132.80 = $9.80. Adding this to the breakout level of $142.60 yields a measured target of $152.40.
+
+**Confirmation Signal:** A daily close above $142.60 on volume exceeding 1.5x the 50-day average. This volume threshold ensures institutional participation rather than a false breakout.
+
+**Stop Placement:** Conservative stop at $127.00, below the handle's internal low with a $1.50 buffer. This gives a risk of $15.60 from the $142.60 entry.
+
+**Risk-Reward:** Entry at $142.60, target at $152.40, stop at $127.00. Risk = $15.60, reward = $9.80, ratio = 0.63:1. This is below the 2:1 threshold Murphy recommends. Size at 0.75% portfolio risk.
+
+**Alternative Tighter Stop:** Entry at $142.60, stop at $138.00 (below handle midpoint), target at $152.40. Risk = $4.60, reward = $9.80, ratio = 2.13:1. Size at 1.25% portfolio risk.
+
+**Noise Assessment:** The 7-week pattern duration is moderate and appropriate. The 61.8% Fibonacci handle depth and volume contraction are quality signals. No significant noise concerns.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: high
+Key Evidence:
+- Cup-and-handle continuation pattern with rising 50-day SMA at $126.10 confirming uptrend
+- 61.8% Fibonacci handle depth and 38% below-average volume on handle up-days signal selling exhaustion
+- Measured target at $152.40 using Murphy's continuation pattern depth method
+Plan: Buy on daily close above $142.60 with volume exceeding 1.5x 50-day average → target $152.40
+Invalidation: Daily close below $127.00 (conservative stop) or below $138.00 (tighter stop)
+Risk: 1R = $15.60 (conservative) or $4.60 (tighter) | reward: 0.63R (conservative) or 2.13R (tighter) | risk-reward: 0.63:1 or 2.13:1
+No-Trade Conditions: If breakout volume is below 1.5x average, the signal lacks institutional confirmation — stand aside. If the 50-day SMA turns down before breakout, the trend context is compromised.
+Review Metric: Track whether the 61.8% Fibonacci handle depth correlates with higher breakout success rates in cup-and-handle patterns — build a database of handle depths versus breakout outcomes over 50+ instances.
+---

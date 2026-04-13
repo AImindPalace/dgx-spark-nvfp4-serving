@@ -1,0 +1,24 @@
+This is a portfolio risk management scenario with multiple interacting constraints — a hard drawdown limit, a volatility-scaling mandate, and a portfolio heat threshold — all of which must be managed simultaneously. The fund is 3.8 percentage points from its 15% drawdown limit, and the current portfolio heat of 8.3% is well below the typical 10-12% maximum heat level, but the expanding volatility creates a dynamic risk that could push the fund over the limit if not addressed.
+
+Applying DePrado's hierarchical risk parity framework, the fund's position sizing should be determined by the inverse of the volatility of each position, which is then further decomposed hierarchically. The flagship S&P position's ATR has expanded 40% above its 20-day average, meaning the position-level risk has increased by approximately 40% even if the nominal position size remains unchanged. If the fund is currently sized for the 20-day average ATR, the current position is over-sized by roughly 40% relative to what the volatility-targeting model prescribes.
+
+The fund should resize over the next two trading days using a staged approach: Day 1, reduce the S&P position by 25% of its current size (from, say, 100 contracts to 75). This immediately reduces the portfolio heat from 8.3% to approximately 7.5% and creates a buffer below the 15% drawdown limit. Day 2, reduce by another 20% of the remaining size (from 75 to 60 contracts), bringing portfolio heat to approximately 6.8%. The target heat level after both days should be approximately 6.5-7.0%, which provides a comfortable buffer below the 10-12% maximum heat threshold and well below the 15% drawdown limit.
+
+The fund should consider a full stop-out at a portfolio heat level of 10.5% or higher, which is the point where the risk committee's 15% drawdown limit is approximately 2 percentage points away. At that level, the fund has no margin for error — any adverse move in the S&P position could push the drawdown past 15%, triggering a forced liquidation under the hard limit. The current 8.3% heat gives a 2.2 percentage point buffer, which is adequate but requires the staged reduction.
+
+The operational risk of liquidating into elevated volatility is significant. The 40% ATR expansion means bid-ask spreads are likely wider, market impact of selling will be larger, and the risk of adverse price movement during the liquidation itself is elevated. The fund should use limit orders rather than market orders, execute in slices over the two-day window, and avoid selling during the first 30 minutes and last 30 minutes of the trading session when volatility is typically highest. The risk committee should also be informed that the staged reduction may not be completed if market conditions deteriorate further, in which case the full stop-out threshold of 10.5% portfolio heat becomes the immediate trigger.
+
+---
+DECISION FRAMEWORK:
+Regime: volatile — confidence: high
+Key Evidence:
+- Drawdown at -11.2% is 3.8 percentage points from the 15% hard limit
+- S&P ATR expanded 40% above 20-day average, meaning current position is over-sized by ~40%
+- Portfolio heat at 8.3% is below the 10-12% maximum but requires reduction to maintain drawdown buffer
+Plan: Reduce S&P position by 25% on Day 1, then 20% on Day 2, targeting portfolio heat of 6.5-7.0% | Full stop-out trigger at 10.5% portfolio heat
+Target: Maintain drawdown within 15% limit while reducing portfolio heat to 6.5-7.0%
+Invalidation: If S&P ATR expands another 20% beyond current levels (total 60% above 20-day average), accelerate to full stop-out immediately
+Risk: 1R = 3.8 percentage points drawdown buffer | reward: preservation of drawdown limit and risk committee compliance | risk-reward: favorable (preserving capital is the priority)
+No-Trade Conditions: If the fund's drawdown limit were not hard-enforced (i.e., a soft limit), the staged reduction could be more gradual. If portfolio heat is below 7.5% and ATR expansion has stabilized, no further reduction is needed.
+Review Metric: Track whether the staged reduction achieved the target heat level without triggering the 15% drawdown limit — calibrates the adequacy of the 10.5% stop-out threshold for future volatility regimes.
+---

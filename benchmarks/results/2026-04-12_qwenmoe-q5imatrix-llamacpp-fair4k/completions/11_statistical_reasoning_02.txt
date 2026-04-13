@@ -1,0 +1,87 @@
+<think>
+This is a textbook application of Aronson's hypothesis testing framework to evaluate whether a 63-day Sharpe ratio of 2.71 provides sufficient evidence to justify doubling position sizes. The trader is committing what Aronson would call a Type I error — rejecting the null hypothesis that the strategy has no edge when in fact it might.
+
+**Step 1: Calculate the 95% confidence interval for the true Sharpe ratio.**
+
+Aronson's framework treats the Sharpe ratio as a sample statistic with sampling error. The standard error of the Sharpe ratio is approximately:
+
+SE(SR) = √[(1 + 0.5 × SR²) / N]
+
+Where N = 63 days and SR = 2.71:
+
+SE = √[(1 + 0.5 × 2.71²) / 63] = √[(1 + 0.5 × 7.344) / 63] = √[4.672 / 63] = √0.0742 = 0.272
+
+The 95% confidence interval uses the critical value of approximately 1.96:
+
+Lower bound = 2.71 - (1.96 × 0.272) = 2.71 - 0.533 = 2.18
+Upper bound = 2.71 + (1.96 × 0.272) = 2.71 + 0.533 = 3.24
+
+So the 95% confidence interval is [2.18, 3.24].
+
+**Step 2: Assess upward bias in small-sample Sharpe estimates.**
+
+Aronson's framework identifies that small-sample Sharpe ratios are upward-biased because the sample mean is a random variable that can deviate from the true mean in either direction, but the decision to trade is conditional on observing a positive result. This is selection bias — the trader is only looking at strategies that happened to perform well in a short window.
+
+The expected value of a sample Sharpe ratio from a zero-edge strategy (true SR = 0) with N = 63 is approximately:
+
+E[SR_sample | SR_sample > 0] ≈ √(2N/π) × 1/√N = √(2/π) ≈ 0.80
+
+So even a strategy with zero true edge has an expected sample Sharpe of about 0.80 conditional on being positive. A sample Sharpe of 2.71 is 3.4 standard errors above zero (2.71 / 0.272 = 9.96), which is statistically significant — but the confidence interval still includes values as low as 2.18, which is a 20% reduction from the point estimate.
+
+**Step 3: Minimum sample size for reliable estimation.**
+
+Aronson's framework suggests that the standard error should be small enough that the confidence interval is meaningfully narrow. For a Sharpe ratio estimate to be useful, the lower bound of the 95% confidence interval should be above zero (or above some minimum threshold the trader requires).
+
+Setting the lower bound to 1.0 (a modest but positive edge):
+
+SR - 1.96 × √[(1 + 0.5 × SR²) / N] ≥ 1.0
+
+For SR = 2.71:
+2.71 - 1.96 × √[(1 + 0.5 × 7.344) / N] ≥ 1.0
+1.71 ≥ 1.96 × √[4.672 / N]
+0.872 ≥ √[4.672 / N]
+0.761 ≥ 4.672 / N
+N ≥ 6.14
+
+This calculation is circular because it uses the sample SR to determine N. A more practical rule from Aronson's framework is that N should be at least 100-200 observations for any meaningful statistical inference, and 500+ for robust conclusions. At N = 200:
+
+SE = √[4.672 / 200] = √0.0234 = 0.153
+95% CI = [2.71 - 0.30, 2.71 + 0.30] = [2.41, 3.01]
+
+At N = 500:
+SE = √[4.672 / 500] = √0.00934 = 0.097
+95% CI = [2.71 - 0.19, 2.71 + 0.19] = [2.52, 2.90]
+
+**Step 4: Type I and Type II error analysis.**
+
+Type I error (false positive): The trader concludes the strategy has a genuine edge when it doesn't. With a 63-day sample, the probability of observing an SR of 2.71 or higher from a zero-edge strategy is extremely low (p < 0.001), so Type I error risk is small. However, the risk increases dramatically if the trader is testing multiple strategies and only reports the best one — this is the multiple comparisons problem that Aronson's framework addresses.
+
+Type II error (false negative): The trader concludes the strategy has no edge when it actually does. This is less relevant here because the sample SR is already high.
+
+The real risk is not Type I or Type II error in the traditional sense — it's overfitting to a short sample. The strategy may have been lucky, and the true SR could be much lower than 2.71. Doubling position sizes based on a 63-day sample is a classic case of extrapolating from insufficient evidence.
+
+**Recommendation:** Do not double position sizes. The 95% confidence interval of [2.18, 3.24] is wide enough that the true SR could be meaningfully lower. Continue trading at current size, collect at least 200 more observations (approximately 100 trading days), and only then reassess. The expected P&L at current size is $312/day, so waiting 100 days costs approximately $31,200 in opportunity cost — a small price for avoiding the risk of doubling into a strategy that may have a true SR of 1.0 or lower.
+
+</think>
+
+The 63-day Sharpe ratio of 2.71 is statistically impressive but insufficient evidence for doubling position sizes. Applying Aronson's hypothesis testing framework, the 95% confidence interval for the true Sharpe ratio is approximately [2.18, 3.24], calculated using the standard error formula SE(SR) = √[(1 + 0.5 × SR²) / N] = √[(1 + 0.5 × 7.344) / 63] = 0.272, with the interval computed as 2.71 ± (1.96 × 0.272).
+
+The critical insight from Aronson's framework is that the confidence interval is wide enough that the true Sharpe ratio could be 20% lower than the point estimate — and if the trader is selecting from multiple tested strategies (the multiple comparisons problem), the probability that the true SR is near zero increases substantially. A sample of 63 observations provides only moderate statistical power; Aronson's framework suggests a minimum of 200 observations for reliable inference, with 500+ for robust conclusions.
+
+The Type I error risk (concluding the strategy has an edge when it doesn't) is low for a single strategy at p < 0.001, but the Type II error risk (missing that the strategy's edge is smaller than estimated) is high — the true SR could be 1.5 or lower, which would still be profitable but not justify doubling size. The expected daily P&L of $312 with a standard deviation of $1,840 means the strategy experiences daily losses of $1,840 or more roughly 16% of the time (one standard deviation below the mean). Doubling position sizes would double both the expected gain ($624/day) and the expected loss magnitude ($3,680/day), dramatically increasing the probability of a drawdown that exceeds the trader's risk tolerance.
+
+The correct action is to maintain current position sizes and collect at least 200 more observations (approximately 100 trading days). At N = 200, the 95% confidence interval narrows to approximately [2.41, 3.01] assuming the SR remains stable, providing much tighter bounds on the true edge. The opportunity cost of waiting is approximately $31,200 in foregone gains ($312 × 100 days), which is a small price to pay for avoiding the risk of doubling into a strategy with a potentially much lower true Sharpe ratio.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate
+Key Evidence:
+- 63-day Sharpe ratio of 2.71 has a 95% confidence interval of [2.18, 3.24], indicating substantial estimation uncertainty
+- Sample size of 63 is below Aronson's minimum threshold of 200 observations for reliable statistical inference
+- Daily P&L standard deviation of $1,840 means doubling position sizes would expose the account to losses of $3,680/day or more with 16% probability
+Plan: Maintain current position sizes → collect 200+ additional observations (approximately 100 trading days) → recalculate Sharpe ratio and confidence interval → only consider doubling size if the 95% lower bound remains above 1.5
+Invalidation: If the Sharpe ratio drops below 1.5 during the observation period, the strategy's edge may be illusory and position sizing should be reduced, not increased
+Risk: Current daily risk exposure is $1,840 (1 standard deviation) | Doubling would increase to $3,680, raising the probability of a drawdown exceeding 2R to approximately 2.5% per day | Opportunity cost of waiting: ~$31,200 over 100 days
+No-Trade Conditions: Do not double position sizes under any circumstances until the sample size reaches at least 200 trading days and the 95% confidence interval lower bound exceeds 1.5. Also do not double if the strategy's maximum drawdown during the observation period exceeds 3R, as this indicates the true risk is higher than the sample statistics suggest.
+Review Metric: Track the realized Sharpe ratio over the next 100 trading days and compare it to the 95% confidence interval from the initial 63-day sample — this tests whether the initial estimate was an upward-biased sample artifact or a reliable signal of genuine edge.
+---

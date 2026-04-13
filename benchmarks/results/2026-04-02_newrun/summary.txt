@@ -1,0 +1,5 @@
+Experiment: newrun (independent)
+Date: 2026-04-02
+Baseline: 9.5 tok/s | This run: 11.0 tok/s (+15.8%)
+TTFT: 300.0ms (baseline: 500.0ms)
+Memory: 56.0 GB

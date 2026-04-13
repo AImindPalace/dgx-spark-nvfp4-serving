@@ -1,0 +1,31 @@
+This scenario requires applying Tharp's R-multiples framework and his position sizing principles to a mean-reversion strategy with a 58% win rate, +4.2% average winner, and -2.8% average loser. The full-Kelly fraction is approximately 29%, but Tharp's work demonstrates that full-Kelly is almost never the optimal live-market sizing method.
+
+**The Full-Kelly Problem in Live Markets**
+
+Tharp's R-multiples framework provides a powerful tool for sizing: the average R-multiple is (0.58 × 4.2% / 2.8%) = 0.87R, and the average loss is -1R. The full-Kelly fraction is 29%, which means risking 29% of equity on every trade — a position size that would be devastating during a drawdown. Tharp's work on the Kelly criterion's limitations in live trading reveals three critical problems with full-Kelly: (1) parameter estimation error — the 58% win rate and the +4.2%/-2.8% distribution are estimates from historical data, not certainties. Any overestimation of the win rate or underestimation of the loss distribution leads to overbetting, which can produce negative expected returns. (2) the Kelly criterion assumes you know your true edge precisely, but in live markets your edge is constantly changing as market regimes shift. (3) full-Kelly produces maximum growth but also maximum volatility — the drawdown depth is far greater than at any fractional Kelly level.
+
+**The Fractional Kelly Recommendation**
+
+Tharp's work on position sizing and his R-multiples framework suggest that a fractional Kelly approach is almost universally preferable. The specific fraction depends on the trader's risk tolerance and the degree of confidence in the backtest results. For a swing trader with a 5-year backtest on a liquid universe like S&P 500 constituents, a half-Kelly (14.5%) or even a quarter-Kelly (7.25%) approach is more appropriate. I recommend a quarter-Kelly (7.25% of equity) as the starting point. This means risking approximately $18,125 per trade on a $250,000 account, which translates to a position size of roughly $18,125 / 2.8% = $647,321 in notional value — approximately 2.6x account equity.
+
+**Ongoing Position-Size Adjustments**
+
+As new trade data accumulates, the R-multiple distribution should be updated. Tharp's framework provides a concrete method: track the actual R-multiple distribution of live trades, not just the average. If the live win rate drifts below 55%, reduce the fractional Kelly to 1/6th or lower. If the average R-multiple expands above 1.0R, you may increase to half-Kelly. The key is to use the live R-multiple distribution as your primary sizing input, not the backtest parameters. This is Tharp's principle of using the R-multiple distribution to determine position size — the distribution itself, not just the average, contains the information about tail risk that full-Kelly ignores.
+
+**What Could Go Wrong**
+
+The primary risk is that the backtest's +4.2%/-2.8% distribution is a poor estimate of live performance. Mean-reversion strategies are particularly sensitive to regime changes — a shift from a range-bound to a trending market can compress the win rate below 50% and widen the average loser. If the live win rate drops below 52%, the full-Kelly fraction becomes negative, meaning the strategy has no edge and should be stopped entirely. The quarter-Kelly approach provides a buffer against this possibility, but it does not eliminate it.
+
+---
+DECISION FRAMEWORK:
+Regime: range — confidence: moderate
+Key Evidence:
+- Full-Kelly at 29% is optimal only in theory; live-market parameter uncertainty makes fractional Kelly necessary
+- Quarter-Kelly (7.25%) provides a 3.7x safety margin against backtest overestimation
+- Live R-multiple distribution is the primary sizing input, not backtest averages
+Plan: Enter quarter-Kelly position sizing at 7.25% of equity ($18,125 risk per trade) → entry trigger is the mean-reversion signal from the backtest framework → target is the +4.2% average winner (approximately 1.5R)
+Invalidation: Live win rate drops below 52% over a 50-trade sample, or live average R-multiple falls below 0.7R, indicating the backtest edge has degraded
+Risk: 1R = $18,125 (7.25% of equity) | reward: 1.5R = $27,188 | risk-reward 1:1.5
+No-Trade Conditions: If the live R-multiple distribution shows a skew toward larger losses (average loser exceeding -3.5%), or if the strategy has not been live-tested for at least 30 trades, do not deploy full size
+Review Metric: Track the live R-multiple distribution vs. backtest distribution weekly — any divergence of more than 15% in win rate or loss magnitude requires immediate position-size reduction
+---

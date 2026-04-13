@@ -1,0 +1,85 @@
+<think>
+This is a direct application of the Kelly Criterion framework to a real-world trading scenario, requiring both the mathematical calculation and the critical behavioral interpretation that Kelly's original formulation doesn't address.
+
+**Kelly Calculation:**
+
+The Kelly formula for a binary bet is: f* = (p × b - q) / b
+
+Where:
+- p = probability of winning = 0.58
+- q = probability of losing = 1 - 0.58 = 0.42
+- b = payoff ratio = average winner / average loser = 4.2 / 2.8 = 1.5
+
+Plugging in: f* = (0.58 × 1.5 - 0.42) / 1.5 = (0.87 - 0.42) / 1.5 = 0.45 / 1.5 = 0.30
+
+The full-Kelly fraction is 30% of the account per trade.
+
+At $250,000, full-Kelly bet size = $250,000 × 0.30 = $75,000 per trade.
+
+**Drawdown During the 9-Trade Loss Run:**
+
+This is where the Kelly framework reveals its most dangerous property. Each loss reduces the account by 30% of the current balance. After 9 consecutive losses:
+
+Account after 9 losses = $250,000 × (1 - 0.30)^9 = $250,000 × 0.70^9 = $250,000 × 0.04035 = $10,088
+
+The trader would have lost 96% of their capital during the observed maximum consecutive-loss run.
+
+**Why Full-Kelly Is Impractical for Live Discretionary Traders:**
+
+Three fundamental problems make full-Kelly unusable in practice:
+
+1. **Parameter estimation error:** The Kelly fraction is extremely sensitive to the input parameters. If the true win rate is 55% rather than 58% (a plausible estimation error), the Kelly fraction drops to: f* = (0.55 × 1.5 - 0.45) / 1.5 = (0.825 - 0.45) / 1.5 = 0.375 / 1.5 = 0.25, or 25%. But if the true payoff ratio is 1.3 rather than 1.5, Kelly drops to: f* = (0.58 × 1.3 - 0.42) / 1.3 = (0.754 - 0.42) / 1.3 = 0.334 / 1.3 = 0.257. The backtested parameters are estimates with standard errors, and Kelly amplifies estimation error into catastrophic overbetting. This is the overfitting problem that Aronson's framework addresses.
+
+2. **Drawdown psychology:** A 96% drawdown is psychologically impossible for most traders to endure. Even if the trader has the mathematical conviction, the behavioral reality is that they will abandon the strategy during the drawdown. This is the gap between what the Kelly framework assumes (a rational agent who can endure any drawdown) and what real traders experience.
+
+3. **Kelly's own warning:** Kelly himself recommended half-Kelly (f* / 2) as a practical compromise. Half-Kelly at 15% per trade produces a maximum drawdown of $250,000 × 0.85^9 = $250,000 × 0.2316 = $57,900, or a 76.8% drawdown — still severe but more survivable. Quarter-Kelly at 7.5% produces: $250,000 × 0.925^9 = $250,000 × 0.505 = $126,250, or a 49.5% drawdown — the most survivable of the three.
+
+The practical recommendation is quarter-Kelly: $250,000 × 0.075 = $18,750 per trade. This preserves the mathematical edge while making the drawdown survivable.
+
+**Signal Frequency Consideration:**
+
+With 3–5 signals per week, the trader faces 156–260 trades per year. At quarter-Kelly, the annual turnover is substantial, and the trader must maintain discipline across hundreds of decisions. This is where the decision science framework becomes relevant: the trader needs a pre-commitment system to prevent emotional deviations from the plan during drawdowns.
+
+</think>
+
+The Kelly Criterion calculation yields a full-Kelly fraction of 30%, meaning $75,000 per trade on a $250,000 account. However, this is mathematically correct but practically catastrophic.
+
+**Kelly Calculation:**
+- Win rate p = 0.58
+- Loss rate q = 0.42
+- Payoff ratio b = 4.2 / 2.8 = 1.5
+- Kelly fraction f* = (0.58 × 1.5 - 0.42) / 1.5 = 0.30 or 30%
+- Full-Kelly bet size: $250,000 × 0.30 = $75,000 per trade
+
+**Drawdown During the 9-Trade Loss Run:**
+- Account after 9 consecutive losses: $250,000 × (1 - 0.30)^9 = $250,000 × 0.04035 = $10,088
+- Maximum drawdown: 96% of capital
+
+**Why Full-Kelly Fails in Practice:**
+
+Kelly's original formulation assumes a rational agent who can endure any drawdown. Real traders cannot. The 96% drawdown during the observed maximum consecutive-loss run would cause virtually every discretionary trader to abandon the strategy. This is the gap between Kelly's theoretical framework and the behavioral reality of live trading.
+
+**Parameter Estimation Error:**
+The Kelly fraction is extremely sensitive to input parameters. If the true win rate is 55% rather than 58%, Kelly drops to 25%. If the true payoff ratio is 1.3 rather than 1.5, Kelly drops to 25.7%. The backtested parameters have standard errors, and Kelly amplifies estimation error into overbetting. This is the overfitting problem that Aronson's framework addresses — the backtested statistics are estimates, not truths.
+
+**Practical Recommendation — Quarter-Kelly:**
+Kelly himself recommended half-Kelly as a practical compromise. Given the parameter uncertainty and the 96% drawdown at full-Kelly, quarter-Kelly is the most prudent choice:
+- Quarter-Kelly fraction: 7.5%
+- Bet size: $250,000 × 0.075 = $18,750 per trade
+- Drawdown during 9-trade loss run: $250,000 × 0.925^9 = $126,250 (49.5% drawdown)
+
+This preserves the mathematical edge while making the drawdown survivable. The trader must also implement a pre-commitment system — a written trading plan that specifies the bet sizing rule and prohibits deviations during drawdowns. With 156–260 trades per year at 3–5 signals weekly, the trader faces hundreds of decisions where discipline is the primary skill.
+
+---
+DECISION FRAMEWORK:
+Regime: range — confidence: moderate
+Key Evidence:
+- Kelly fraction of 30% produces a 96% drawdown during the observed 9-trade loss run, making full-Kelly psychologically impossible to execute
+- Quarter-Kelly at 7.5% ($18,750 per trade) produces a 49.5% drawdown during the same run, which is survivable
+- Parameter estimation error in the backtested win rate and payoff ratio means the true Kelly fraction is likely lower than 30%
+Plan: Enter trades at quarter-Kelly bet size of $18,750 per signal, maintaining 3–5 signals per week → target: preserve the mathematical edge while surviving the drawdowns
+Invalidation: If the strategy's win rate drops below 52% on a rolling 100-trade basis, the Kelly fraction becomes negative and the strategy should be abandoned entirely
+Risk: 1R = $18,750 per trade | reward: 1.5R per winner | risk-reward 1:1.5 | maximum drawdown under quarter-Kelly: ~50%
+No-Trade Conditions: Do not increase bet size above quarter-Kelly during drawdowns; do not trade during the first 2 weeks after a new market regime begins (e.g., VIX spike above 30); do not trade if the trader has deviated from the plan more than twice in the prior 50 trades
+Review Metric: Track the realized win rate and average payoff ratio quarterly; if the realized Kelly fraction falls below 15%, reduce to half-Kelly (3.75%)
+---

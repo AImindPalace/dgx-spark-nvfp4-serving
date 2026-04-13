@@ -1,0 +1,29 @@
+This scenario is a textbook example of Kahneman's base-rate neglect combined with the availability heuristic, and the trader's impulse to add aggressively is the planning fallacy in action. Let me diagnose the cognitive errors and then prescribe a structured decision framework.
+
+**Cognitive Error Diagnosis:** The trader is experiencing three overlapping biases. First, base-rate neglect: the 38% base rate for sustaining 4%+ earnings gaps is the most informative piece of data, but it's being ignored in favor of the vivid, recent narrative of a beat-and-raise quarter. Kahneman's research shows that people systematically underweight base rates when a compelling story is available. The beat-by-$0.18, revenue beat of $1.1B, and Azure at 33% YoY are vivid, recent, and emotionally resonant — exactly the kind of information that drives availability heuristic-driven overestimation of probability. Second, the availability heuristic is inflating the perceived likelihood of continued gains: the gap up is visible, the numbers are impressive, and the Azure growth headline is exciting. Each of these makes the bullish outcome more available in memory, which Kahneman shows causes people to overestimate its probability. Third, the planning fallacy is driving the aggressive sizing: the trader is projecting the current momentum forward without accounting for the regression toward the mean that the base rate predicts. The forward P/E at 36x versus the 5-year median of 30x is a critical data point — the stock is already priced for continued outperformance, meaning the easy money has been made.
+
+**Structured Decision Process:** Applying Kahneman's method of explicit base-rate anchoring, the trader should follow this 4-step framework before adding to the position:
+
+1. **Explicit Base-Rate Anchor:** Write down the 38% base rate for sustained 4%+ earnings gaps as the first line of the trade thesis. This is the starting point, not the conclusion. Every subsequent reason to add must be weighed against this 38% starting probability.
+
+2. **Identify Specific Additive Evidence:** List each reason the current situation differs from the base rate — Azure growth at 33% vs. 29% expected (a 4 percentage point beat), EPS beat of $0.18, revenue beat of $1.1B. Quantify each: how much does each factor move the probability from 38%? A 4 percentage point Azure beat might add 5-7 percentage points of probability, but only if Azure growth is a leading indicator for the stock's forward performance — which requires its own validation.
+
+3. **Explicit Base-Rate Neglect Check:** Ask: "If I had never seen today's earnings report and only knew the 38% base rate, what position size would I be comfortable with?" Compare that to the planned add. The gap between the two reveals the availability heuristic's distortion.
+
+4. **P/E Mean-Reversion Check:** The forward P/E at 36x versus the 5-year median of 30x means the stock needs to grow earnings by at least 20% just to return to its median valuation. This is a concrete, quantifiable constraint that the availability heuristic obscures.
+
+**Trade Recommendation:** If the trader's current position is already long, the add should be sized conservatively — no more than 25% of the existing position — with a stop at $375 (approximately 5% below the gap-up close, which would represent a failure of the earnings gap to hold). The target should be $410, which represents a modest continuation of the post-earnings momentum, but the probability-weighted expected value must be calculated using the 38% base rate as the starting point. Confidence: moderate — the earnings beat is real but the base rate and valuation suggest the easy money has been made.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate
+Key Evidence:
+- 38% base rate for sustained 4%+ earnings gaps provides the probability anchor
+- Forward P/E at 36x vs. 5-year median of 30x indicates 20% earnings growth needed for mean reversion
+- Azure growth beat of 4 percentage points is the strongest additive factor but requires validation as a leading indicator
+Plan: Add to existing long position at $385 (gap-up close) at 25% of current position size → target $410
+Invalidation: Close below $375 on volume exceeding 1.5x 20-day average, indicating the earnings gap is failing
+Risk: 1R = $10.00 (from $375 stop to $385 entry) | reward: 2.5R ($385 to $410) | risk-reward 2.5:1
+No-Trade Conditions: If the 38% base rate is not explicitly written in the trade thesis before sizing, or if the forward P/E exceeds 38x, or if the broader market is in a confirmed downtrend
+Review Metric: Track the actual 1-month outcome vs. the 38% base rate prediction — was the explicit base-rate anchoring method effective in preventing oversizing?
+---

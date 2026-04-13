@@ -1,0 +1,103 @@
+<think>
+This is a textbook data-mining problem that Aronson addresses directly in his chapter on the statistical method. The core issue is distinguishing between genuine predictive power and the inevitable best result from searching through many parameter combinations.
+
+**In-Sample vs. Genuine Predictive Power**
+
+Aronson explains that in-sample optimization is the process of finding the parameter combination that would have produced the best historical results. This is fundamentally different from genuine predictive power, which is the ability to produce good results on data the model has never seen. The critical insight is that when you search through many parameter combinations, you are guaranteed to find at least one that looks good — even if all parameters are random noise.
+
+Aronson provides a concrete example: if you test 100 random parameter combinations, you should expect the best one to have a Sharpe ratio of approximately 0.5–0.7 just from random chance. With 847 combinations, the expected best-Sharpe from pure noise is substantially higher.
+
+**Estimating Independent Trials**
+
+The key question is: how many independent trials does 847 parameter combinations represent? This is not 847 — many combinations are highly correlated. Two EMA pairs that are close together (e.g., 12/48 and 13/49) will produce nearly identical results. A rough rule of thumb is that independent trials are approximately the square root of the total combinations when parameters are smoothly varying, so √847 ≈ 29 independent trials.
+
+Using Aronson's framework for the expected best-Sharpe from random data, with approximately 29 independent trials, the expected best-Sharpe from pure noise is approximately 0.8–1.0. The observed 1.84 is higher, but not dramatically so — it could easily be a statistical fluke.
+
+**White's Reality Check**
+
+Aronson describes White's Reality Check (also called the bootstrap method) as the proper statistical procedure. The procedure is:
+
+1. Generate 1,000+ random parameter combinations (not just the 847 tested)
+2. For each random combination, compute the Sharpe ratio
+3. Find the best Sharpe ratio among all random combinations
+4. Repeat steps 1–3 many times (1,000+ iterations)
+5. Build a distribution of best-Sharpe values from pure noise
+6. Compare the actual best-Sharpe (1.84) to this distribution
+
+If the actual best-Sharpe exceeds the 95th percentile of the noise distribution, the strategy has genuine predictive power at the 5% significance level. If it's below, the results are likely due to data mining.
+
+**Walk-Forward and Out-of-Sample Requirements**
+
+Aronson's framework for walk-forward testing requires:
+
+1. **Out-of-sample test length**: At least 1 year of daily data (252 trading days) for a daily strategy. For a strategy with a 12/48 EMA crossover, the average trade duration is approximately 30 days, so 252 days provides roughly 8 independent trade cycles.
+
+2. **Walk-forward methodology**: Divide the data into training and testing windows that roll forward. For example:
+   - Train on 2010–2015 (6 years)
+   - Test on 2016–2017 (2 years)
+   - Retrain on 2010–2017
+   - Test on 2018–2019
+   - Retrain on 2010–2019
+   - Test on 2020–2024 (5 years)
+
+3. **Minimum performance threshold**: The out-of-sample Sharpe should be at least 0.7 (roughly half the in-sample Sharpe) to be considered viable. The 2018–2024 period includes the 2020 COVID crash, which is a critical stress test.
+
+4. **Parameter stability**: The optimal parameters should not change dramatically between training windows. If the 12/48 combination works in 2010–2015 but the optimal parameters shift to 8/32 or 20/60 in later windows, the strategy is overfit to specific market regimes.
+
+**Recommendation**
+
+The analyst should not present the 1.84 Sharpe ratio to investors without first running the White's Reality Check and walk-forward analysis. The strategy may be viable, but the current evidence is insufficient to distinguish genuine edge from data-mining artifact.
+
+---
+This analysis draws directly from Aronson's chapter on data mining and the statistical method, which provides the framework for distinguishing genuine predictive power from the inevitable best result from searching through many parameter combinations.
+
+</think>
+
+The colleague's concern about data-mining bias is well-founded and requires immediate attention before any investor presentation. Aronson's framework for the statistical method provides the rigorous approach to resolve this.
+
+**In-Sample vs. Genuine Predictive Power**
+
+In-sample optimization — finding the parameter combination that produced the best historical results — is fundamentally different from genuine predictive power. With 847 parameter combinations tested, you are guaranteed to find at least one that looks good even if all parameters are random noise. Aronson's analysis shows that the expected best-Sharpe from pure random data depends on the number of independent trials.
+
+**Estimating Independent Trials**
+
+The 847 combinations are not 847 independent trials. EMA pairs that are close together (e.g., 12/48 vs. 13/49) produce highly correlated results. A conservative estimate using the square-root rule for smoothly varying parameters: √847 ≈ 29 independent trials. Using Aronson's framework, the expected best-Sharpe from 29 independent random trials is approximately 0.8–1.0. The observed 1.84 is higher, but this gap is not large enough to rule out data mining with high confidence.
+
+**White's Reality Check — The Required Procedure**
+
+The analyst must apply White's Reality Check (bootstrap method) before presenting to investors:
+
+1. Generate 1,000+ random parameter combinations (not just the 847 tested)
+2. For each, compute the Sharpe ratio on the full 2010–2024 dataset
+3. Record the maximum Sharpe from each random set
+4. Repeat steps 1–3 for 1,000+ iterations to build a distribution of best-Sharpe values from pure noise
+5. Compare the actual best-Sharpe of 1.84 to this distribution
+
+If 1.84 exceeds the 95th percentile of the noise distribution, the strategy has genuine predictive power at the 5% significance level. If it falls below, the results are likely a data-mining artifact. This procedure is non-negotiable — presenting a strategy without it is misleading.
+
+**Walk-Forward Testing Protocol**
+
+Before any investor presentation, the strategy must pass walk-forward testing:
+
+- **Out-of-sample test length**: Minimum 1 year of daily data (252 trading days). For a 12/48 EMA crossover with average trade duration of ~30 days, this provides approximately 8 independent trade cycles.
+- **Walk-forward structure**:
+  - Train: 2010–2015 (6 years) → Test: 2016–2017 (2 years)
+  - Retrain: 2010–2017 → Test: 2018–2019 (2 years)
+  - Retrain: 2010–2019 → Test: 2020–2024 (5 years, includes COVID crash)
+- **Performance threshold**: Out-of-sample Sharpe must be at least 0.7 (roughly half the in-sample Sharpe of 1.84). Maximum drawdown must not exceed -20%.
+- **Parameter stability check**: The optimal parameters should remain within the 10–15 EMA / 45–55 EMA range across all training windows. If optimal parameters shift dramatically (e.g., to 5/20 or 30/100), the strategy is regime-dependent and not robust.
+
+**Investor Presentation Recommendation**
+
+Do not present the 1.84 Sharpe ratio as the strategy's expected return. Instead:
+
+1. Present the White's Reality Check p-value (e.g., "the probability that a Sharpe of 1.84 or better arises from random data is 3.2%")
+2. Present the walk-forward Sharpe ratio (likely 0.8–1.2 if the strategy has genuine edge)
+3. Present the maximum drawdown from walk-forward testing
+4. State the strategy's capacity, turnover, and transaction cost assumptions
+5. Allocate no more than 5% of portfolio capital to the strategy until it has demonstrated 12+ months of live out-of-sample performance
+
+The colleague's concern is the correct instinct — data-mining bias is the single most important risk in quantitative strategy development, and Aronson's statistical method is the proper tool to address it.
+
+---
+This analysis is grounded in Aronson's chapter on data mining and the statistical method, which provides the framework for distinguishing genuine predictive power from the inevitable best result from searching through many parameter combinations. The White's Reality Check procedure is the standard method for addressing this problem. Confidence in the strategy's viability is low before the walk-forward test is completed.

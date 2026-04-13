@@ -1,0 +1,31 @@
+This scenario is a textbook case of the planning fallacy operating in real-time, compounded by base-rate neglect and the availability heuristic. The trader is about to commit a classic error described by Kahneman: treating a single, vivid, recent event as representative of a broader probability distribution, while ignoring the underlying base rates that govern the outcome.
+
+**Base-Rate Neglect and the Planning Fallacy:** The trader's conviction that this gap-up "confirms the bull thesis" is the planning fallacy in action. The base rate for stocks gapping up more than 4% on earnings and sustaining gains through the following month is only 38%. This means 62% of the time, the gap-up fades or reverses within 30 days. The trader is focusing entirely on the specific, vivid details of this quarter's beat — the $0.18 EPS surprise, the $1.1B revenue beat, the 33% Azure growth — and using these as evidence that this time is different. But the base rate already accounts for all the factors the trader is celebrating: strong earnings, strong revenue, strong growth. The base rate is the aggregate of all such instances, and it tells you that the majority of the time, the gap-up doesn't hold.
+
+**Availability Heuristic Distortion:** The availability heuristic is the mechanism driving this error. The earnings beat is recent, vivid, and emotionally charged — it's "available" in the trader's mind with high salience. The base rate of 38% is abstract, statistical, and emotionally neutral — it's not available. Kahneman's research shows that people systematically overweight the probability of events that are easily recalled. The trader's brain is constructing a probability estimate that is far higher than 38% because the evidence for the bull case is so accessible.
+
+**The Forward P/E Context:** The forward P/E at 36x versus the 5-year median of 30x is a critical data point the trader is likely ignoring. This means the market is pricing in continued outperformance — the stock is 20% more expensive than its historical average. The earnings beat has already been priced in by the 4.8% gap-up. The question is whether the market can sustain paying 36x forward earnings. This is a valuation anchor that should be explicitly included in any decision framework.
+
+**Structured Decision Process — The Base-Rate Anchoring Method:** Before adding to the position, the trader should use a structured decision process that forces base-rate integration:
+
+1. **Explicit Base-Rate Anchor:** Write down the 38% base rate for sustained gap-ups. This is the starting point, not a conclusion.
+2. **Specific Adjustments:** Identify 2-3 specific factors that might push the probability above or below 38%. For MSFT, the Azure growth at 33% (vs. 29% expected) is a positive adjustment. The forward P/E at 36x versus 30x median is a negative adjustment. The net effect may be neutral or slightly negative.
+3. **Explicit Probability Estimate:** Write down a probability estimate before looking at any additional data. This forces the trader to engage with the base rate rather than letting the availability heuristic dominate.
+4. **Position Sizing Rule:** Size the add based on the probability estimate, not conviction. If the adjusted probability is roughly 40%, the add should be no larger than 40% of the target position size, and the trader should plan for a stop-loss at the pre-gap level.
+5. **Time-Based Review:** Schedule a review for 30 days post-gap. If the stock hasn't held above the gap level by then, the base rate has been validated and the add should be trimmed.
+
+The key insight is that the trader's conviction is a symptom of the availability heuristic, not evidence of superior analysis. The structured process forces the base rate back into the decision.
+
+---
+DECISION FRAMEWORK:
+Regime: bull — confidence: moderate
+Key Evidence:
+- Gap-up of 4.8% on strong earnings beat ($0.18 EPS, $1.1B revenue, 33% Azure growth) — vivid, available evidence
+- Base rate for sustained gap-ups above 4% is only 38% — 62% of the time the gap fades
+- Forward P/E at 36x versus 5-year median of 30x — 20% premium to historical average
+Plan: Add to position at no more than 40% of target size, entry at gap-up level, with explicit base-rate anchoring in the decision process
+Invalidation: Price closes below the pre-gap level within 30 days — this would confirm the base rate and trigger a full exit of the add
+Risk: 1R = $4.80 per share (gap-up distance) | reward: 0.5R (conservative, based on 38% base rate) | risk-reward 1:0.5 — below ideal, requires probability-weighted sizing
+No-Trade Conditions: If the trader cannot articulate the base rate and specific adjustments before adding, the add should not proceed — the availability heuristic is too dominant
+Review Metric: Track whether the 38% base rate held for this specific instance — was the adjusted probability estimate accurate?
+---

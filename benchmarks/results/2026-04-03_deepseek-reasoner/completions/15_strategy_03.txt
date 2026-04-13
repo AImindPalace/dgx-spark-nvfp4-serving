@@ -1,0 +1,61 @@
+## Evaluation Using Elder's Triple Screen System
+
+### Technical Setup Assessment
+
+**Screen 1 (Weekly Trend - "The Tide"):** ✅ **Valid**  
+Weekly MACD histogram turning up from -1.8 confirms the primary trend is shifting bullish. This satisfies Elder's first screen requirement.
+
+**Screen 2 (Daily Oscillator - "The Wave"):** ✅ **Valid**  
+Daily Force Index (2-day EMA) dropping below zero (-42,000) while the weekly trend is up creates the "pullback against the tide" opportunity Elder seeks. This is a proper second-screen setup.
+
+**Screen 3 (Entry/Exit Timing):** ⚠️ **Requires Verification**  
+- Buy-stop at $188.50 (above today's high): Reasonable breakout entry
+- Stop at $181.20: Creates $7.30 risk per share
+- **Critical Check:** Is $181.20 a logical technical level on the daily chart? This stop represents a 3.9% decline from entry—somewhat wide but possibly justified if it aligns with a swing low or support.
+
+### Position Sizing Calculation
+
+**Account:** $150,000  
+**Risk Per Trade:** 2% = $3,000  
+**Trade Risk:** $188.50 - $181.20 = $7.30 per share  
+
+**Proper Position Size:**
+\[
+\text{Shares} = \frac{\text{Account Risk}}{\text{Trade Risk}} = \frac{3000}{7.30} \approx 410 \text{ shares}
+\]
+
+**Position Value:** 410 × $188.50 = $77,285  
+**Position as % of Account:** 51.5% (acceptable given the defined risk)
+
+**Key Discipline:** The $3,000 risk is **absolute**—it cannot be exceeded regardless of recent losses or psychological pressure.
+
+### Psychological Diagnosis (Elder's Three M's)
+
+**1. Mind - The Critical Problem:**
+- **"Make back" mentality:** You're experiencing **revenge trading**—a classic emotional trap where traders abandon discipline to recoup losses quickly.
+- **Three consecutive losses:** This creates heightened emotional vulnerability. Elder emphasizes that after such a streak, traders often either become risk-averse (missing good setups) or risk-aggressive (overtrading).
+- **Urgency feeling:** Direct violation of Elder's principle: "The market will be there tomorrow." True opportunities don't require urgency.
+
+**2. Method - Threat to System Integrity:**
+The Triple Screen method remains valid technically, but your psychological state threatens to corrupt its execution through:
+- Potential stop adjustment (widening stops to "avoid another loss")
+- Entering before confirmation (fearing "missing the move")
+- Exiting winners prematurely ("just take the profit")
+
+**3. Money - Risk of Capital Erosion:**
+- The 2% rule exists specifically to **survive** losing streaks. Three consecutive losses at 2% each = 6% drawdown—painful but survivable.
+- Increasing risk beyond 2% to "make back" losses could trigger catastrophic loss (10% risk would mean a 30% loss from three failures).
+
+### Prescription from Elder's Framework
+
+**Immediate Action Required:**
+1. **Acknowledge the emotional state** before entering this trade
+2. **Write down:** "This trade risks 2%, not more, regardless of past losses"
+3. **Consider pausing** for 24 hours if the "urgency" feeling persists
+4. **Visualize** accepting another loss—can you emotionally handle it without deviation?
+
+**The Iron Rule:** Your sizing decision (410 shares) must be **untouched** by recent losses. If you find yourself calculating "but if I trade 600 shares I could recover all losses in one trade," you have abandoned the system and are gambling.
+
+**Final Assessment:** The technical setup qualifies under Triple Screen rules, but your psychological state is the **primary threat**. Execute only if you can completely separate this trade's risk parameters from your recent losing streak. Otherwise, stand aside until emotional equilibrium returns.
+
+Remember Elder's axiom: "Losers average losers." Don't let previous losses distort this new, independent trade.

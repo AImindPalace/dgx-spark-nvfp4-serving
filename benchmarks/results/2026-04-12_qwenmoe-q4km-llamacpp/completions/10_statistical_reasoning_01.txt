@@ -1,0 +1,96 @@
+<think>
+This is a textbook data-mining problem that Aronson addresses directly in his chapter on the statistical method. The analyst has performed 847 parameter combinations and found one with a Sharpe of 1.84 — but Aronson's framework tells us this is almost certainly a statistical artifact, not a genuine edge.
+
+**The Core Problem: 847 Trials and the Expected Best from Noise**
+
+Aronson explains that when you test many parameter combinations, you're implicitly running multiple hypothesis tests. The probability of finding a "significant" result by chance increases with the number of trials. With 847 combinations, the analyst has effectively conducted 847 simultaneous tests.
+
+Aronson's framework for estimating the expected best Sharpe from pure noise is based on the distribution of maximum values from multiple independent draws. For a normal distribution of Sharpe ratios (which is approximately true for random price series), the expected maximum of N independent draws can be approximated using order statistics.
+
+For 847 independent trials, the expected maximum Sharpe from pure noise is approximately:
+
+E[max] ≈ σ × Φ⁻¹(1 - 1/N)
+
+Where σ is the standard deviation of Sharpe ratios from random series (approximately 0.5 for daily data over 14 years), and Φ⁻¹ is the inverse standard normal CDF.
+
+Φ⁻¹(1 - 1/847) = Φ⁻¹(0.99882) ≈ 3.00
+
+So E[max] ≈ 0.5 × 3.00 = 1.50
+
+The analyst's best Sharpe of 1.84 exceeds this expected maximum from noise by only 0.34 — not a large margin. More precisely, the probability that the best of 847 noise trials exceeds 1.84 is approximately:
+
+P(max > 1.84) = 1 - [Φ(1.84/0.5)]^847 = 1 - [Φ(3.68)]^847 ≈ 1 - (0.99988)^847 ≈ 0.37
+
+There's approximately a 37% chance that a strategy with Sharpe 1.84 would emerge from pure noise given 847 trials. This is far from the conventional 5% significance threshold.
+
+**White's Reality Check (Bootstrap Method)**
+
+Aronson describes White's Reality Check as the proper statistical framework for evaluating data-mined results. The procedure:
+
+1. Generate 10,000+ bootstrap samples of the original price series (preserving autocorrelation and volatility clustering through block bootstrapping)
+2. For each bootstrap sample, run all 847 parameter combinations
+3. Record the best Sharpe ratio from each bootstrap sample
+4. Compare the original best Sharpe (1.84) to the distribution of best Sharpe ratios from the 10,000 bootstrap samples
+5. The p-value is the proportion of bootstrap samples where the best Sharpe exceeds 1.84
+
+If the p-value exceeds 0.05 (or more conservatively 0.01), the result is not statistically significant. Given the 37% probability calculated above, the p-value will likely be well above 0.05, meaning the strategy should be rejected.
+
+**Walk-Forward Validation Framework**
+
+Aronson emphasizes that the only way to validate a data-mined strategy is through proper out-of-sample testing. The walk-forward method is the gold standard:
+
+1. Divide the 14-year period (2010–2024) into 28 quarterly windows
+2. For each window: optimize parameters on the first 3 quarters (in-sample), then test on the 4th quarter (out-of-sample)
+3. Roll forward one quarter and repeat
+4. The strategy must maintain positive risk-adjusted returns across at least 15 consecutive out-of-sample quarters to be considered viable
+
+With 847 combinations, the probability that at least one combination produces a positive out-of-sample Sharpe by chance is extremely high. Aronson's framework suggests that even a strategy that survives 15 quarters of walk-forward testing may still be a false positive if the parameter search was sufficiently extensive.
+
+**Recommendation**
+
+The analyst should:
+1. Run the full White's Reality Check bootstrap procedure before presenting to investors
+2. If the p-value exceeds 0.05, the strategy should be abandoned entirely
+3. If the p-value is below 0.01, proceed to walk-forward testing with a minimum of 15 consecutive out-of-sample quarters
+4. Apply the principle of parsimony: if multiple parameter combinations produce similar results, the strategy is likely overfitted. The 12/48 EMA combination should be compared against the 10/40, 15/50, and other nearby combinations — if they all produce Sharpe ratios above 1.5, the strategy is not robust to parameter variation.
+5. Never present a strategy to investors without a full statistical validation framework. Aronson's chapter makes clear that data-mined results presented as genuine findings are a form of academic misconduct.
+
+</think>
+
+The analyst's situation is a classic case of data-mining bias that Aronson's statistical method framework is designed to detect. The 847 parameter combinations represent 847 simultaneous hypothesis tests, and the best result (Sharpe 1.84) is almost certainly a statistical artifact rather than a genuine predictive signal.
+
+**Expected Best Sharpe from Pure Noise**
+
+Using Aronson's order statistics framework, the expected maximum Sharpe from 847 independent trials on random price data is approximately 1.50 (calculated as 0.5 × Φ⁻¹(1 - 1/847) ≈ 0.5 × 3.00). The analyst's 1.84 Sharpe exceeds this by only 0.34 — a margin that corresponds to approximately a 37% probability that such a result emerges from pure noise. This means the strategy is more likely to be a false positive than a genuine edge.
+
+**White's Reality Check Bootstrap Procedure**
+
+The analyst must implement the following before any investor presentation:
+
+1. Generate 10,000+ bootstrap samples of SPY daily returns using block bootstrapping (preserving autocorrelation and volatility clustering)
+2. For each bootstrap sample, run all 847 parameter combinations and record the maximum Sharpe ratio
+3. Calculate the p-value as the proportion of bootstrap samples where the maximum Sharpe exceeds 1.84
+4. If p > 0.05, reject the strategy — the result is not statistically significant
+5. If p < 0.01, proceed to walk-forward testing
+
+**Walk-Forward Validation Requirements**
+
+The strategy must survive at least 15 consecutive out-of-sample quarters (approximately 3.75 years) using the walk-forward method: optimize on the first 3 quarters, test on the 4th, roll forward one quarter, repeat. The out-of-sample Sharpe ratio must remain above 0.50 across all 15+ quarters.
+
+**Parsimony Check**
+
+Compare the 12/48 EMA combination against nearby parameter combinations (10/40, 15/50, 12/50, 10/48). If multiple combinations produce Sharpe ratios above 1.5, the strategy is not robust to parameter variation and is almost certainly overfitted. Aronson's framework suggests that genuine edges are stable across parameter ranges, while data-mined results are highly sensitive to the specific combination that happened to work in-sample.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: low
+Key Evidence:
+- 847 parameter combinations imply 37% probability that best Sharpe of 1.84 emerges from pure noise
+- Expected maximum Sharpe from 847 noise trials is approximately 1.50; the 1.84 result exceeds this by only 0.34
+- White's Reality Check bootstrap procedure required before any investor presentation
+Plan: Stand down — do not present to investors until White's Reality Check p-value is below 0.01 AND the strategy survives 15+ consecutive quarters of walk-forward testing with out-of-sample Sharpe above 0.50
+Invalidation: If the bootstrap p-value is below 0.01 and walk-forward testing produces out-of-sample Sharpe above 0.50 for 15+ consecutive quarters, the strategy may be viable
+Risk: 1R = full capital allocation to the strategy (estimated $500,000 if deployed) | reward: unknown until validated | risk-reward: currently undefined due to unquantified false positive probability
+No-Trade Conditions: Do not present to investors without completing the full statistical validation framework. Do not deploy real capital on any data-mined strategy without at least 15 consecutive quarters of walk-forward out-of-sample testing.
+Review Metric: After completing the White's Reality Check, compare the p-value to the 37% probability estimate. This calibrates the analyst's ability to intuitively assess data-mining severity and improves future parameter-search discipline.
+---

@@ -1,0 +1,55 @@
+Based on your description, this trader is exhibiting a **classic, severe case of the Disposition Effect**, as identified by Shefrin and Statman (1985). This is a behavioral bias where investors/traders have a strong propensity to **sell assets that have increased in value (winners) too early** and **hold assets that have decreased in value (losers) too long**.
+
+### Diagnosis: The Disposition Effect in Action
+
+1.  **Asymmetric Holding Times:** The core symptom. Winning trades are held for an average of **4.2 days**, while losing trades are held **2.8 times longer (11.7 days)**. This is the empirical fingerprint of the disposition effect.
+2.  **Skewed Reward/Risk Ratio:** The average win ($420) is less than half the size of the average loss ($890). A healthy system typically requires the opposite—winners larger than losers—to be profitable even with a moderate win rate. His negative expectancy (-$77/trade) directly results from this asymmetry.
+3.  **High Win Rate with Poor Performance:** The 62% win rate is a deceptive comfort blanket. It creates the *feeling* of being "right" most of the time, which reinforces the behavior of taking quick profits. However, the few large losses completely erase the many small gains.
+4.  **Ex-Post Regret ("Left Money on the Table"):** The 14 trades that ran further after he exited are powerful, emotionally charged evidence that he is prematurely closing winning positions. This creates regret, which can ironically lead to overtrading or revenge trading later.
+
+### The Driving Force: Prospect Theory Utility Function
+
+The disposition effect is rooted in the **S-shaped value function** from Kahneman and Tversky's Prospect Theory, which describes how people *actually* make decisions under risk, as opposed to how rational models say they should.
+
+*   **Reference Point Dependence:** The trader's psychology is anchored to the **purchase price** of the trade. Gains and losses are measured relative to this "reference point," not from a portfolio or long-term perspective.
+*   **Loss Aversion (The Steeper Loss Curve):** The pain of a realized loss is psychologically about **2 to 2.5 times more powerful** than the pleasure from an equivalent realized gain. This makes him **reluctant to realize a loss** (hold losers), hoping the trade will "come back" to his breakeven reference point.
+*   **Risk Aversion in Gains, Risk Seeking in Losses:**
+    *   **In the Domain of Gains (winning trade):** The value function is **concave**. Each additional dollar of profit feels less rewarding. The fear of losing the existing paper gain becomes overwhelming, prompting him to "lock in" the sure, smaller profit. This explains the quick 4.2-day exits.
+    *   **In the Domain of Losses (losing trade):** The value function is **convex**. Facing a sure loss (selling) is agonizing. He becomes **risk-seeking**—preferring to gamble on a long-shot recovery (holding for 11.7 days) rather than accept the certain, painful loss. This transforms a small, manageable loss into a large, portfolio-damaging one.
+*   **Mental Accounting & The House Money Effect:** Each trade is viewed in isolation (a separate "mental account"). The profits from winning trades feel like "house money," which he is quick to cash out. The losses, however, feel like losing his "own money," which he fights to retain.
+
+---
+
+### Corrective Protocol: A Structured Exit Framework
+
+The goal is to **systematically remove discretion from exit decisions**, which are currently hijacked by emotion. The protocol must be **pre-defined, mechanical, and followed unconditionally**.
+
+**Phase 1: Foundation - Position Sizing & Maximum Risk**
+
+*   **Rule 1: The 1% Rule:** Risk no more than **1% of total trading capital on any single trade**. This defines the maximum possible dollar loss before the trade begins.
+*   **Rule 2: Define "R":** The 1% risk amount becomes **1R** (one unit of risk). All trade planning and performance metrics will be expressed in terms of R. *(If capital is $100,000, 1R = $1,000)*.
+
+**Phase 2: The Pre-Defined Exit Framework (To Be Set Before Entry)**
+
+*   **Step A: The Unconditional Stop-Loss (The "Losing Trade" Exit):**
+    *   **Rule:** Based on technical analysis (support/resistance, ATR), determine a **precise, logical price level** where your trade thesis is objectively invalidated.
+    *   **Calculation:** The distance from entry to this stop-loss defines your **per-share risk**.
+    *   **Position Size Formula:** `Position Size = (1R in $) / (Per-Share Risk in $)`. This ensures your maximum loss is always 1R.
+    *   **Action:** This stop-loss is **entered as a good-'til-cancelled (GTC) sell order immediately upon trade entry**. It is non-negotiable.
+
+*   **Step B: The Profit-Taking Framework (The "Winning Trade" Exit):**
+    *   **Objective:** To let winners run and systematically capture trends, overriding the urge to sell early.
+    *   **Recommended Method: Scaling Out with a Trailing Stop.**
+        1.  **Profit Target 1 (Take Partial Profits):** At a **+2R** gain (twice your initial risk), sell **50%** of your position. This "locks in" a risk-free trade (you've banked 1R profit) and satisfies the psychological need for a win.
+        2.  **Trailing Stop for Remainder:** On the remaining 50% position, move your stop-loss to **breakeven** (or +1R). Then, trail it using a mechanical method:
+            *   **Option A (Technical):** Trail below a moving average (e.g., 20-period) or a recent swing low on the chart you're using.
+            *   **Option B (Volatility):** Use an Average True Range (ATR) multiple (e.g., trail at 2.5 x ATR below price).
+        3.  **Let the Market Take You Out:** The trailing stop will hold through normal pullbacks but will exit you if the trend reverses significantly. This is how you capture the "additional 15-30%" moves.
+
+**Phase 3: Journaling & Accountability**
+
+*   **Trade Log Mandatory Fields:** For every trade, record: Entry Rationale, **Pre-defined Stop-Loss (Price & R)**, **Pre-defined Profit-Taking Plan**, Exit Price, **Holding Time**, and **Result in R** (e.g., -1R, +3.5R).
+*   **Weekly Review:** Focus on **average winner in R** and **average loser in R**. The target is for Avg Winner > 1.5x Avg Loser (ideally 2x or 3x). The absolute holding time disparity should disappear as the system forces you to cut losers quickly (at 1R) and let winners develop.
+
+**Expected Transformation:**
+By adhering to this protocol, the trader's statistics should invert. Holding time for losers will plummet (stopped out at 1R within days). Holding time for winners will increase as trends are captured. The win rate will likely **fall** (as small, scratch winners are replaced by some small, planned losses), but the **profit factor (Avg Winner / Avg Loser)** will soar, turning the negative expectancy into a strong positive one. The emotional burden of exit decisions is lifted, replaced by the discipline of executing a pre-defined plan.

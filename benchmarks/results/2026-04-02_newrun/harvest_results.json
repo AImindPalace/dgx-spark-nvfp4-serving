@@ -1,0 +1,38 @@
+{
+  "label": "newrun",
+  "mode": "harvest",
+  "trials": [
+    {
+      "prompt_id": "q1",
+      "category": "test",
+      "trial": 1,
+      "is_warmup": false,
+      "prompt": "question",
+      "completion": "longer answer",
+      "max_tokens": 2048,
+      "tokens_generated": 220,
+      "ttft_ms": 400.0,
+      "total_time_s": 22.0,
+      "tok_per_s": 10.0,
+      "memory_after_gb": 56.0
+    }
+  ],
+  "stats": {
+    "tok_per_s": {
+      "mean": 10.0,
+      "std": 0.0,
+      "min": 10.0,
+      "max": 10.0,
+      "p50": 10.0,
+      "p95": 10.0
+    },
+    "ttft_ms": {
+      "mean": 400.0,
+      "std": 0.0,
+      "min": 400.0,
+      "max": 400.0,
+      "p50": 400.0,
+      "p95": 400.0
+    }
+  }
+}

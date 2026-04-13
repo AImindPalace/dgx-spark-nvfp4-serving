@@ -1,0 +1,61 @@
+This is a well-defined technical analysis scenario requiring application of Murphy's framework for continuation patterns, specifically cup-and-handle formations. Let me systematically evaluate each component.
+
+**Pattern Quality Assessment:**
+
+1. **Cup Geometry**: The cup spans from $98.40 to $142.60, a range of $44.20. The cup duration of approximately 7 weeks is within the typical 2-7 week range for daily cup-and-handle patterns. The handle has contracted to $132.80, which is a $9.80 decline from the rim ($142.60 - $132.80 = $9.80). This represents a 6.9% handle depth — within the ideal 10-15% range Murphy describes, though on the shallow side.
+
+2. **Fibonacci Handle Retracement**: The handle's 61.8% Fibonacci retracement at $132.80 is significant. Murphy discusses Fibonacci retracements extensively as support and resistance levels. The handle pulling back to the 61.8% level of its own range suggests the correction is proportionate and likely complete — this is a bullish signal.
+
+3. **Volume Characteristics**: Declining volume during the handle formation is exactly what Murphy's volume rules prescribe for healthy continuation patterns. The 38% below-average volume on the last three up-days within the handle is particularly constructive — it indicates selling pressure is drying up as price consolidates near the rim.
+
+4. **50-Day SMA Support**: The rising 50-day SMA at $126.10 provides a structural floor $6.70 below the current handle low. This alignment between the handle low and a rising moving average is a strong confirmation of the bullish trend.
+
+**Measured Move Target**: Murphy's method for cup-and-handle patterns uses the cup depth as the measured move. Cup depth = $142.60 - $98.40 = $44.20. The breakout level is the rim at $142.60. Target = $142.60 + $44.20 = $186.80. This represents a 30.9% move from the breakout level.
+
+**Confirmation Signal**: The pattern is not yet confirmed. Murphy requires a close above the rim ($142.60) on above-average volume to confirm the breakout. Until that occurs, the pattern is a setup, not a signal.
+
+**Stop Placement**: Murphy's rule for continuation patterns places the stop below the handle low. The handle low is $132.80, so a stop at $131.50 (below the handle with a small buffer) gives $11.10 risk per share from a $142.60 entry. Alternatively, if entering on a pullback to the breakout level, the stop could be placed at $132.80.
+
+**Risk-Reward**: From a $142.60 entry with a $131.50 stop, risk is $11.10 per share. Target at $186.80 gives $44.20 reward. Risk-reward = 4:1. This is excellent.
+
+**Confidence Assessment**: The pattern quality is high — proper geometry, declining handle volume, Fibonacci alignment, rising 50-day SMA support. Confidence is moderate-to-high, but the pattern is not yet confirmed.
+</think>
+
+This cup-and-handle setup exhibits high-quality technical characteristics across multiple dimensions. Here is the full assessment.
+
+**Pattern Quality Evaluation:**
+
+The cup geometry is textbook: a $44.20 range ($98.40 to $142.60) over approximately 7 weeks, with a handle depth of $9.80 (6.9% of the cup range). Murphy's framework for continuation patterns requires the handle to be a shallow, low-volume consolidation after the cup — and this pattern delivers precisely that. The handle's 61.8% Fibonacci retracement at $132.80 is a significant confluence level: it represents both the natural correction depth and a Fibonacci support level, which Murphy identifies as one of the most reliable technical reference points.
+
+The volume signature is the strongest bullish indicator. Declining volume during the handle formation, with the last three up-days averaging 38% below the 50-day average, confirms that selling pressure has exhausted itself. Murphy's volume rules state that volume should decline during the handle and expand on the breakout — the current volume profile is exactly what precedes a successful breakout.
+
+The rising 50-day SMA at $126.10 provides structural support $6.70 below the handle low. This alignment between the handle and a rising moving average is a high-conviction signal that the underlying trend supports the continuation pattern.
+
+**Measured Move Target:**
+
+Applying Murphy's cup-and-handle measured move method: cup depth = $142.60 - $98.40 = $44.20. Projected target = breakout level ($142.60) + cup depth ($44.20) = $186.80. This represents a 30.9% move from the breakout level.
+
+**Confirmation Signal Required:**
+
+The pattern is NOT yet confirmed. Entry requires a daily close above $142.60 on volume exceeding the 50-day average by at least 1.5x. Without this confirmation, the pattern remains a setup, not a signal. Murphy's framework is explicit: the breakout must be confirmed by price and volume before capital is committed.
+
+**Stop Placement:**
+
+Primary stop: $131.50, placed $1.30 below the handle low of $132.80. This gives $11.10 risk per share from a $142.60 entry. Alternative stop: $126.00, just below the 50-day SMA at $126.10, which would give $16.60 risk but a higher probability of holding through normal post-breakout pullbacks.
+
+**Trade Parameters:**
+
+- Entry: $142.60 (on confirmed breakout close)
+- Stop: $131.50 (primary) or $126.00 (alternative)
+- Target: $186.80 (measured move)
+- Risk-reward: 4:1 (primary stop) or 2.7:1 (alternative stop)
+- Position sizing: 1% portfolio risk using the primary stop ($11.10/share)
+- Confidence: Moderate-to-high — pattern quality is excellent, but unconfirmed
+
+**Invalidation:**
+
+A close below $132.80 (handle low) on expanding volume would invalidate the pattern entirely. Murphy's rule is clear: if the handle breaks down, the cup-and-handle thesis is dead and the stock likely resumes its prior trend.
+
+**Risk Identification:**
+
+The primary risk is a false breakout — price closes above $142.60 but reverses within 2-3 sessions on heavy volume. Murphy notes that false breakouts are the most common failure mode for continuation patterns. A secondary risk is that the measured move target of $186.80 is not reached due to overhead resistance from prior price levels — check the weekly chart for resistance zones between $160-$175 that could cap the advance.

@@ -1,0 +1,24 @@
+This is a direct application of Tharp's Kelly framework to a live trading context, and the answer is almost certainly fractional Kelly. Let me work through the full-Kelly calculation first, then build the case for why full-Kelly is dangerous.
+
+**Full-Kelly Calculation:** The Kelly formula is K% = W - [(1 - W) / R], where W = win rate, R = average winner / average loser. Here, W = 0.58, average winner = 4.2%, average loser = 2.8%, so R = 4.2 / 2.8 = 1.5. K% = 0.58 - [(1 - 0.58) / 1.5] = 0.58 - [0.42 / 1.5] = 0.58 - 0.28 = 0.30, or 30% — the trader's backtest suggests a full-Kelly fraction of 30% (the prompt says approximately 29%, which is close enough). At 30% full-Kelly, the trader would risk 30% of equity per trade. On a $250,000 account, that's $75,000 per trade.
+
+**The Case for Fractional Kelly:** Tharp's position sizing framework, which builds on the Kelly method, explicitly recommends fractional Kelly for live trading. The reasons are well-documented. First, the Kelly formula assumes you know your true win rate and R-multiple — but you only have estimates from backtests. If the true win rate is actually 52% instead of 58%, full-30% Kelly would be massively overbetting and could lead to rapid drawdown. Second, Tharp emphasizes that the Kelly formula is a maximum-growth-rate solution, not a risk-management tool. It maximizes expected geometric growth but ignores the path — you could experience a 50% drawdown on the way to that maximum growth. Third, the Kelly formula assumes independent, identically distributed trades — but real markets have regimes, correlations, and fat tails. Fourth, Tharp's R-multiple framework requires you to know your average winner and average loser precisely, but in live trading you only discover these after the fact.
+
+**Recommended Fraction:** I recommend a half-Kelly approach (15% of equity per trade) as a starting point, with a minimum floor of quarter-Kelly (7.5% of equity). Half-Kelly provides approximately 75% of the maximum growth rate but with dramatically reduced drawdown risk — the maximum expected drawdown at half-Kelly is roughly half that of full-Kelly. For a $250,000 account, half-Kelly means risking $37,500 per trade, which translates to approximately 1,340 shares of an $28 S&P 500 constituent at a 2.8% stop-loss distance ($0.78 per share).
+
+**Ongoing Position-Size Adjustments:** Tharp's framework requires continuous updating of the Kelly fraction as new data arrives. The trader should maintain a rolling 100-trade sample of live performance data. As each trade closes, update W and R. If the full-Kelly estimate rises above 30% (e.g., W = 62%, R = 1.8), the trader can increase to 20% of equity per trade (approximately 2/3 Kelly). If it falls below 20% (e.g., W = 54%, R = 1.3), reduce to 10% of equity per trade. The key is to never use the full-Kelly fraction — always apply a 0.5x to 0.75x multiplier to the calculated full-Kelly. This conservative approach protects against the three primary risks: parameter uncertainty, regime change, and the non-normal distribution of real-market returns.
+
+---
+DECISION FRAMEWORK:
+Regime: range — confidence: high (mean-reversion strategy operating in a well-defined regime)
+Key Evidence:
+- Full-Kelly estimate of 30% is derived from backtest data with known parameter uncertainty
+- Tharp's framework and the Kelly method's maximum-growth-rate assumption both imply overbetting risk in live markets
+- Half-Kelly provides approximately 75% of maximum growth with dramatically reduced drawdown risk
+Plan: Deploy half-Kelly (15% of equity, ~$37,500 per trade) with a minimum floor of quarter-Kelly (7.5% of equity) → entry trigger remains the mean-reversion signal → position size determined by the 2.8% average loser distance
+Target: Maintain 15% Kelly fraction as baseline; update with rolling 100-trade sample after each trade close
+Risk: 1R = $37,500 per trade (half-Kelly) | Kelly fraction of 15% provides 75% of maximum growth rate with reduced drawdown | maximum expected drawdown at half-Kelly is approximately half that of full-Kelly
+Invalidation: If rolling 100-trade sample shows W < 52% or R < 1.2, the strategy's edge is insufficient for Kelly-based sizing — reduce to quarter-Kelly or halt trading
+No-Trade Conditions: Do not trade when the full-Kelly estimate drops below 20% (meaning the strategy's edge has eroded) — this is a signal to reassess the strategy's viability, not just reduce size
+Review Metric: Track the rolling 100-trade sample's W and R continuously — compare live performance to backtest assumptions to detect regime changes or strategy degradation early
+---

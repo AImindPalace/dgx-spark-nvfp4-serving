@@ -1,0 +1,73 @@
+<think>
+This is a textbook case of the disposition effect — the tendency to sell winners too early and hold losers too long. The trader's data tells a devastating story: 62% win rate sounds impressive, but the asymmetric payoff structure ($420 average winner vs. -$890 average loser) produces a negative expectancy of -$77 per trade. The 14 trades where he took profits prematurely and missed 15–30% additional gains represent opportunity cost that compounds over time.
+
+Shefrin and Statman's disposition effect framework, as synthesized by Marks and other behavioral finance researchers, explains this through prospect theory's utility function. The utility function is concave for gains (risk-averse in the domain of gains) and convex for losses (risk-seeking in the domain of losses). This means:
+
+- When a trade is in profit, the trader feels the pain of giving up that gain (concave utility makes the marginal utility of additional gain diminish), so he locks in the sure thing — the $420 winner.
+- When a trade is in loss, the trader feels the pain of realizing that loss (convex utility makes the marginal pain of additional loss diminish), so he holds hoping for a reversal.
+
+The behavioral mechanism is loss aversion: the pain of losing $890 is psychologically about 2.25 times more intense than the pleasure of gaining $420 (based on Kahneman's loss aversion coefficient of approximately 2.25:1). This asymmetry explains why the trader's average loser is 2.12x the size of his average winner.
+
+The 14 missed continuation trades are the most telling evidence: the trader's utility function is so distorted that he's systematically under-holding winners. This is the flip side of the disposition effect — not just selling winners too early, but failing to let winners run.
+
+The correction requires a structured exit framework that removes the discretionary decision from the holding period. The most effective method is a trailing stop with a defined scaling rule. Here's the specific protocol:
+
+**Pre-trade setup (must be defined before entry):**
+- Define the initial stop loss at a level based on the instrument's ATR (e.g., 1.5x ATR below entry for longs)
+- Define the initial target at 2x the risk (e.g., if risk is $890, target is $1,780)
+- Define the trailing stop rule: once the trade reaches 1.5x risk ($1,335), move the stop to breakeven
+- Define the trailing method: trail at 0.5x ATR below the highest price reached for longs
+
+**Post-entry execution rules:**
+- Do not manually override the trailing stop under any circumstances
+- If the trailing stop is hit, the trade is closed — no re-entry unless a new setup forms
+- Review the trade log weekly, not daily, to reduce the frequency of emotionally-driven decisions
+
+**Quantitative target:**
+- The goal is to shift the average winner from $420 to at least $1,200 (2.7x the average loser)
+- With a 62% win rate and $1,200 average winner vs. $890 average loser, expectancy becomes: (0.62 × $1,200) - (0.38 × $890) = $744 - $338 = +$406 per trade
+- This transforms a -$77 expectancy into a +$406 expectancy — a 5.3x improvement
+
+The framework must be written down and reviewed before each trade. The trader should also implement a "no manual override" rule for the first 30 days of implementation — any override must be documented with a written justification that is reviewed by a peer or journal.
+
+This is a systematic solution to a behavioral problem, which is the correct approach: you cannot out-think your own psychology in the moment, so you must build guardrails that prevent the psychology from expressing itself.
+
+</think>
+
+This trader exhibits the classic disposition effect as defined by Shefrin and Statman and synthesized by Marks: selling winners too early (14 trades missed 15–30% additional gains) while holding losers too long (average loser $890 vs. average winner $420). The 62% win rate is a red herring — the asymmetric payoff structure produces a negative expectancy of -$77 per trade, meaning the trader is systematically destroying capital despite being right more often than wrong.
+
+The behavioral driver is prospect theory's utility function, which is concave for gains and convex for losses. When a trade is in profit, the trader's utility function makes him risk-averse — he locks in the sure $420 rather than risking it for additional gain. When a trade is in loss, the utility function makes him risk-seeking — he holds hoping for a reversal rather than accepting the $890 loss. Kahneman's loss aversion coefficient of approximately 2.25:1 explains why the average loser is 2.12x the size of the average winner: the psychological pain of realizing a loss is more than twice as intense as the pleasure of realizing a gain.
+
+The correction requires a structured exit framework that removes discretionary decision-making from the holding period. The specific protocol:
+
+**Pre-trade (before entry):**
+- Define initial stop at 1.5x ATR below entry (for longs)
+- Define initial target at 2x the risk (if risk is $890, target is $1,780)
+- Define trailing stop rule: once trade reaches 1.5x risk ($1,335), move stop to breakeven
+- Define trailing method: trail at 0.5x ATR below the highest price reached for longs
+
+**Post-entry execution:**
+- No manual override of the trailing stop for the first 30 days of implementation
+- If the trailing stop is hit, the trade is closed — no re-entry unless a new setup forms
+- Review the trade log weekly, not daily, to reduce the frequency of emotionally-driven decisions
+
+**Quantitative target:**
+- Shift average winner from $420 to at least $1,200 (2.7x the average loser)
+- With 62% win rate and $1,200 average winner vs. $890 average loser: (0.62 × $1,200) - (0.38 × $890) = $744 - $338 = +$406 per trade
+- This transforms -$77 expectancy into +$406 expectancy — a 5.3x improvement
+
+The trader should also implement a written-justification rule for any override: if he overrides the trailing stop, he must write down the specific reason and review it with a peer. This creates accountability and builds metacognitive awareness of the disposition effect in real time.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate
+Key Evidence:
+- Disposition effect confirmed by 14 missed continuation trades (15–30% additional gains) and 2.12x average loser-to-winner ratio
+- Negative expectancy of -$77 per trade despite 62% win rate proves the asymmetric payoff structure is the problem, not the win rate
+- Prospect theory utility function (concave for gains, convex for losses) explains the behavioral mechanism driving the asymmetric holding behavior
+Plan: Implement the structured trailing stop framework with breakeven trigger at 1.5x risk and 0.5x ATR trailing distance → target average winner of $1,200, transforming expectancy from -$77 to +$406 per trade
+Invalidation: If after 30 days of strict framework adherence the average winner remains below $600, the issue may be entry quality rather than exit behavior — reassess the setup selection process
+Risk: 1R = $890 (average loser) | reward: 1.35R ($1,200) | risk-reward ratio 1:1.35 on average, but with 62% win rate the expectancy is +$406 per trade
+No-Trade Conditions: Do not override the trailing stop rule for the first 30 days of implementation — any override must be documented with written justification and peer review
+Review Metric: Track the ratio of average winner to average loser weekly — target improvement from 0.47:1 to at least 1.35:1 within 60 days; also track the number of trades that exceeded the initial target before the trailing stop was hit
+---

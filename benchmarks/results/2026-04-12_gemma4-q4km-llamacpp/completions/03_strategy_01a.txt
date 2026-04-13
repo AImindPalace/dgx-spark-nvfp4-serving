@@ -1,0 +1,29 @@
+This scenario combines Kelly Criterion position sizing with drawdown risk management, and the results are sobering. Let me work through the full calculation.
+
+First, the Kelly parameters. Win rate (p) = 0.58, loss rate (q) = 0.42. Average winner (W) = 4.2%, average loser (L) = 2.8%. The Kelly fraction formula is: K% = p - q/W/L = 0.58 - (0.42 / 4.2 / 2.8) = 0.58 - (0.42 / 0.1176) = 0.58 - 0.0357 = 0.5443, or 54.43% of equity. Full-Kelly recommends risking 54.43% of capital per trade.
+
+At $250,000 account, the full-Kelly dollar bet is $250,000 × 0.5443 = $136,075 per trade. This is the amount at risk — if the trade hits the average loser of 2.8%, the loss is $136,075 × 0.028 = $3,809. Wait, that's not right — the Kelly fraction determines the percentage of capital to risk, not the total position size. Let me re-frame: the Kelly fraction of 54.43% means you allocate 54.43% of equity to the strategy's risk budget. At $250,000, that's $136,075 in total risk. With an average loser of 2.8%, the position size would be $136,075 / 0.028 = $4,860,000 — which is 19.44x leverage. This is the full-Kelly recommendation.
+
+Now the drawdown analysis. During the 9 consecutive losses, each loss is at the average loser of 2.8% of the then-current equity. Let'E_0 = $250,000. After 9 losses: E_9 = E_0 × (1 - 0.028)^9 = $250,000 × (0.972)^9 = $250,000 × 0.773 = $193,250. The drawdown is $250,000 - $193,250 = $56,750, or 22.7%. This is the drawdown from the 9-loss streak alone, not including any intervening winners. The maximum drawdown over the entire backtest would be even larger.
+
+Why this makes full-Kelly impractical: the Kelly Criterion is a long-run growth maximizer, and it achieves this by accepting enormous short-term volatility. The 22.7% drawdown from just 9 losses is psychologically devastating for most discretionary traders — and more importantly, it's the minimum drawdown you'd experience because the backtest likely contains longer losing streaks than 9. The Kelly Criterion also assumes you can trade exactly at the calculated fraction, but discretionary traders face execution slippage, gap risk, and emotional pressure that make precise Kelly sizing impossible. The fractional Kelly approach (half-Kelly or quarter-Kelly) is the standard recommendation for live trading, and even then, most discretionary traders use a much smaller fraction — perhaps 10–20% of Kelly.
+
+The Calmar ratio of 1.4 is actually quite good for a mean-reversion strategy, but it's a backtest statistic, not a live execution metric. The Kelly calculation is sound, but the implementation gap is enormous.
+
+---
+DECISION FRAMEWORK:
+Regime: range — confidence: high
+Key Evidence:
+- Kelly Criterion yields 54.43% full-Kelly fraction, recommending 19.44x leverage — mathematically optimal for long-run growth but practically impossible
+- 9 consecutive losses produce a 22.7% drawdown on a $250,000 account, which is the minimum drawdown the trader would experience
+- Discretionary execution introduces slippage, gap risk, and emotional factors that full-Kelly cannot account for
+Plan: Stand down from full-Kelly implementation — the full-Kelly fraction is theoretically correct but practically dangerous for a discretionary trader. Instead, use a half-Kelly fraction (27.22%) as a maximum, and realistically target 10–15% of Kelly for live trading.
+Invalidation: If the strategy's backtest win rate drops below 52% or average loser exceeds 4%, the Kelly fraction becomes negative — the strategy should be abandoned entirely.
+Risk: 1R = $3,809 (full-Kelly loss on 1 trade) | reward: 1.5R ($5,714) | risk-reward ratio 1.5:1
+No-Trade Conditions: Do not trade any Kelly-derived position sizing without first implementing a half-Kelly or quarter-Kelly haircut. If the trader cannot commit to a fixed fractional Kelly sizing rule in writing before market open, they should not trade the strategy at all — the emotional pressure of sizing decisions will degrade execution.
+Review Metric: Track the actual drawdown experienced during the live implementation versus the backtest's maximum drawdown. If live drawdown exceeds backtest drawdown by more than 20%, the backtest is not capturing execution reality and the strategy needs re-evaluation.
+---
+DECISION: stand down — full-Kelly is theoretically optimal but practically reckless for discretionary execution; implement half-Kelly or quarter-Kelly instead
+---
+BLANKET: The Kelly Criterion is a mathematical framework that must be modified for real-world constraints — discretionary traders should never use full-Kelly, and even fractional Kelly requires a minimum of half-Kelly to account for execution slippage, gap risk, and the psychological reality of drawdown tolerance.
+---

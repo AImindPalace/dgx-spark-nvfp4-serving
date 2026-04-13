@@ -1,0 +1,117 @@
+This is a multi-timeframe alignment setup that requires synthesizing signals across weekly, daily, and 4-hour charts. Let me apply a systematic method to build the plan.
+
+**Weekly Chart (Strategic Context):**
+- 14-week symmetrical triangle between $492 and $521 — this is a consolidation pattern that typically resolves with a directional move
+- The triangle is narrowing, meaning volatility is compressing — this is a coiling spring setup
+- The resolution direction is not predetermined by the pattern itself, but the daily chart is providing a directional bias
+
+**Daily Chart (Tactical Signal):**
+- Bull engulfing bar closing above the 20-day EMA at $514.30 on 1.8x volume — this is a strong bullish signal
+- The engulfing pattern above the EMA suggests buyers are taking control
+- Volume confirmation at 1.8x is meaningful — it's not extreme but above average
+
+**4-Hour Chart (Execution Level):**
+- Clean base at $516.40 with no overhead supply until $521 (weekly resistance)
+- This gives a clear path of least resistance upward
+
+**Multi-Timeframe Alignment Assessment:**
+- Weekly: Neutral-to-bullish (triangle hasn't broken yet, but daily is signaling upward resolution)
+- Daily: Bullish (engulfing above EMA on volume)
+- 4-Hour: Bullish (clean base, no supply overhead)
+- Alignment: 2 bullish, 1 neutral — this is favorable but not unanimous. The weekly triangle hasn't confirmed the breakout yet, so this is a pre-breakout entry with a defined risk level.
+
+**Trade Plan Construction:**
+
+**Entry Trigger:**
+- The daily bull engulfing above the 20-day EMA at $514.30 is the signal
+- Entry: Buy at $516.40 (the 4-hour base level, which is the cleanest execution point with no supply overhead)
+- Alternative: Limit entry at $516.40 or market entry if price is already above $516.40
+
+**Stop Level:**
+- Below the daily bull engulfing bar's low — need to estimate this. If the engulfing bar closed at $514.30 and was a strong bar, the low was likely around $510-511
+- Conservative stop: $509.50 (below the engulfing bar low and below the 4-hour base)
+- Risk per share: $516.40 - $509.50 = $6.90
+
+**Target 1 (Partial Exit):**
+- Weekly triangle resistance at $521 — this is the first major resistance level
+- Reward: $521 - $516.40 = $4.60
+- Risk-reward to T1: $4.60 / $6.90 = 0.67:1 — this is below 1:1, which is concerning for a full position
+
+**Target 2 (Trailing / Full Exit):**
+- If the triangle breaks above $521, the measured move from the triangle projects: height of triangle = $521 - $492 = $29, projected from $521 = $550
+- Reward: $550 - $516.40 = $33.60
+- Risk-reward to T2: $33.60 / $6.90 = 4.87:1
+
+**Position Sizing:**
+- Account: $100,000
+- Risk per trade: 1% = $1,000
+- Risk per share: $6.90
+- Shares: $1,000 / $6.90 = 144.93 → 144 shares
+- Position value: 144 × $516.40 = $74,361.60 (74.4% of account — this is concentrated for a single trade)
+
+**Issue with Position Sizing:**
+The position value at 144 shares is 74.4% of the account, which is very concentrated. For a single trade, most risk management frameworks recommend capping position concentration at 25-30% of account value. Let me recalculate with a concentration cap:
+- Max position value: 30% of $100,000 = $30,000
+- Max shares: $30,000 / $516.40 = 58 shares
+- Risk at 58 shares: 58 × $6.90 = $400.20 (0.4% of account)
+- This is below the 1% target, so the concentration cap is the binding constraint
+
+**Revised Position Size:**
+- 58 shares at $516.40 = $30,000 (30% of account)
+- Risk: $400.20 (0.4% of account)
+- Reward at T1: 58 × $4.60 = $266.80
+- Reward at T2: 58 × $33.60 = $1,948.80
+
+**Exit Plan:**
+- T1: Sell 50% (29 shares) at $521 — locks in $133.40 profit
+- T2: Trail remaining 29 shares with a stop at the 20-day EMA, targeting $550
+- If the triangle fails and price drops below $509.50, exit all 58 shares for a $400.20 loss
+
+**Confidence Assessment:**
+- The multi-timeframe alignment is favorable (2 bullish, 1 neutral)
+- Volume confirmation on the daily engulfing bar adds credibility
+- The weekly triangle hasn't confirmed the breakout yet — this is the main risk
+- Confidence: Moderate (60-65%)
+
+**Key Risk Factors:**
+1. The weekly triangle could resolve downward — the daily signal could be a false breakout within the triangle
+2. VIX at 17 is relatively low — if it spikes, it could indicate a broader market stress event
+3. The risk-reward to the first target ($521) is below 1:1, which means the trade needs to reach the measured move target to be profitable on a full position basis
+</think>
+
+This multi-timeframe setup presents a compelling pre-breakout opportunity with a clear execution framework. Let me build the complete trade plan.
+
+**Multi-Timeframe Alignment Assessment:**
+The weekly symmetrical triangle (14 weeks, $492–$521) is the strategic context — it's neutral until resolution. The daily bull engulfing above the 20-day EMA at $514.30 on 1.8x volume provides the directional bias. The 4-hour clean base at $516.40 with no overhead supply until $521 gives the execution edge. Alignment: 2 bullish, 1 neutral — favorable but not unanimous.
+
+**Trade Plan:**
+
+**Entry:** Buy 58 shares at $516.40 (4-hour base level). This is the cleanest execution point with no supply overhead. If price gaps above $516.40 by the time you're ready to enter, use a limit order at $516.40 and accept partial fills.
+
+**Stop:** $509.50 — below the daily bull engulfing bar's low and below the 4-hour base. Risk per share: $6.90. Total risk: 58 × $6.90 = $400.20 (0.4% of account).
+
+**Target 1 (Partial Exit):** $521.00 — weekly triangle resistance. Sell 29 shares (50%). Reward: 29 × $4.60 = $133.40.
+
+**Target 2 (Trailing):** $550.00 — measured move projection from the triangle ($521 + $29 triangle height). Trail remaining 29 shares with a stop at the 20-day EMA. Reward: 29 × $33.60 = $974.40.
+
+**Position Sizing Rationale:** The 1% risk rule ($1,000) would allow 144 shares, but that concentrates 74.4% of the account in a single trade. Applying a 30% concentration cap ($30,000 max position), the binding constraint is the concentration limit, not the risk limit. This produces 58 shares with $400.20 total risk (0.4% of account). The trade-off is lower absolute risk but acceptable given the moderate confidence level.
+
+**Confidence: Moderate (60-65%)** — the daily and 4-hour signals are strong, but the weekly triangle hasn't confirmed the breakout yet. The risk-reward to the first target is only 0.67:1, meaning the trade needs to reach the measured move target to be meaningfully profitable.
+
+**Invalidation:** A daily close below $509.50 on volume exceeding 1.5x average invalidates the bullish engulfing signal and suggests the triangle is resolving downward. Exit all 58 shares immediately.
+
+**Key Risk:** The primary risk is a false breakout within the triangle — price pushes above $516.40, triggers the entry, then reverses back into the triangle. This is why the stop at $509.50 is critical and why the position size is capped at 30% concentration.
+
+---
+DECISION FRAMEWORK:
+Regime: range (weekly triangle) transitioning to potential trend — confidence: moderate
+Key Evidence:
+- Daily bull engulfing above 20-day EMA at $514.30 on 1.8x volume — strong tactical signal
+- 4-hour clean base at $516.40 with no supply until $521 — clear execution path
+- Weekly triangle unresolved — directional bias exists but not confirmed
+Plan: Entry at $516.40 (58 shares) → T1: $521.00 (sell 29 shares) → T2: $550.00 (trail 29 shares with 20-day EMA stop)
+Invalidation: Daily close below $509.50 on volume exceeding 1.5x average — exit all shares immediately
+Risk: 1R = $6.90/share ($400.20 total) | Reward to T1: 0.67R | Reward to T2: 4.87R | Blended risk-reward approximately 2.5:1 assuming 50% exit at T1
+No-Trade Conditions: If VIX spikes above 25 before entry, the macro regime has shifted and the triangle resolution becomes unreliable — stand aside. Also, if the daily close reverses below $514.30 before entry is triggered, the engulfing signal has failed — do not enter.
+Review Metric: Track whether the weekly triangle resolved in the direction of the daily signal — this calibrates the reliability of daily signals within weekly consolidation patterns.
+---

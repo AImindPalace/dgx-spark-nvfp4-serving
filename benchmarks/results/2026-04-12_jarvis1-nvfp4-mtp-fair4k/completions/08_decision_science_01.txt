@@ -1,0 +1,54 @@
+This is a rich scenario that directly engages Kahneman's framework on base-rate neglect, the availability heuristic, and the planning fallacy — all of which are central to the chapter's discussion of how System 1's associative machinery produces systematic errors in probability judgment.
+
+The trader's cognitive error is a textbook case of base-rate neglect combined with availability-driven overconfidence. The vivid, recent evidence (the earnings beat, the 4.8% gap, the heavy volume) is highly available and creates a strong associative activation of "bullish momentum" in System 1. The base rate — only 38% of stocks that gap up more than 4% on earnings sustain those gains through the following month — is abstract, statistical, and cognitively demanding to process. System 1 naturally substitutes the easy question ("Is this earnings beat impressive?") for the hard question ("What is the probability that this stock sustains its gains given the base rate?").
+
+The availability heuristic is distorting the probability assessment in two ways. First, the vividness of the earnings beat (specific numbers: $0.18 EPS beat, $1.1B revenue beat, 33% vs 29% Azure growth) makes the bullish scenario feel more probable than it actually is. Second, the trader likely has recent memories of other stocks that gapped up on earnings and continued higher — these available examples inflate the subjective probability of continuation. The 38% base rate is not being incorporated because it's not vivid, not narrative-driven, and not emotionally salient.
+
+The planning fallacy applies to the position sizing decision: the trader is planning to "add aggressively" based on the optimistic scenario without adequately considering the 62% probability that the gap fades. This mirrors the chapter's discussion of how people plan projects based on best-case scenarios while neglecting the base rate of failure.
+
+The structured decision process should follow Kahneman's prescription: anchor on the base rate first, then adjust for case-specific evidence. The 38% base rate is the starting point. The case-specific evidence (strong earnings beat, Azure growth acceleration) might justify an upward adjustment, but not to the 80-90% confidence the trader likely feels. A reasonable adjustment might bring the probability to 45-50% — still below 50%, which means the expected value of adding aggressively is questionable.
+
+The forward P/E at 36x versus the 5-year median of 30x is relevant context — it means the stock is priced for continued perfection, and the 38% base rate of gap fade is partially explained by mean reversion in valuation.
+
+I'll structure the response to diagnose the cognitive errors, then provide a concrete decision framework with specific position sizing rules.
+</think>
+
+This scenario is a near-perfect illustration of Kahneman's base-rate neglect framework applied to trading. The trader's cognitive error is a compound of three System 1 biases operating simultaneously.
+
+**Diagnosis of Cognitive Errors:**
+
+1. **Base-rate neglect**: The 38% base rate for post-earnings gap sustainability is the most important piece of information in this scenario, yet it is the most likely to be ignored. Kahneman's research shows that when vivid case-specific evidence is available, people adjust from the case evidence toward the base rate — but they start from the case evidence, not from the base rate. The trader is starting from "this earnings beat is strong" and adjusting slightly toward the base rate, rather than starting from "only 38% of similar gaps sustain" and adjusting toward the case evidence.
+
+2. **Availability heuristic distortion**: The specific earnings numbers ($0.18 EPS beat, $1.1B revenue beat, 33% Azure growth) are vivid and concrete. These details create a strong associative activation of "strong company, strong stock." The 38% base rate is abstract and statistical — it has no narrative, no vividness, no emotional charge. System 1 processes the vivid evidence with ease and the base rate with difficulty, and the ease of processing the vivid evidence inflates the perceived probability of continuation.
+
+3. **Planning fallacy in position sizing**: The decision to "add aggressively" is a plan built on the optimistic scenario. Kahneman's planning fallacy research shows that people plan projects based on best-case scenarios while neglecting the base rate of failure. The trader is planning the add based on the 38% scenario (gap sustains) while neglecting the 62% scenario (gap fades).
+
+**Structured Decision Process — Explicit Base-Rate Anchoring Method:**
+
+Step 1 — Anchor on the base rate: Write down "38% probability of gap sustainability" as the starting point. Do not adjust yet.
+
+Step 2 — Adjust for case-specific evidence: The earnings beat is genuinely strong (4.2% EPS beat, $1.1B revenue beat, Azure growth acceleration from 29% to 33%). This is above-average quality evidence that justifies an upward adjustment. A reasonable adjustment might bring the probability to 45-50%.
+
+Step 3 — Incorporate valuation context: The forward P/E at 36x versus the 5-year median of 30x means the stock is priced for continued outperformance. This is a headwind to gap sustainability — the market has already priced in much of the good news. This might justify a downward adjustment from Step 2, bringing the probability back to 40-45%.
+
+Step 4 — Compute expected value: At 40-45% probability of gap sustainability and 55-60% probability of fade, the expected value of adding aggressively is negative unless the upside in the sustain scenario is substantially larger than the downside in the fade scenario.
+
+Step 5 — Size the add using the probability-weighted position sizing rule: If the trader's standard add is 2% of portfolio, the probability-weighted add should be 2% × 0.42 (midpoint of 40-45%) = 0.84% of portfolio. This is less than half the planned aggressive add.
+
+**Concrete Recommendation:**
+
+Do not add aggressively. Instead, add a small position (0.5-0.8% of portfolio) with a stop at 2% below the gap-up open price (the level where the gap would be fully filled). This respects the base rate while allowing for the case-specific evidence. If the stock sustains above the gap for 5 trading days, the base rate for continuation increases and a second add is warranted.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate (earnings gap up in established uptrend, but valuation stretched at 36x forward P/E)
+Key Evidence:
+- 38% base rate for post-earnings gap sustainability is the dominant probability anchor — case-specific evidence adjusts this to approximately 40-45%
+- Earnings beat quality is above average (4.2% EPS, $1.1B revenue, Azure acceleration) — justifies modest upward adjustment from base rate
+- Forward P/E at 36x vs 30x 5-year median creates mean-reversion headwind that partially offsets the earnings beat
+Plan: Add 0.5-0.8% of portfolio at current price → stop at 2% below gap-up open (gap fill level) → if stock sustains above gap for 5 trading days, add another 0.5-0.8% → target 12% above entry over 60 days
+Invalidation: Daily close below the pre-earnings close price (full gap fill) — this confirms the 62% base-rate scenario and triggers exit of the add
+Risk: 1R = 2% below gap-up open | reward: 12% above entry = approximately 6R | risk-reward 6:1 at reduced position size
+No-Trade Conditions: If the stock gaps down on the following day's open (gap reversal), do not add — this is the most common post-earnings failure pattern and the base rate for recovery is below 25%
+Review Metric: Track whether the base-rate-anchored position sizing method (Step 1-5 above) produces better risk-adjusted returns than the trader's intuitive "add aggressively" approach over the next 10 earnings-driven add decisions
+---

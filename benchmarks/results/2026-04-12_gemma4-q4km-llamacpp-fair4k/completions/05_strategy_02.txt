@@ -1,0 +1,23 @@
+This is a multi-timeframe alignment setup that requires synthesizing signals across three timeframes — weekly, daily, and 4-hour — and applying Schwager's principle that top traders systematically identify and act on well-defined patterns. The weekly symmetrical triangle is the dominant structure, the daily engulfing bar is the entry trigger, and the 4-hour base provides the micro-level entry refinement.
+
+**Signal Identification Across Timeframes:**
+
+**Weekly:** 14-week symmetrical triangle between $492 and $521. The coiling candles indicate volatility compression — a classic setup for an expansion move. The upper boundary at $521 is the primary resistance target. This is the macro framework.
+
+**Daily:** Bull engulfing bar closing above the 20-day EMA at $514.30 on 1.8x volume. This is the actionable trigger — it confirms that buyers are reclaiming control at a key moving average level. The volume expansion validates the engulfing pattern.
+
+**4-hour:** Base at $516.40 with no overhead supply until $521. This provides the micro-level entry refinement — the 4-hour chart shows that the daily engulfing bar has already established a base, and there's a clear path to $521 without intermediate resistance.
+
+**Trade Plan Construction:**
+
+Entry trigger: $516.40 (4-hour base level, confirmed by daily engulfing bar). This is the most conservative entry — waiting for the 4-hour base to hold rather than chasing the daily close.
+
+Stop level: $511.50 (below the daily engulfing bar's low by $0.50, and below the 20-day EMA at $514.30). This gives $4.90 of risk per share.
+
+Target 1: $520.00 (just below the weekly triangle resistance at $5521). This is the first profit target for a partial exit — 50% of the position.
+
+Target 2: $529.00 (the measured move from the triangle: $521 - $492 = $29, added to the breakout level of $521 = $550, but more conservatively, the 4-hour base breakout suggests a $13 move above $516.40 = $529.40). This is the full-position target.
+
+Position sizing: 1% account risk on $150,000 = $1,500 risk. With $4.90 risk per share, the position is $1,500 / $4.90 = 306 shares. At $516.40, that's $158,118 — slightly overleveraged for a $150,000 account. Reduce to 280 shares ($144,592) to stay within the 1% risk budget.
+
+Confidence: 72% — the multi-timeframe alignment is strong, but the VIX at 17 means options are reasonably priced and the market isn't in a high-volatility regime where breakout patterns perform best.

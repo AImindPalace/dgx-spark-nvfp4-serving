@@ -1,0 +1,99 @@
+This is a concrete Kelly Criterion application with real backtest statistics. Let me work through the math systematically and then connect it to the practical implications for a live discretionary trader.
+
+**Step 1: Calculate the Kelly fraction**
+
+The Kelly formula is: f* = (bp - q) / b
+
+Where:
+- b = payoff ratio (average win / average loss) = 4.2% / 2.8% = 1.5
+- p = win rate = 0.58
+- q = 1 - p = 0.42
+
+f* = (1.5 × 0.58 - 0.42) / 1.5 = (0.87 - 0.42) / 1.5 = 0.45 / 1.5 = 0.30
+
+So the full-Kelly fraction is 30% of equity per trade.
+
+**Step 2: Optimal bet size in dollars**
+
+At $250,000 equity, full-Kelly bet = 0.30 × $250,000 = $75,000 per trade.
+
+With 3–5 signals per week, this is a highly concentrated approach — the trader would be risking $75,000 on each of 3–5 positions weekly.
+
+**Step 3: Drawdown during 9 consecutive losses**
+
+This is where the math gets sobering. With full-Kelly at 30% per trade, each loss reduces equity by 30% of the current equity. After 9 consecutive losses:
+
+Starting equity: $250,000
+After loss 1: $250,000 × (1 - 0.30) = $175,000
+After loss 2: $175,000 × 0.70 = $122,500
+After loss 3: $122,500 × 0.70 = $85,750
+After loss 4: $85,750 × 0.70 = $60,025
+After loss 5: $60,025 × 0.70 = $42,017.50
+After loss 6: $42,017.50 × 0.70 = $29,412.25
+After loss 7: $29,412.25 × 0.70 = $20,588.58
+After loss 8: $20,588.58 × 0.70 = $14,412.00
+After loss 9: $14,412.00 × 0.70 = $10,088.40
+
+Total drawdown: $250,000 - $10,088.40 = $239,911.60, or approximately 96% of equity.
+
+This is catastrophic. Even if the strategy recovers afterward, the trader would need to grow $10,088 back to $250,000 — a 2,380% return — just to get back to the starting point.
+
+**Step 4: Why full-Kelly is impractical for discretionary traders**
+
+The Kelly framework assumes several conditions that rarely hold for live discretionary trading:
+
+1. **Parameter stability**: The 58% win rate and 4.2%/2.8% win/loss figures are historical. A discretionary trader's execution quality, psychological state, and market regime all affect these parameters in real time. The Kelly fraction is only optimal if the input parameters are accurate — and they're almost never known with certainty.
+
+2. **Discrete vs. continuous compounding**: The Kelly formula assumes continuous reinvestment. A discretionary trader with 3–5 signals per week faces discrete, lumpy bets. The drawdown calculation above shows how quickly discrete full-Kelly bets compound losses.
+
+3. **Psychological survival**: A 96% drawdown would destroy most traders psychologically. The behavioral finance research (Kahneman, Marks) shows that experiencing such losses causes permanent behavioral damage — risk aversion spikes, execution degrades, and the strategy's edge evaporates.
+
+4. **Correlation risk**: The Kelly formula assumes independent bets. A mean-reversion strategy on S&P 500 constituents has correlated signals — during a market-wide selloff, multiple mean-reversion signals fire simultaneously and all lose together. The 9 consecutive losses might represent a single regime shift, not 9 independent events.
+
+5. **The half-Kelly solution**: The standard practical approach is half-Kelly (15% of equity per trade), which reduces the 9-loss drawdown to approximately 55% ($250,000 × 0.85^9 = $57,625, a 77% drawdown — still severe but survivable). Quarter-Kelly (7.5%) produces a 50% drawdown after 9 losses ($250,000 × 0.925^9 = $125,000).
+
+**Step 5: Position sizing recommendation**
+
+For a $250,000 account with 3–5 weekly signals, I'd recommend quarter-Kelly at 7.5% per trade ($18,750 per position), with a hard maximum of 20% total portfolio exposure across all concurrent positions. This balances growth potential with survivability.
+</think>
+
+The Kelly Criterion calculation reveals a sobering gap between theoretical optimality and practical survivability for discretionary traders.
+
+**Full-Kelly Calculation:**
+
+Using the Kelly formula f* = (bp - q) / b:
+- b (payoff ratio) = 4.2% / 2.8% = 1.5
+- p = 0.58, q = 0.42
+- f* = (1.5 × 0.58 - 0.42) / 1.5 = 0.30 or 30% of equity per trade
+
+At $250,000, full-Kelly bet size = $75,000 per trade.
+
+**The 9-Loss Drawdown:**
+
+Compounding 9 consecutive losses at 30% per trade: $250,000 × 0.70^9 = $10,088.40. That's a 96% drawdown. To recover, the trader needs a 2,380% return from $10,088 — essentially impossible. The maximum consecutive-loss run of 9 is not a theoretical edge case; it's an observed historical reality from the 5-year backtest.
+
+**Why Full-Kelly Fails in Practice:**
+
+The Kelly framework assumes known, stable parameters — but a discretionary trader's edge is inherently unstable. The 58% win rate and 4.2%/2.8% win/loss figures are historical estimates with sampling error. If the true win rate is 55% instead of 58%, the Kelly fraction drops to 24% — and the trader is already overbetting. If the true win rate is 52%, full-Kelly at 30% becomes a negative-expectancy strategy.
+
+Additionally, the Kelly formula assumes independent bets. A mean-reversion strategy on S&P 500 constituents has correlated signals — during a regime shift (e.g., the March 2020 crash), multiple mean-reversion longs fire simultaneously and all lose together. The 9 consecutive losses likely represent a single correlated event, not 9 independent trials. This correlation risk means the actual drawdown could be worse than the independent-loss calculation suggests.
+
+**Practical Position Sizing Recommendation:**
+
+Apply quarter-Kelly at 7.5% per trade ($18,750 per position). After 9 consecutive losses: $250,000 × 0.925^9 = $125,000 — a 50% drawdown, which is severe but survivable. With 3–5 concurrent signals, cap total exposure at 20% of equity ($50,000 across all positions). This means roughly 2–3 positions at quarter-Kelly size, not 5.
+
+The Calmar ratio of 1.4 is adequate but not exceptional — it confirms the strategy has a positive edge but doesn't justify aggressive sizing. The risk-reward framework here is straightforward: the Kelly method provides the mathematical ceiling, and practical constraints (correlation, parameter uncertainty, psychological limits) push the optimal bet size well below that ceiling.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate (5-year backtest spans multiple regimes, but live execution may differ)
+Key Evidence:
+- Full-Kelly fraction is 30% per trade, producing a 96% drawdown during the observed 9-loss streak
+- Correlated mean-reversion signals on S&P 500 constituents amplify drawdown risk beyond the independent-loss calculation
+- Quarter-Kelly (7.5%) limits the 9-loss drawdown to 50% — survivable but still severe
+Plan: Implement quarter-Kelly at 7.5% per trade ($18,750 per position) with maximum 20% total portfolio exposure ($50,000 across all concurrent positions) → entry on each mean-reversion signal within the position sizing limits
+Invalidation: If the strategy's live win rate drops below 52% over any rolling 100-trade window, reduce to half-Kelly (15%) or pause the strategy entirely
+Risk: 1R = $18,750 per trade | reward: 1.5R ($28,125) | risk-reward 1:1.5 per trade
+No-Trade Conditions: Do not deploy full-Kelly under any circumstances; do not exceed 20% total portfolio exposure; do not add to losing positions to "average down" — this is the most common behavioral failure mode for mean-reversion traders
+Review Metric: Track the actual maximum consecutive-loss run in live trading vs. the backtested 9 — if live drawdown exceeds 60%, reduce to half-Kelly immediately
+---

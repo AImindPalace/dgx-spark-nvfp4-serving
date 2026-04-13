@@ -1,0 +1,93 @@
+<think>
+This is a textbook application of Aronson's statistical framework for evaluating strategy performance, specifically the section on confidence intervals for Sharpe ratios and the dangers of small-sample inference. The trader's situation is dangerously common: a short track record with a high Sharpe ratio, and the temptation to scale up before the evidence is statistically reliable.
+
+**Step 1: Calculate the 95% confidence interval for the true Sharpe ratio**
+
+Aronson provides the formula for the standard error of the Sharpe ratio:
+
+SE(SR) = √[(1 + 0.5 × SR²) / N]
+
+Where:
+- SR = 2.71 (sample Sharpe)
+- N = 63 (sample size)
+
+SE(SR) = √[(1 + 0.5 × 7.3441) / 63] = √[4.67205 / 63] = √0.07416 = 0.2723
+
+The 95% confidence interval uses the critical value of 1.96:
+
+Lower bound: 2.71 - (1.96 × 0.2723) = 2.71 - 0.534 = 2.176
+Upper bound: 2.71 + (1.96 × 0.2723) = 2.71 + 0.534 = 3.244
+
+So the 95% confidence interval is approximately [2.18, 3.24].
+
+**Step 2: Assess the upward bias in small-sample Sharpe estimates**
+
+Aronson's framework identifies several mechanisms that cause small-sample Sharpe ratios to be upward-biased:
+
+1. **Selection bias**: The trader likely has a long history of strategies, and this is the one that survived 63 days. If they tested 10 strategies and only the best one was deployed, the sample Sharpe is inflated by the selection process.
+
+2. **Survivorship bias**: The strategy has survived 63 days without hitting a drawdown large enough to trigger a stop or cause the trader to abandon it. Strategies that would have failed are no longer in the sample.
+
+3. **Regression to the mean**: A Sharpe of 2.71 over 63 days is statistically extreme. The probability of observing a Sharpe this high from a strategy with a true Sharpe of 0 is essentially zero. Even from a strategy with a true Sharpe of 1.0, the probability is very low. This means the true Sharpe is almost certainly lower than 2.71.
+
+4. **Data-mining bias**: If the strategy was developed through iterative optimization (as most retail strategies are), the 63-day sample is the continuation of a data-mining process, not an independent test.
+
+**Step 3: Minimum sample size for reliable estimation**
+
+Aronson's framework implies that the standard error decreases with the square root of N. To reduce the SE from 0.2723 to a more acceptable level, we need to determine what constitutes a "reliable" estimate.
+
+If we want the half-width of the 95% confidence interval (1.96 × SE) to be ±0.5:
+
+0.5 = 1.96 × √[(1 + 0.5 × SR²) / N]
+
+Assuming the true SR is around 1.5 (a reasonable conservative estimate):
+
+0.5 = 1.96 × √[(1 + 0.5 × 2.25) / N] = 1.96 × √[2.125 / N]
+0.5 / 1.96 = √[2.125 / N]
+0.2551 = √[2.125 / N]
+0.0651 = 2.125 / N
+N = 2.125 / 0.0651 = 32.64
+
+Wait, that's too small. Let me recalculate with a more conservative target. If we want the half-width to be ±0.3:
+
+0.3 = 1.96 × √[2.125 / N]
+0.3 / 1.96 = √[2.125 / N]
+0.1531 = √[2.125 / N]
+0.0234 = 2.125 / N
+N = 2.125 / 0.0234 = 90.8
+
+So approximately 91 days would give a ±0.3 half-width. But Aronson's framework emphasizes that even with 91 days, the estimate is still subject to the biases above. A more robust approach is to require at least 120-180 trading days (6-9 months) before making any scaling decisions, and to use out-of-sample testing.
+
+**Step 4: Type I and Type II error risks**
+
+**Type I error (false positive)**: The trader concludes the strategy has a genuinely high Sharpe and scales up, when in reality the true Sharpe is low or negative. The probability of this error depends on the true Sharpe. If the true Sharpe is 0, the probability of observing a sample Sharpe of 2.71 over 63 days is vanishingly small (p < 0.001). If the true Sharpe is 1.0, the probability is still low but non-negligible. The risk is that the trader is seeing a statistical fluke amplified by selection bias.
+
+**Type II error (false negative)**: The trader concludes the strategy is not reliable and does not scale up, when in reality the true Sharpe is high. This is the less dangerous error for a retail trader, because the cost of waiting is opportunity cost, not capital loss.
+
+The asymmetry of these errors is critical: the Type I error (scaling up a false-positive strategy) can destroy capital, while the Type II error (not scaling a true-positive strategy) costs only opportunity. This asymmetry means the trader should use a conservative decision rule.
+
+**Step 5: Actionable recommendation**
+
+The trader should NOT double position sizes. The confidence interval [2.18, 3.24] is wide relative to the point estimate, and the upward bias mechanisms are active. Instead:
+
+1. Continue trading at current size for at least 120 more days (total N ≈ 183)
+2. Track the Sharpe ratio trajectory — if it converges toward 2.0 or higher, the strategy is likely genuine
+3. If the Sharpe drops below 1.5 during the extended period, the strategy should be re-evaluated
+4. Consider a phased scaling approach: increase to 1.25× after 120 days if the Sharpe remains above 2.0, then to 1.5× after 180 days if the Sharpe remains above 1.8
+5. Implement a hard drawdown limit: if the strategy experiences a drawdown exceeding 2× the current maximum drawdown, reduce to 0.5× size immediately
+6. Use the confidence interval method to set a minimum Sharpe threshold: the lower bound of the 95% CI should remain above 1.5 before any scaling occurs
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate (63 days of positive returns suggests a trending environment, but 3 months is insufficient to confirm regime persistence)
+Key Evidence:
+- 95% confidence interval for true Sharpe: [2.18, 3.24] — wide interval indicates high estimation uncertainty
+- SE of Sharpe = 0.2723, meaning the estimate has ±0.534 margin of error at 95% confidence
+- Upward bias mechanisms (selection, survivorship, regression to mean) are active and unquantified
+Plan: Maintain current position size → continue trading for minimum 120 additional days (total N ≈ 183) → re-evaluate Sharpe and confidence interval at that point; phased scaling to 1.25× only if lower bound of 95% CI remains above 1.5
+Invalidation: If the strategy experiences a drawdown exceeding 2× its current maximum drawdown, or if the rolling 60-day Sharpe drops below 1.0, reduce position size to 0.5× immediately
+Risk: Current risk is 1R = $1,840 daily standard deviation | potential scaling risk at 2× size: 2R = $3,680 daily standard deviation | confidence in current sizing: high (appropriate for sample size) | confidence in scaling recommendation: moderate (statistical framework supports waiting, but cannot predict future performance)
+No-Trade Conditions: Do not scale position size until at least 180 total trading days of live data are accumulated AND the lower bound of the 95% confidence interval for the Sharpe ratio remains above 1.5
+Review Metric: Track the trajectory of the Sharpe ratio over the next 120 days — specifically monitor whether the estimate converges toward a stable value or continues to fluctuate, and whether the confidence interval narrows at the expected rate (SE 
+</think>
+

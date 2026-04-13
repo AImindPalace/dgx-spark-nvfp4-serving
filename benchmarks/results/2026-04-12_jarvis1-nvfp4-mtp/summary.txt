@@ -1,0 +1,6 @@
+Experiment: NVFP4+MTP (shootout)
+Date: 2026-04-12
+Throughput: 17.64 tok/s (±0.58)
+TTFT: 227.44ms (±20.44)
+Memory: 97.0 GB
+Status: PASS

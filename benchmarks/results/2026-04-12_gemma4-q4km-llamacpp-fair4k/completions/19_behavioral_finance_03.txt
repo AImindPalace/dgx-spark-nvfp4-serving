@@ -1,0 +1,24 @@
+This scenario is a textbook illustration of what Duke calls 'resulting' — judging a decision by its outcome rather than its process — combined with the hedgehog-fox problem. The strategist's 25% recession probability sounds moderate, but her portfolio construction reveals she's operating as a hedgehog: she has one big idea (recession is unlikely) and her entire portfolio reflects that single view. A true fox would structure positions to reflect the full probability distribution, not just the most likely scenario.
+
+Let's decompose the portfolio's expected return and risk. The probability-weighted expected return is: (0.25 × -25%) + (0.55 × +12%) + (0.20 × +20%) = -6.25% + 6.6% + 4.0% = +4.35%. The expected return is positive, which might tempt the strategist to feel comfortable. But the probability-weighted downside risk is the more important metric: there is a 25% chance of a -25% loss, which means the portfolio's expected loss contribution from the recession scenario alone is -6.25% — more than the entire expected gain of +4.35%. This is a portfolio that is expected to lose money on a probability-weighted basis if you isolate the recession scenario.
+
+The resulting trap is evident: the strategist will likely feel her positioning is 'hedged' because she only assigns 25% to recession, but her portfolio is actually 70% long equities — the exact opposite of hedged. She's not hedging against recession; she's betting against it. This is the hedgehog's error: having one big idea (recession is unlikely) and letting it dominate all positioning decisions. A fox would recognize that even at 25% probability, a -25% loss scenario demands meaningful protection.
+
+Applying Tetlock's superforecasting framework, the strategist should adopt a fox approach: maintain a portfolio that reflects the full probability distribution, not just the base case. Specifically, she should reduce equity allocation from 70% to approximately 50% and allocate 20% to recession hedges (put options, inverse ETFs, or short-duration bond positions) and 30% to soft-landing-oriented positions (equities, corporate bonds, carry trades). This restructuring would produce a portfolio with a positive expected return across all scenarios and a maximum loss of approximately -10% in the recession scenario rather than -25%. The key is to make the portfolio's expected return positive in every scenario, not just the base case.
+
+The probability-weighted expected return of the restructured portfolio would be: (0.25 × -10%) + (0.55 × +8%) + (0.20 × +15%) = -2.5% + 4.4% + 3.0% = +4.9%, with a maximum loss of -10% instead of -25%. This is a superior risk-reward profile. The strategist should also implement a systematic update rule: every 2 weeks, update the scenario probabilities based on new data and adjust portfolio positioning accordingly. This prevents the hedgehog tendency to let a single view dominate indefinitely.
+
+---
+DECISION FRAMEWORK:
+Regime: transition — confidence: moderate
+Key Evidence:
+- Portfolio expected return of +4.35% masks a -6.25% expected loss contribution from the recession scenario alone
+- 70% equity allocation represents hedgehog positioning (single-view dominance) rather than fox positioning (probability-weighted optimization)
+- Maximum loss of -25% in recession scenario exceeds the entire expected portfolio gain of +4.35%
+Plan: Restructure portfolio to 50% equities, 20% recession hedges, 30% soft-landing positions → target +4.9% expected return with maximum loss reduced to -10%
+Target: Positive expected return across all 3 scenarios simultaneously, not just the base case
+Invalidation: If the recession probability drops below 15% based on updated data, the hedge allocation can be reduced; if it rises above 40%, the hedge allocation must increase
+Risk: 1R = -10% (maximum portfolio loss in recession scenario) | reward: +4.9% expected return | risk-reward ratio 1:0.49 on expected return basis, but risk-reward improves from 1:0.17 in the original portfolio
+No-Trade Conditions: Do not increase equity allocation above 50% while recession probability exceeds 20%; do not hold any scenario-specific position without a corresponding hedge if its probability exceeds 20%
+Review Metric: Track whether the restructured portfolio's actual returns over the next 6 months align with the probability-weighted expected return of +4.9% — if actual returns consistently deviate by more than 3 percentage points, the probability estimates need recalibration
+---

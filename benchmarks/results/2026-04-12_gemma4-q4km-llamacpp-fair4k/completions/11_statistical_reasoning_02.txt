@@ -1,0 +1,26 @@
+This scenario is a direct application of Aronson's chapter on hypothesis testing and the critical role of sample size in evaluating trading strategies. The trader's 63-day Sharpe of 2.71 is almost certainly a gross overestimation of the true strategy performance, and scaling up based on this number is a textbook decision error.
+
+**Signal Identification:** The key signals are the small sample size (63 days, 47 trades), the high observed Sharpe (2.71), the trader's desire to double position size, and the lack of any statistical validation beyond the raw calculation. Aronson's framework provides the tools to evaluate this.
+
+**Framework Application — The Bias of Small-Sample Sharpe:** Aronson's chapter on hypothesis testing establishes that the Sharpe ratio is a statistic subject to sampling error, and that the magnitude of this error depends on sample size. With only 63 days of data, the sampling error is enormous. The 95% confidence interval for the true Sharpe ratio can be estimated using the standard error of the Sharpe ratio, which is approximately 1 / √(N), where N is the number of observations. For 63 days, the standard error is 1 / √63 ≈ 0.126. The 99% confidence interval (approximately ±2.58 standard errors) would be ±0.325, and the 95% confidence interval (approximately ±1.96 standard errors) would be ±0.247. This means the true Sharpe could reasonably be anywhere from 2.46 to 2.96 — but this is a naive estimate that assumes the true Sharpe is near 2.71. More importantly, Aronson's chapter demonstrates that the expected Sharpe ratio from a random-walk strategy is zero, and the observed Sharpe of 2.71 could easily be pure noise. The minimum sample size for a reliable Sharpe estimate, as Aronson suggests, is at least 250 observations (roughly one year of daily data), and even then the confidence interval remains wide.
+
+**Type I and Type II Error Risks:** The trader faces two distinct error risks. Type I error (false positive): believing the strategy has positive expected returns when it does not. With 63 days of data, the probability of observing a Sharpe of 2.71 purely from noise is non-trivial — the trader should calculate the p-value for the null hypothesis that the true Sharpe is zero. If the p-value exceeds 0.05, the result is not statistically significant at the 95% level. Type II error (false negative): failing to recognize a genuinely good strategy because the sample is too small. This is the opposite risk — the strategy could be excellent, but the 63-day window may have captured a particularly favorable market regime. The trader's desire to double position size is a Type I error risk masquerading as confidence.
+
+**Actionable Recommendation:** The trader should not double position size. Instead, maintain current position size and collect at least 187 additional trading days (bringing the total to 250 days, approximately one year) before making any sizing decision. During this period, the trader should also evaluate whether the strategy's performance is concentrated in a few large trades or distributed across the 47+ trades — a few lucky wins can dramatically inflate a small-sample Sharpe. The minimum threshold for scaling up should be a 95% confidence interval for the true Sharpe that excludes zero and has a lower bound above 1.0.
+
+**Risk Identification:** The primary risk is that the trader's 63-day sample is dominated by a single market regime, and the strategy's true performance in a different regime could be negative. The second risk is that the strategy's edge is genuinely zero, and the observed 2.71 Sharpe is pure sampling error — a common occurrence with small samples.
+
+---
+DECISION FRAMEWORK:
+Regime: N/A (strategy evaluation, not market regime) — confidence: low
+Key Evidence:
+- 63-day sample size is far below the 250-day minimum for reliable Sharpe estimation
+- Observed Sharpe of 2.71 is subject to massive sampling error; 95% confidence interval is extremely wide
+- Type I error risk is elevated — the observed return could be pure noise
+Plan: Maintain current position size; collect 187+ additional trading days (total 250+) before any scaling decision; evaluate whether Sharpe lower bound at 95% confidence excludes zero
+Target: True Sharpe ratio lower bound above 1.0 at 95% confidence before scaling
+Invalidation: If the strategy's Sharpe ratio drops below 0.5 over the next 187 days, the original 2.71 was almost certainly sampling error — do not scale and consider strategy redesign
+Risk: 1R = current position size at risk (no change in size, so no additional risk) | reward: potential to avoid scaling into a false edge | risk-reward ratio: preserving capital > chasing a potentially spurious edge
+No-Trade Conditions: Do not scale position size until at least 250 days of live trading data are collected AND the 95% confidence interval for the true Sharpe excludes zero with a lower bound above 1.0.
+Review Metric: Track the strategy's Sharpe ratio on a rolling 250-day basis over the next year — does the 63-day estimate prove to be a gross overestimation? This builds calibration of the trader's confidence in small-sample Sharpe estimates.
+---

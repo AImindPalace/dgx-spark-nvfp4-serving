@@ -1,0 +1,42 @@
+This scenario presents a technically valid Triple Screen setup but a psychologically compromised trader. The technical signals are clear, but the emotional state introduces a sizing distortion that must be addressed before any position is entered.
+
+**Signal Assessment — Triple Screen Framework:**
+Screen 1 (weekly MACD histogram): The histogram turned up from -1.8 two bars ago. This is a buy signal — the weekly tide has turned bullish. The direction is up.
+Screen 2 (daily Force Index): The 2-day EMA of Force Index dropped below zero to -42,000. This is the buying opportunity Elder describes — the daily tide is pulling back within a weekly uptrend. This is the correct setup for a long entry.
+Screen 3 (intraday): Your buy-stop entry at $188.50 is above today's high, which is the correct intraday trigger.
+The Triple Screen alignment is correct: weekly up, daily pulling back, intraday trigger at the high. The setup passes all three screens.
+
+**Position Sizing Calculation — Money Management:**
+Your account is $150,000 with a 2% risk limit = $3,000 maximum risk per trade.
+Entry: $188.50
+Stop: $181.20
+Risk per share = $188.50 - $181.20 = $7.30
+Maximum shares = $3,000 / $7.30 = 410.96 → round down to 410 shares
+Position size = 410 × $188.50 = $77,285
+This represents 51.5% of your account — a substantial but manageable position for a swing trade.
+
+**Psychological Diagnosis — Elder's Three M's:**
+The critical issue is your stated urgency to 'make back' losses from three consecutive stop-outs. Elder's framework identifies this as a Mind problem that will distort the Money decision. The urgency to recover losses is a form of loss aversion — you're not sizing based on the trade's edge, you're sizing based on your emotional need to recover. This often manifests as oversizing (wanting to win big to make up for losses) or undersizing (fear of another loss).
+
+Elder's method is clear: the Money decision must be made independently of the Mind's emotional state. The calculated 410 shares is the correct size regardless of how you feel. The 'make back' mentality is a red flag — it means you're trading to recover, not to execute a system.
+
+**Trade Plan:**
+Entry: $188.50 via buy-stop
+Stop: $181.20
+Target: $198.00 (the next resistance level, representing a risk-reward of $7.30 risk for $9.50 reward = 1.3:1)
+Position size: 410 shares
+Confidence: Moderate — the Triple Screen setup is valid, but the psychological state warrants reduced confidence in execution.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate
+Key Evidence:
+- Weekly MACD histogram turned up from -1.8, bullish weekly tide
+- Daily Force Index below zero at -42,000, buying opportunity within weekly uptrend
+- Buy-stop trigger at $188.50 above today's high, intraday alignment correct
+Plan: Buy-stop entry at $188.50 → target $198.00
+Invalidation: Close below $181.20 on daily close
+Risk: 1R = $7.30 ($188.50 - $181.20) | reward: 1.3R ($198.00 - $188.50 = $9.50) | risk-reward 1.3:1
+No-Trade Conditions: If the buy-stop is not triggered at $1â€”$188.50 by end of session, do not chase; the intraday timing window has closed. If you feel the urge to increase size beyond 410 shares to 'recover faster,' that is a Mind problem — reduce to 200 shares or pass entirely.
+Review Metric: Track whether the psychological state of 'urgency to recover' led to any sizing deviation from the calculated 410 shares. Also measure whether the Triple Screen setup produced a win — the setup itself is valid regardless of the trader's emotional state.
+---

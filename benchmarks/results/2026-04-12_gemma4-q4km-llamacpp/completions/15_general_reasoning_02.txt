@@ -1,0 +1,25 @@
+This is a high-stakes, real-time decision that maps directly onto Boyd's OODA loop framework — the speed and quality of the trader's OODA cycle will determine whether they preserve capital or suffer a preventable loss. The original plan (long breakout) is now contradicted by two independent signals: a bearish engulfing bar on 5-minute chart on 2.4x volume, and a Fed speaker's hawkish comment causing an 8 bps spike in 2-year yields.
+
+**OODA Cycle 1 (9:35 AM):** The trader must immediately Observe — the bearish engulfing bar is the most visible data point, but the Fed speaker's comment is equally critical. The Orient phase is where the most cognitive bias risk exists. The trader's original plan (long breakout) creates a confirmation bias: they'll instinctively look for reasons the bearish engulfing bar is noise rather than signal. The 2.4x volume on the engulfing bar is the most important data point — it means institutional participants are selling into the gap-up, not just retail panic. The 8 bps spike in 2-year yields is the macro catalyst that explains the institutional selling. The trader must orient to the new reality: the gap-up was a trap, not a breakout.
+
+**OODA Cycle 2 (9:36 AM):** The trader must Decide — the decision is to cancel the long entry and potentially consider a short entry if the bearish engulfing bar holds. The original thesis is dead. This is the most important decision in the entire sequence because it prevents a loss that would have been 100% likely given the new information. The trader's original stop was likely set below the gap-up low, meaning a loss of at least 0.8% per share.
+
+**OODA Cycle 3 (9:37 AM):** The trader must Act — cancel the buy order immediately. If the bearish engulfing bar's low holds as support on the 5-minute chart, consider a short entry at the low of the engulfing bar with a stop above the engulfing bar's high. This is a new decision, not a continuation of the old one.
+
+The critical insight from McChrystal's work on adaptive decision-making is that the trader must be willing to abandon the original plan entirely. Boyd's OODA loop isn't about refining the original decision — it's about cycling through the loop fast enough to reach a new, more accurate decision. The 2.4x volume on the bearish engulfing bar is the key technical signal — it confirms institutional distribution. The Fed speaker's comment provides the fundamental catalyst. Together, they create a high-confidence short setup. The entry would be a short at the bearish engulfing bar's low (approximately 0.4-0.5% below the gap-up open), with a stop above the engulfing bar's high (approximately 0.3% above the gap-up open). The target would be a retest of yesterday's close, representing a potential 1.2-1.5% decline from the gap-up. Risk-reward: approximately 1:2.5. Confidence: moderate-to-high, given the volume confirmation and macro catalyst.
+
+The primary risk is that the Fed speaker's comment is noise and the market recovers — but the 2.4x volume on the bearish engulfing bar makes this less likely. The 8 bps spike in 2-year yields is the most important macro signal here, and the trader should monitor it closely.
+
+---
+DECISION FRAMEWORK:
+Regime: transition — confidence: high (gap-up-and-reverse with volume confirmation is a regime change from bullish to bearish)
+Key Evidence:
+- Bearish engulfing bar on 5-minute chart with 2.4x average volume — institutional distribution into the gap-up
+- Fed speaker's hawkish comment causing 8 bps spike in 2-year yields — fundamental catalyst for selling pressure
+- Original long thesis contradicted by both price action and macro news within 5 minutes
+Plan: Cancel original long entry immediately → Short entry at bearish engulfing bar low (approximately 0.4-0.5% below gap-up open) → Target yesterday's close (approximately 1.2-1.5% decline from gap-up)
+Invalidation: Price reclaims the bearish engulfing bar's high on 5-minute chart with volume — original bullish thesis is partially restored
+Risk: 1R = approximately 0.3% (stop above engulfing bar high) | reward: 2.5R | risk-reward ratio 2.5:1
+No-Trade Conditions: If the bearish engulfing bar's low is breached and price consolidates without direction for 15+ minutes — the signal is ambiguous and the OODA cycle needs more data before acting
+Review Metric: Track how many times the OODA loop was completed within 2 minutes of the initial signal — measures decision speed and ability to abandon the original plan under pressure
+---

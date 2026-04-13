@@ -1,0 +1,75 @@
+<think>
+This is a multi-timeframe alignment setup that requires synthesizing information across three timeframes using a hierarchical framework — a method Schwager describes as characteristic of top traders who don't rely on a single timeframe's signals.
+
+**Timeframe Analysis:**
+
+Weekly (14-week symmetrical triangle): The consolidation between $492 and $521 represents a coiling pattern where volatility is compressing. The triangle's apex is approaching — the distance between $492 and $521 is narrowing each week. This is a high-probability breakout setup because the longer the consolidation, the more explosive the eventual move. The weekly close above $514.30 (the 20-day EMA) is the first sign of directional resolution.
+
+Daily (bull engulfing bar above 20-day EMA): The bull engulfing bar is a reversal/continuation signal that confirms the weekly direction. Closing above the 20-day EMA at $514.30 on 1.8x volume provides the daily confirmation. Volume at 1.8x average is meaningful but not extraordinary — it's sufficient for a breakout initiation but not a climax.
+
+4-hour (base at $516.40, no overhead supply): This is the tactical timeframe. A clean base at $516.40 with no overhead supply until $521 means the immediate path of least resistance is upward. The $516.40 level becomes the critical support — if price retests this level, it should hold.
+
+**Multi-Timeframe Alignment:**
+- Weekly: Coiling triangle, direction resolving upward
+- Daily: Bullish engulfing, volume confirmation
+- 4-hour: Clean base, no overhead supply
+
+All three timeframes align bullish. This is a high-quality multi-timeframe confluence.
+
+**Trade Parameters:**
+
+Entry: $517.00 — a limit order at the top of the 4-hour base, slightly above the $516.40 base level to ensure fill while maintaining proximity to support. This is a buy-the-dip entry within the breakout.
+
+Stop: $513.50 — below the 20-day EMA at $514.30 and below the bull engulfing bar's low. Risk per share: $517.00 - $513.50 = $3.50.
+
+Target 1 (partial exit): $521.00 — the weekly resistance at the triangle's upper boundary. This is the first resistance level and a natural place to take 50% off. Reward: $4.00 per share.
+
+Target 2 (trailing): $535.00 — a measured move from the triangle. The triangle's height at the widest point is approximately $29 ($521 - $492). Adding this to the breakout point ($521) gives $550, but I'll use a conservative $535 as the trailing target, representing a 1.5x measured move. Reward: $18.00 per share.
+
+Position size: $100,000 account, 1% risk = $1,000. Risk per share: $3.50. Shares: $1,000 / $3.50 = 285 shares. Dollar exposure: 285 × $517 = $147,345.
+
+Risk-reward: 1R = $3.50. Target 1 = 1.14R ($4.00/$3.50). Target 2 = 5.14R ($18.00/$3.50). Blended risk-reward with 50% at T1 and 50% trailing to T2: (0.5 × 1.14) + (0.5 × 5.14) = 3.14R. This is acceptable because the trailing portion has a high probability of reaching T2 given the multi-timeframe alignment.
+
+Confidence: High. Three-timeframe alignment, 14-week consolidation, volume confirmation, and clean 4-hour structure.
+
+**Framework Application:**
+- Schwager's multi-timeframe method: All three timeframes confirm upward direction
+- Elder's three-wave model: The 14-week triangle represents a wave 2 consolidation; the bull engulfing is wave 3 initiation
+- Risk-reward framework: 3.14R blended, well above the 2:1 minimum
+- Position sizing: 1% account risk rule applied consistently
+- Support and resistance: $516.40 as support, $521 as first resistance, $535 as trailing target
+- Volatility context: VIX at 17 is moderate — not extreme, so the breakout isn't being driven by panic or euphoria, which is actually favorable for a measured move
+
+</think>
+
+This is a high-quality multi-timeframe alignment setup where the weekly, daily, and 4-hour charts all confirm upward direction. Applying Schwager's framework for top traders who synthesize across timeframes, the convergence of signals across all three timeframes creates a high-probability breakout trade.
+
+**Trade Parameters:**
+- **Entry:** $517.00 (limit order at the top of the 4-hour base, slightly above $516.40 support)
+- **Stop:** $513.50 (below the 20-day EMA at $514.30 and below the bull engulfing bar's low)
+- **Target 1:** $521.00 (weekly triangle resistance — take 50% off)
+- **Target 2:** $535.00 (conservative 1.5x measured move from the triangle, trailing the remaining 50%)
+- **Position Size:** 285 shares ($100,000 × 1% risk / $3.50 risk per share = $1,000 / $3.50 = 285.7, rounded to 285)
+- **Dollar Exposure:** $147,345 (285 × $517)
+- **Risk-Reward:** 1R = $3.50. Blended: 3.14R (0.5 × 1.14R at T1 + 0.5 × 5.14R at T2)
+
+**Why This Works:**
+The 14-week symmetrical triangle represents maximum compression — the longer the consolidation, the more explosive the eventual breakout. The bull engulfing bar on 1.8x volume is the first directional signal, and the 4-hour clean base at $516.40 with no overhead supply provides the tactical entry. VIX at 17 is moderate — not extreme — which means the breakout isn't being driven by panic or euphoria, making a measured move more likely than a violent spike-and-reverse.
+
+**Invalidation:** A daily close below $513.50 invalidates the entire setup. This would mean the bull engulfing bar failed and the triangle is resolving downward. Exit immediately — no averaging down.
+
+**Confidence:** High. Three-timeframe alignment, volume confirmation, and clean structure.
+
+---
+DECISION FRAMEWORK:
+Regime: trend (breakout from 14-week consolidation) — confidence: high
+Key Evidence:
+- Weekly symmetrical triangle coiling for 14 weeks — maximum compression before directional resolution
+- Daily bull engulfing bar above 20-day EMA on 1.8x volume — first confirmed directional signal
+- 4-hour clean base at $516.40 with no overhead supply until $521 — tactical entry with clear support
+Plan: Enter at $517.00 limit → Target 1 at $521.00 (50% off) → Trail remaining 50% to $535.00
+Invalidation: Daily close below $513.50 — exit immediately, no averaging down
+Risk: 1R = $3.50 per share | Blended reward: 3.14R | Risk-reward ratio 3.14:1
+No-Trade Conditions: If VIX spikes above 25 before entry (indicating regime shift to fear), or if price gaps below $513.50 on any news event, stand aside. Also stand aside if the 4-hour base at $516.40 breaks before entry is filled.
+Review Metric: Track whether 14-week symmetrical triangles in SPY produce measured moves exceeding 1.5x the triangle height — build a statistical database of triangle breakout outcomes to calibrate future target sizing.
+---

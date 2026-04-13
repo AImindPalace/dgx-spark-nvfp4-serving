@@ -1,0 +1,79 @@
+<think>
+This scenario requires applying Elder's Triple Screen system for the technical analysis, his position sizing framework, and his psychological model (the three M's) to diagnose a trader who is psychologically compromised. The technical setup is actually valid, but the trader's mindset threatens to distort the execution.
+
+**Technical Analysis — Triple Screen Confirmation:**
+
+Screen 1 (weekly): MACD histogram turned up from -1.8 two bars ago. Elder's rule: when the weekly MACD histogram turns up, the tide is turning bullish — this is a buy signal. The trend is shifting from bearish to bullish.
+
+Screen 2 (daily): The 2-day EMA of Force Index dropped below zero to -42,000 while the weekly trend is up. Elder's second screen rule: when the daily Force Index drops below zero while the weekly trend is up, it's a buying opportunity. The Force Index measures the power of buying and selling — when it drops below zero, it means selling pressure has overwhelmed buying pressure, creating a pullback within an uptrend. This is the dip-buying setup.
+
+Screen 3 (intraday): Buy-stop entry at $188.50, just above today's high. This is the third screen — timing the entry to confirm the daily pullback is ending and the weekly uptrend is resuming.
+
+The Triple Screen is fully confirmed: weekly bullish (histogram up), daily pullback (Force Index below zero), intraday trigger (buy-stop above today's high). This is a textbook Triple Screen buy setup.
+
+**Position Sizing — The Money Framework:**
+
+Elder's Money framework for position sizing: risk no more than 2% of account per trade. With a $150,000 account, maximum risk is $3,000.
+
+Entry: $188.50 (buy-stop)
+Stop: $181.20 (below the pullback low)
+Risk per share: $188.50 - $181.20 = $7.30
+
+Shares: $3,000 / $7.30 = 410.96, rounded to 410 shares
+Total risk: 410 × $7.30 = $2,993 (1.995% of account)
+
+Target: $198.00 (measured move from the weekly pullback, or the next resistance level)
+Reward: $198.00 - $188.50 = $9.50 per share
+Risk-reward: $9.50 / $7.30 = 1.30:1
+
+The risk-reward is modest at 1.30:1. This is below the 2:1 threshold that Elder and most risk management frameworks recommend. However, the Triple Screen system's strength is that it identifies high-probability setups — the weekly trend direction, daily pullback, and intraday trigger all align. Elder's framework suggests that high-probability setups can justify slightly lower risk-reward ratios because the win rate compensates.
+
+**Psychological Diagnosis — The Mind Framework:**
+
+Elder's Mind framework states that the trader's mind is the most important factor in trading success. He specifically warns about the three M's: Mind, Method, and Money. The trader's psychological state is compromised — three consecutive stopped-out trades have created a desire to 'make back' losses quickly. This is the gambler's fallacy in action: the belief that losses must be recovered immediately, which leads to overtrading and oversized positions.
+
+The specific danger: the trader is likely to increase position size beyond the 2% risk rule because they feel urgency to recover losses. If they increase to 4% risk ($6,000), they'd buy 822 shares instead of 410. If the trade hits the stop, the loss is $6,000 (4% of account) instead of $3,000 (2%). After three consecutive losses, a 4% loss on the fourth trade could trigger a cascade of emotional decisions.
+
+Elder's method for handling this: the trader must recognize that the Triple Screen setup is valid regardless of their emotional state, but their emotional state is NOT valid for overriding the position sizing rule. The correct action is to execute the trade at the calculated 410 shares with the $3,000 risk cap, accepting that the risk-reward is only 1.30:1. If the trader cannot accept this sizing, they should not take the trade at all — Elder's framework is clear that the trader's mind must be in the correct state before executing.
+
+**The Target:**
+
+The measured move target of $198.00 gives a reward of $9.50 per share. At 410 shares, that's $3,895 in profit if the target is reached. The risk-reward of 1.30:1 is below ideal, but the Triple Screen's high-probability nature and the weekly trend alignment make this a tradeable setup. The trader should accept the modest risk-reward because the probability of success is elevated by the three-screen confirmation.
+
+**The Urgency Problem:**
+
+The feeling of urgency to 'make back' losses is a psychological distortion that Elder's Mind framework explicitly addresses. The trader must recognize this as a signal to reduce, not increase, position size. The correct response is to take the trade at the calculated 2% risk ($3,000) and accept the 1.30:1 risk-reward. If the trader cannot accept this, they should not trade — Elder's framework is clear that the trader's mind must be in the correct state before executing.
+
+</think>
+
+The Triple Screen system is fully confirmed for AMZN: weekly MACD histogram turned up from -1.8 (bullish tide), daily Force Index dropped to -42,000 below zero (buying opportunity within the uptrend), and the intraday buy-stop at $188.50 provides the timing trigger. This is a textbook Triple Screen buy setup.
+
+However, the trader's psychological state is compromised — three consecutive stopped-out trades have created urgency to 'make back' losses. This is the gambler's fallacy, and Elder's Mind framework identifies it as the most dangerous threat to trading success. The correct position sizing is 410 shares at 2% risk ($3,000), not the inflated size the urgency is pushing toward.
+
+**Trade Parameters:**
+- Entry: $188.50 (buy-stop above today's high)
+- Stop: $181.20 (below the daily pullback low)
+- Risk per share: $7.30
+- Position: 410 shares (2% of $150,000 = $3,000 risk)
+- Target: $198.00 (measured move / next resistance)
+- Reward: $9.50 per share
+- Risk-reward: 1.30:1
+- Confidence: Moderate — Triple Screen confirmation is strong but risk-reward is below the 2:1 ideal
+
+**Psychological Diagnosis:**
+The urgency to recover losses is a psychological distortion that Elder's Mind framework explicitly warns against. The trader must recognize this as a signal to reduce, not increase, position size. The correct action is to execute at the calculated 410 shares with $3,000 risk. If the trader cannot accept this sizing, they should not take the trade at all — Elder's framework is clear that the trader's mind must be in the correct state before executing.
+
+**The Urgency Trap:**
+If the trader increases to 4% risk ($6,000) and buys 822 shares, a stop-out would be a $6,000 loss (4% of account) — compounding the emotional damage from the previous three losses. This is the cascade failure that Elder's risk management framework is designed to prevent. The 2% rule exists precisely to protect the trader from their own emotional state.
+
+---
+DECISION FRAMEWORK:
+Regime: trend (weekly bullish, daily pullback) — confidence: moderate
+Key Evidence:
+- Triple Screen fully confirmed: weekly MACD histogram up from -1.8, daily Force Index at -42,000 below zero, intraday buy-stop trigger at $188.50
+- Trader's psychological state is compromised (urgency to recover losses) — Elder's Mind framework requires the trader's mind to be in correct state before execution
+- Risk-reward of 1.30:1 is below the 2:1 ideal but acceptable for a high-probability Triple Screen setup with weekly trend alignment
+Plan: Buy 410 shares at $188.50 (buy-stop) → target $198.00, with stop at $181.20
+Invalidation: Daily close below $181.20 on volume exceeding 1.5x 20-day average; also invalidated if the weekly MACD histogram turns down again before entry
+Risk: 1R = $7.30 per share ($2,993 total, 1.995% of account) | reward: 1.30R ($9.50 per share, $3,895 total) | risk-reward 1.30:1
+No-Trade Conditions: If the trader cannot accept the 2% risk cap and feels compelled to

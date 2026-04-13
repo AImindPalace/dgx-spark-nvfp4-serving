@@ -1,0 +1,43 @@
+This is a pure OODA loop execution scenario — the trader has less than 60 seconds to cycle through all four phases before the next 5-minute bar closes and the opportunity either crystallizes or evaporates. The framework here is Boyd's OODA Loop (Observe, Orient, Decide, Act) as applied to trading, with McChrystal's adaptive decision-making principles providing the framework for how to Orient under uncertainty.
+
+**Phase 1: Observe (9:35 AM — 0-5 seconds)**
+The trader's eyes scan the screen. QQQ gapped up 0.8% at the open but reversed immediately. The 5-minute bearish engulfing bar has 2.4x average volume. The Fed speaker's unscheduled comment has pushed 2-year yields up 8 bps. These are the raw data points — no interpretation yet. The trader must also observe their own internal state: elevated heart rate, adrenaline spike, the urge to act quickly. This self-observation is critical because it identifies the emotional bias that will contaminate the Orient phase.
+
+**Phase 2: Orient (9:35:05-9:35:30 AM — 5-25 seconds)**
+This is the most critical and most vulnerable phase. The trader must integrate the new data against their original thesis. The original thesis was: 'QQQ will continue yesterday's strong close with a gap-up breakout.' The new data says: 'QQQ gapped up but reversed immediately on heavy volume, and a macro catalyst just introduced a headwind.' The Orient phase must produce a revised thesis, not a confirmation of the old one. The 2.4x volume on the bearish engulfing bar is the most important data point — it means institutional sellers are active at the open, not just retail panic. The 8 bps yield spike is a fundamental headwind for tech stocks, adding a second layer of bearish pressure. The revised thesis: 'The gap-up was a bull trap, and the original long breakout thesis is now invalidated.'
+
+**Cognitive biases threatening the Orient phase:**
+- **Confirmation bias:** The trader's original thesis was long. The Orient phase must actively search for disconfirming evidence, not cherry-pick data that supports the original plan.
+- **Anchoring:** The 0.8% gap-up is a powerful anchor — the trader may subconsciously want to believe the gap represents buying demand, even though the reversal on heavy volume contradicts this.
+- **Loss aversion:** The trader may feel the need to 'save' the trade by finding a reason to stay long, rather than objectively evaluating the new evidence.
+
+**Phase 3: Decide (9:35:30-9:35:50 AM — 25-45 seconds)**
+The decision must be clear and binary. The original long breakout trade is dead. The question is now: do I flip short, or do I stand aside? The bearish engulfing bar on 2.4x volume is a strong short signal, but the gap-up itself still represents some residual buying demand that could cause a secondary bounce. The optimal decision is to wait for the next 5-minute bar to close. If the next bar holds below the bearish engulfing bar's low, enter short with a stop above the engulfing bar's high. If the next bar bounces back above the engulfing bar, the gap-up may have more life — hold off on either trade.
+
+**Phase 4: Act (9:35:50-9:35:55 AM — 45-50 seconds)**
+The trader places the order. If the next bar closes below the engulfing bar's low, enter short at the close of the next bar with a stop above the engulfing bar's high. If not, no action. The key is that the OODA loop must cycle again with the next bar's data.
+
+**Trade parameters for the short entry:**
+- Entry: Short at close of the second 5-minute bar if it closes below the engulfing bar's low (approximately $400.80, assuming QQQ at $401.50 at the gap-up)
+- Stop: Above the engulfing bar's high (approximately $402.00)
+- Target: $398.50 (the gap-down zone, representing a full retracement of the gap plus additional selling)
+- Risk: $1.20 per share
+- Reward: $2.30 per share
+- Risk-reward: 1.9:1
+- Position sizing: 1% portfolio risk (standard for intraday)
+
+The original long breakout trade is abandoned entirely. The OODA loop framework demands that the trader be willing to discard their original thesis when the Orient phase produces disconfirming evidence.
+
+---
+DECISION FRAMEWORK:
+Regime: transition — confidence: high (bearish reversal from gap-up with heavy volume and macro catalyst)
+Key Evidence:
+- 5-minute bearish engulfing bar on 2.4x average volume — institutional selling at the open
+- 8 bps spike in 2-year yields from unscheduled Fed comment — fundamental headwind for tech
+- Original long thesis invalidated by immediate reversal on heavy volume
+Plan: Short entry at close of next 5-minute bar below engulfing bar low → target $398.50
+Invalidation: QQQ closes above the engulfing bar's high on the next 5-minute bar — the gap-up may have more life than the reversal suggests
+Risk: 1R = $1.20 | reward: 1.9R | risk-reward 1.9:1
+No-Trade Conditions: If the next 5-minute bar closes above the engulfing bar's high, no short entry — the reversal was a false signal. Also no trade if the 2-year yield spike reverses and yields decline back below 8 bps, removing the macro catalyst.
+Review Metric: Track the OODA loop cycle time — did the trader cycle through all 4 phases within the 5-minute bar window? Also measure whether the Orient phase was contaminated by confirmation bias (did the trader search for disconfirming evidence or only confirming evidence?)
+---
