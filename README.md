@@ -4,6 +4,12 @@ Notes from getting a DoRA fine-tuned Qwen3.5-27B dense model, quantized to NVFP4
 
 Tested April 2026 on DGX Spark OS 7.4.0, driver 580.126.09, CUDA 13.0.
 
+## 2026-04-14 Note — DFlash evaluation (research only, no stack change yet)
+
+Researched z-lab's **DFlash** diffusion-based speculative drafter ([z-lab/Qwen3.5-27B-DFlash](https://huggingface.co/z-lab/Qwen3.5-27B-DFlash)) after community reports of ~30 tok/s on Spark with INT4 targets. Full write-up in **[docs/2026-04-14-dflash-evaluation.md](docs/2026-04-14-dflash-evaluation.md)**.
+
+Short version: DFlash and our current MTP setup are mutually exclusive (`--speculative-config` takes one method). DFlash on **NVFP4** targets is **unverified** — every reported Spark number uses INT4-AutoRound or FP8. DFlash requires vLLM ≥ 0.19 (we're on 0.18.2rc1) and `--attention-backend flash_attn` (we auto-select FLASHINFER_CUTLASS). Potential upside is real (~25–30 tok/s realistic on NVFP4 if it works vs. our 17.1 on MTP), but it's a pod-run A/B, not a README rewrite. Not changing anything in this branch until we have measured numbers.
+
 ## 2026-04-12 Update — Multi-model serving + quality shootout
 
 What was originally about Jarvis_1 (single-model NVFP4 serving) has grown into a full comparison across 3 serving stacks and 3 model architectures on the same Spark, with a blind-scored quality shootout. See:
