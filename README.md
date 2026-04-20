@@ -4,6 +4,8 @@ Notes from getting a DoRA fine-tuned Qwen3.5-27B dense model, quantized to NVFP4
 
 Tested April 2026 on DGX Spark OS 7.4.0, driver 580.126.09, CUDA 13.0.
 
+> **Short technical note:** [Four Post-Export Fixes Required to Serve an NVFP4-Quantized Qwen3.5-27B on DGX Spark](docs/writeups/modelopt-nvfp4-export-fixes.md) — a standalone write-up of the `modelopt` 0.42 post-export fixes, suitable for citing or cross-posting. See [CITATION.cff](CITATION.cff).
+
 ## 2026-04-12 Update — Multi-model serving + quality shootout
 
 What was originally about Jarvis_1 (single-model NVFP4 serving) has grown into a full comparison across 3 serving stacks and 3 model architectures on the same Spark, with a blind-scored quality shootout. See:
