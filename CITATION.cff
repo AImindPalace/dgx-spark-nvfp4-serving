@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it using the metadata from this file."
+title: "Serving a Fine-Tuned Qwen3.5-27B (Dense, NVFP4) on DGX Spark"
+abstract: >-
+  Reproducible guide and toolchain for quantizing a DoRA fine-tuned
+  Qwen3.5-27B dense model to NVFP4 via nvidia-modelopt and serving it on a
+  single NVIDIA DGX Spark (GB10, SM121) using native vLLM. Documents the
+  post-export fixes required by modelopt 0.42 (use of
+  export_hf_checkpoint() in place of save_pretrained(), MTP weight grafting,
+  VLM wrapper config rewrite, safetensors index generation), Multi-Token
+  Prediction speculative decoding setup, and a blind-scored quality
+  shootout across three serving stacks (vLLM NVFP4, llama.cpp GGUF
+  Q4_K_M / Q5_K_M+imatrix) and three architectures (Qwen3.5-27B dense,
+  Qwen3.5-35B-A3B MoE, Gemma 4 26B-A4B). Baseline: 11.2 tok/s; with MTP:
+  17.1 tok/s (+52%).
+authors:
+  - family-names: Verbeck
+    given-names: Brandon
+    email: verbeck69@gmail.com
+    affiliation: AImindPalace
+type: software
+repository-code: "https://github.com/AImindPalace/dgx-spark-nvfp4-serving"
+url: "https://github.com/AImindPalace/dgx-spark-nvfp4-serving"
+date-released: 2026-04-02
+version: "2026.04.13"
+keywords:
+  - nvfp4
+  - vllm
+  - dgx-spark
+  - qwen
+  - qwen3.5
+  - quantization
+  - modelopt
+  - llm-inference
+  - speculative-decoding
+  - multi-token-prediction
+  - fine-tuning
+  - llama.cpp
