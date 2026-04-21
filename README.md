@@ -2,6 +2,8 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19673102.svg)](https://doi.org/10.5281/zenodo.19673102) [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
+> **Companion repo:** [AImindPalace/mac-studio-mlx-serving](https://github.com/AImindPalace/mac-studio-mlx-serving) — same Jarvis fine-tune, Apple Silicon / MLX serving path. Head-to-head throughput comparison and notes on MLX speculative-decoding + llama.cpp FastMTP dead ends.
+
 Notes from getting a DoRA fine-tuned Qwen3.5-27B dense model, quantized to NVFP4 via `nvidia-modelopt`, serving on a single DGX Spark. This took significant trial and error across multiple frameworks and configurations. Sharing what worked and what didn't so others don't have to repeat it.
 
 Tested April 2026 on DGX Spark OS 7.4.0, driver 580.126.09, CUDA 13.0.
