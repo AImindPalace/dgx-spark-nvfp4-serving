@@ -37,3 +37,11 @@ keywords:
   - fine-tuning
   - llama.cpp
 license: Apache-2.0
+doi: 10.5281/zenodo.19673102
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19673102
+    description: Concept DOI (all versions)
+  - type: doi
+    value: 10.5281/zenodo.19673103
+    description: DOI for version v2026.04.13

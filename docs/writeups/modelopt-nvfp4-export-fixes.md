@@ -2,7 +2,9 @@
 
 **Brandon Verbeck · AImindPalace · April 2026**
 
-*Companion technical note to [AImindPalace/dgx-spark-nvfp4-serving](https://github.com/AImindPalace/dgx-spark-nvfp4-serving). Ready for cross-posting to a blog or as an informal preprint. Cite via [CITATION.cff](../../CITATION.cff).*
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19673102.svg)](https://doi.org/10.5281/zenodo.19673102)
+
+*Companion technical note to [AImindPalace/dgx-spark-nvfp4-serving](https://github.com/AImindPalace/dgx-spark-nvfp4-serving). Cite via [CITATION.cff](../../CITATION.cff) or the DOI above.*
 
 ## Abstract
 
@@ -87,4 +89,4 @@ The SM121 software E2M1 patch is the work of [Avarok-Cybersecurity](https://gith
 
 ---
 
-*Suggested citation: Verbeck, B. (2026). Four Post-Export Fixes Required to Serve an NVFP4-Quantized Qwen3.5-27B on DGX Spark. AImindPalace Technical Note. https://github.com/AImindPalace/dgx-spark-nvfp4-serving/blob/main/docs/writeups/modelopt-nvfp4-export-fixes.md*
+*Suggested citation: Verbeck, B. (2026). Serving a Fine-Tuned Qwen3.5-27B (Dense, NVFP4) on DGX Spark (Version v2026.04.13) [Software]. Zenodo. https://doi.org/10.5281/zenodo.19673102*
