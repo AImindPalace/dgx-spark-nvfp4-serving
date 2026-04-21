@@ -21,8 +21,8 @@ authors:
 type: software
 repository-code: "https://github.com/AImindPalace/dgx-spark-nvfp4-serving"
 url: "https://github.com/AImindPalace/dgx-spark-nvfp4-serving"
-date-released: 2026-04-02
-version: "2026.04.13"
+date-released: 2026-04-20
+version: "2026.04.20"
 keywords:
   - nvfp4
   - vllm
@@ -45,3 +45,6 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.19673103
     description: DOI for version v2026.04.13
+  - type: doi
+    value: 10.5281/zenodo.19674042
+    description: DOI for version v2026.04.20 (DFlash A/B result)
