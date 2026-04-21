@@ -8,7 +8,11 @@ Notes from getting a DoRA fine-tuned Qwen3.5-27B dense model, quantized to NVFP4
 
 Tested April 2026 on DGX Spark OS 7.4.0, driver 580.126.09, CUDA 13.0.
 
-> **Short technical note:** [Four Post-Export Fixes Required to Serve an NVFP4-Quantized Qwen3.5-27B on DGX Spark](docs/writeups/modelopt-nvfp4-export-fixes.md) — a standalone write-up of the `modelopt` 0.42 post-export fixes, suitable for citing or cross-posting. See [CITATION.cff](CITATION.cff).
+> **Short technical notes:**
+> - [Four Post-Export Fixes Required to Serve an NVFP4-Quantized Qwen3.5-27B on DGX Spark](docs/writeups/modelopt-nvfp4-export-fixes.md) — `modelopt` 0.42 post-export fixes.
+> - [DFlash vs MTP on a Fine-Tuned Qwen3.5-27B: Acceptance Survives the Fine-Tune, Speed Doesn't](docs/writeups/2026-04-20-dflash-vs-mtp.md) — empirical A/B vs the MTP + NVFP4 baseline; retires our Eagle-3 training plan on Spark.
+>
+> Both are cite-ready via [CITATION.cff](CITATION.cff).
 >
 > **Upstream vLLM contribution:** [vllm-project/vllm#39476](https://github.com/vllm-project/vllm/pull/39476) — adds `IsHybrid` support to `Qwen3_5MoeForCausalLM` so V1 engine initializes KV cache correctly for the MoE variant (Qwen3.5-35B-A3B). Until merged, running the text-only MoE on vLLM requires a build from the [AImindPalace/vllm fix branch](https://github.com/AImindPalace/vllm/tree/fix/qwen3_5_moe_hybrid_support).
 

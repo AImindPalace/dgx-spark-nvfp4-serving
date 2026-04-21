@@ -1,0 +1,85 @@
+<think>
+The case for fractional Kelly over full-Kelly is one of the most important position sizing decisions a trader makes, and it connects directly to the chapter's discussion of how the Kelly formula's mathematical optimality assumes perfect knowledge of probabilities — an assumption that never holds in live markets.
+
+**Why Full-Kelly Fails in Practice:**
+
+1. **Parameter estimation error.** The 58% win rate and 4.2%/-2.8% averages come from a 5-year backtest. These are estimates, not truths. If the true win rate is 55% instead of 58%, full-Kelly at 29% becomes dangerously overleveraged. The Kelly formula is extremely sensitive to small errors in probability estimates — a 3-percentage-point error in win rate can shift the optimal fraction by 10+ percentage points.
+
+2. **Distributional assumptions.** Kelly assumes the payoff distribution is stationary and known. Real markets exhibit fat tails, regime changes, and correlation breakdowns that the backtest may not capture. A 5-year backtest on S&P 500 constituents likely misses at least one major regime shift (2020 COVID crash, 2022 rate shock).
+
+3. **The ruin problem.** Full-Kelly maximizes long-run geometric growth but does so at the cost of maximum possible drawdowns. The expected maximum drawdown at full-Kelly is approximately 50% of peak equity. At half-Kelly, it drops to approximately 25%. At quarter-Kelly, approximately 12.5%. For a $250,000 account, a 50% drawdown means losing $125,000 — psychologically devastating and potentially triggering forced liquidation.
+
+4. **Transaction costs and slippage.** The backtest likely uses idealized fills. Real execution costs reduce the edge, which means the true Kelly fraction is lower than the backtest suggests.
+
+**Recommended Fractional Kelly Level: Half-Kelly (14.5%)**
+
+Half-Kelly sacrifices approximately 75% of the growth rate improvement but reduces maximum drawdown by approximately 50%. This is the standard recommendation in the Kelly literature (Thorp, Poundstone, and most quantitative practitioners). For this specific strategy:
+
+- Full-Kelly: 29% of $250,000 = $72,500 per trade
+- Half-Kelly: 14.5% of $250,000 = $36,250 per trade
+- Quarter-Kelly: 7.25% of $250,000 = $18,125 per trade
+
+I recommend half-Kelly as the starting point because the 5-year backtest provides reasonable confidence in the edge, but live execution will introduce unknowns.
+
+**R-Multiple Distribution and Ongoing Adjustments:**
+
+Tharp's R-multiple framework provides the mechanism for dynamic position sizing. R is the initial risk per trade (the distance from entry to stop). Each trade's outcome is measured in R-multiples: a +4.2% average winner on a $36,250 position with a 2.8% stop represents approximately 1.5R per winner.
+
+The ongoing adjustment process should track:
+- Rolling 6-month win rate (vs. the 58% backtest estimate)
+- Rolling average R-multiple of winners and losers
+- Maximum consecutive losing streak observed in live trading
+
+If the live win rate drops below 53% over a 6-month rolling window, reduce to quarter-Kelly. If it drops below 50%, halt trading and re-evaluate. If the average loser exceeds -3.5% (wider than the backtest's -2.8%), the strategy's risk profile has deteriorated — reduce to quarter-Kelly immediately.
+
+The R-multiple distribution also reveals whether the strategy is capturing its expected edge. If the average winner is compressing from 4.2% toward 3.0%, the mean-reversion edge may be decaying as more participants exploit it.
+
+**Concrete Position Sizing for This Account:**
+
+At half-Kelly ($36,250 per trade), with a 2.8% stop distance, the maximum dollar risk per trade is $1,015. This represents 0.41% of the $250,000 account — well within Tharp's recommended 1-2% risk per trade framework. The trader could actually run slightly larger positions (up to 1% risk = $2,500 per trade) and still be below half-Kelly, providing additional margin of safety.
+
+</think>
+
+
+
+The case for fractional Kelly over full-Kelly is overwhelming, and it connects directly to the chapter's core insight: the Kelly formula's mathematical optimality requires perfect knowledge of probabilities — an assumption that never holds in live markets.
+
+**Why Full-Kelly Is Dangerous in Practice:**
+
+1. **Parameter estimation error.** Your 58% win rate and 4.2%/-2.8% averages are backtest estimates, not truths. The Kelly formula is extremely sensitive to small errors: if the true win rate is 55% instead of 58%, the optimal fraction drops from 29% to approximately 18% — a 38% reduction. Full-Kelly at 29% with a 55% true win rate is actually overleveraged, producing negative long-run growth.
+
+2. **Maximum drawdown at full-Kelly is approximately 50%.** On a $250,000 account, that's a $125,000 drawdown — psychologically devastating and potentially triggering forced liquidation. At half-Kelly, maximum drawdown drops to approximately 25% ($62,500). At quarter-Kelly, approximately 12.5% ($31,250).
+
+3. **Transaction costs and slippage reduce the true edge.** Your backtest likely uses idealized fills. Real execution costs of even 0.1-0.2% per trade reduce the effective win rate and average winner, meaning the true Kelly fraction is lower than the backtest suggests.
+
+4. **Regime non-stationarity.** A 5-year backtest on S&P 500 constituents likely misses at least one major regime shift. Mean-reversion strategies can lose their edge during trending regimes, and the backtest may not capture this.
+
+**Recommended Fractional Kelly: Half-Kelly (14.5%)**
+
+Half-Kelly sacrifices approximately 75% of the growth rate improvement but reduces maximum drawdown by approximately 50%. This is the standard recommendation in the Kelly literature and represents the optimal balance between growth and survivability.
+
+- Full-Kelly: 29% of $250,000 = $72,500 per trade
+- Half-Kelly: 14.5% of $250,000 = $36,250 per trade
+- Quarter-Kelly: 7.25% of $250,000 = $18,125 per trade
+
+At half-Kelly with a 2.8% stop distance, maximum dollar risk per trade is $1,015 — representing 0.41% of account equity. This is conservative relative to Tharp's 1-2% risk-per-trade framework, providing additional margin of safety.
+
+**R-Multiple Distribution and Ongoing Adjustments:**
+
+Tharp's R-multiple framework provides the mechanism for dynamic position sizing. Track these metrics on a rolling 6-month basis:
+
+- **Win rate:** If it drops below 53%, reduce to quarter-Kelly. Below 50%, halt trading and re-evaluate.
+- **Average loser:** If it exceeds -3.5% (wider than the backtest's -2.8%), the strategy's risk profile has deteriorated — reduce to quarter-Kelly immediately.
+- **Average winner:** If it compresses from 4.2% toward 3.0%, the mean-reversion edge may be decaying — reduce to quarter-Kelly.
+- **Maximum consecutive losing streak:** If you observe 8+ consecutive losses (which has a probability of approximately 0.0002% per sequence at 58% win rate, but is plausible in live trading with estimation error), reduce to quarter-Kelly.
+
+The R-multiple distribution also reveals whether the strategy is capturing its expected edge. If the average winner is compressing from 4.2% toward 3.0% while the average loser stays constant, the strategy's risk-reward ratio is deteriorating — a signal that the mean-reversion edge may be decaying as more participants exploit it.
+
+---
+DECISION FRAMEWORK:
+Regime: range — confidence: moderate (mean-reversion strategy assumes range-bound behavior; confidence depends on current market regime)
+Key Evidence:
+- Full-Kelly at 29% assumes perfect probability knowledge that never exists in live markets; parameter estimation error alone could make full-Kelly overleveraged
+- Half-Kelly at 14.5% ($36,250 per trade) reduces maximum drawdown from ~50% to ~25% while preserving most of the growth advantage
+- R-multiple tracking on a rolling 6-month basis provides the mechanism for dynamic adjustment as live data accumulates
+Plan: Enter at half-Kelly (14.5% of equity, $36,250 per trade) → adjust to quarter-Kelly

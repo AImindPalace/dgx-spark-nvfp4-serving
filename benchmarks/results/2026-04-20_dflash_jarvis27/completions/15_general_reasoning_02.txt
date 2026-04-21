@@ -1,0 +1,26 @@
+<think>
+This is a real-time decision-making scenario that maps directly to Boyd's OODA Loop framework as applied to fast-paced trading environments. McChrystal's work on adaptive decision-making under uncertainty — particularly his emphasis on 'disorienting the enemy' by operating faster than their OODA cycle — is directly relevant here, though the application is to the trader's own cycle rather than competitive dynamics.
+
+Let me walk through each phase of the OODA loop with specific reference to the scenario:
+
+**Observe (0-30 seconds):** The trader observes three simultaneous data points: (1) QQQ gapped up 0.8% but immediately reversed, (2) a bearish engulfing bar on the 5-minute chart at 2.4x average volume, (3) an unscheduled Fed comment shifting rate expectations, with 2-year yields spiking 8 bps. The critical observation is the convergence of bearish price action with a macro catalyst — this is not random noise but a coordinated signal.
+
+**Orient (30-90 seconds):** This is where cognitive biases are most dangerous. The trader's pre-market orientation was bullish (anticipating continuation). Several biases threaten this phase:
+
+1. **Anchoring bias:** The pre-market thesis anchors the trader to the long bias. The 0.8% gap up reinforces this anchor. The trader must consciously recognize that the pre-market thesis is now invalidated by new evidence.
+
+2. **Confirmation bias:** The trader may selectively attend to any bullish data (e.g., 'the gap is still up, the trend is still up') while discounting the bearish engulfing bar and Fed comment.
+
+3. **Loss aversion:** If the trader already placed a buy order at the open, the reversal creates immediate unrealized loss, triggering the disposition effect — the tendency to hold losers hoping for recovery.
+
+4. **Recency bias in the wrong direction:** Yesterday's strong close is the most recent memory, but the 5-minute bar is more recent and more relevant to the current decision.
+
+The correct orientation requires updating the mental model: the gap-and-reverse pattern on 2.4x volume with a macro catalyst is a high-probability short-term reversal signal. The Fed comment provides a fundamental explanation for the reversal, making it more durable than a purely technical pullback.
+
+**Decide (90-120 seconds):** The optimal decision is to NOT enter the long trade and potentially consider a short if the trader has a short-side strategy. The risk-reward for the original long thesis has deteriorated from favorable to unfavorable. If the trader had already entered, the decision is to exit immediately at market — the stop should have been below the gap-up bar's low, which is now being violated.
+
+**Act (120+ seconds):** Execute the exit or stand aside. Speed matters — McChrystal's framework emphasizes that the side that cycles through OODA faster gains advantage. In intraday trading, a 2-minute delay in recognizing a failed thesis can mean the difference between a 0.3% loss and a 1.5% loss.
+
+The key insight from Boyd's framework applied to trading: the Orient phase is the most important and most vulnerable to bias. The Observe and Act phases are mechanical; the Decide phase follows from Orient. If Orient is corrupted by anchoring or confirmation bias, the entire loop produces a bad decision. The method for protecting Orient is pre-commitment to specific invalidation criteria before the trade — if the gap reverses below the pre-market high within 10 minutes on above-average volume, the thesis is dead regardless of how strongly you believed it.
+</think>
+

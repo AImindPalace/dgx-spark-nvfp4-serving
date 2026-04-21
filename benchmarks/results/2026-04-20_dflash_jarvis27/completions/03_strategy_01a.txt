@@ -1,0 +1,93 @@
+<think>
+This is a direct application of the Kelly Criterion framework to a real trading strategy, requiring both calculation and practical interpretation. Let me work through the math systematically.
+
+**Step 1: Kelly Fraction Calculation**
+
+The Kelly formula for a binary outcome is: f* = (p × b - q) / b, where:
+- p = probability of winning = 0.58
+- q = probability of losing = 1 - p = 0.42
+- b = payoff ratio (average win / average loss) = 4.2% / 2.8% = 1.5
+
+f* = (0.58 × 1.5 - 0.42) / 1.5 = (0.87 - 0.42) / 1.5 = 0.45 / 1.5 = 0.30
+
+So the full-Kelly fraction is 30% of capital per trade.
+
+**Step 2: Dollar Bet Size**
+
+At full Kelly: $250,000 × 0.30 = $75,000 per trade.
+
+**Step 3: Drawdown During Maximum Consecutive Loss Run**
+
+With 9 consecutive losses at full Kelly, each loss reduces capital by 2.8% of the current position (not the original capital — this is compounding). The drawdown calculation:
+
+After 9 consecutive losses at 30% Kelly with 2.8% average loss:
+- Each loss reduces capital by: 30% × 2.8% = 0.84% of total capital
+- But this compounds: $250,000 × (1 - 0.0084)^9 = $250,000 × 0.9273 = $231,825
+- Drawdown: $250,000 - $231,825 = $18,175, or 7.3%
+
+Wait — I need to be more precise. The Kelly framework assumes the loss is a percentage of the bet, not of total capital. Let me recalculate:
+
+Each loss: you lose 2.8% of the $75,000 bet = $2,100
+But Kelly is a fraction of capital, so after each loss, the bet size shrinks:
+- Trade 1: bet $75,000, lose $2,100, capital = $247,900
+- Trade 2: bet $74,370 (30% of $247,900), lose $2,082, capital = $245,818
+- And so on...
+
+Using the compound formula: $250,000 × (1 - 0.30 × 0.028)^9 = $250,000 × (0.9916)^9 = $250,000 × 0.9273 = $231,825
+
+Drawdown = 7.3% of peak equity.
+
+**Step 4: Why Full-Kelly Is Impractical**
+
+The 7.3% drawdown from the observed maximum loss run is actually moderate — but this is the key insight from the Kelly framework. The observed maximum of 9 consecutive losses is a sample statistic from 5 years of data. The true maximum loss run could be much longer. With a 42% loss probability, the probability of 15 consecutive losses is (0.42)^15 = 0.000000023 — rare but possible over a long enough horizon. At full Kelly, 15 consecutive losses would produce a drawdown of approximately 1 - (0.9916)^15 = 12.0%.
+
+More critically, the Kelly framework assumes the edge parameters (58% win rate, 4.2% average win, 2.8% average loss) are known with certainty. In reality, these are estimates from a finite sample. If the true win rate is 54% instead of 58%, the Kelly fraction drops to (0.54 × 1.5 - 0.46) / 1.5 = 0.213, or 21.3%. Betting at 30% when the true Kelly is 21.3% means you're overbetting — and overbetting at Kelly leads to negative geometric growth.
+
+The practical rule is to use half-Kelly or quarter-Kelly. At half-Kelly (15% of capital = $37,500 per trade), the 9-loss drawdown shrinks to approximately 3.7%, and the strategy is robust to parameter estimation error.
+
+The Calmar ratio of 1.4 provides additional context — it suggests the strategy's annualized return divided by maximum drawdown is 1.4, which is decent but not exceptional. This is noise for the Kelly calculation itself but relevant for overall strategy evaluation.
+
+The 3–5 signals per week means roughly 150–250 trades per year, providing a reasonable sample size for the 5-year backtest (750–1,250 total trades). This gives moderate confidence in the parameter estimates.
+
+</think>
+
+
+
+The Kelly Criterion provides a mathematically optimal bet-sizing framework, but its practical application requires significant adjustment for real-world trading. Here's the complete analysis.
+
+**Kelly Fraction Calculation**
+
+Using the standard Kelly formula f* = (p × b - q) / b:
+- p (win rate) = 0.58
+- q (loss rate) = 0.42
+- b (payoff ratio) = 4.2% / 2.8% = 1.5
+
+f* = (0.58 × 1.5 - 0.42) / 1.5 = 0.30, or 30% of capital per trade.
+
+At full Kelly on a $250,000 account: $75,000 per trade.
+
+**Drawdown During Maximum Observed Loss Run**
+
+With 9 consecutive losses at full Kelly, the compound drawdown is: $250,000 × (1 - 0.30 × 0.028)^9 = $250,000 × (0.9916)^9 = $231,825. That's a 7.3% drawdown from peak equity.
+
+This looks manageable — but it's dangerously misleading for three reasons.
+
+**Why Full-Kelly Is Impractical for Discretionary Traders**
+
+1. **Parameter Estimation Error**: The 58% win rate, 4.2% average win, and 2.8% average loss are estimates from approximately 750–1,250 trades over 5 years. If the true win rate is 54% (a plausible 4-percentage-point estimation error), the true Kelly fraction is only 21.3%. Betting at 30% when the true Kelly is 21.3% means you're overbetting, which produces negative geometric growth over time. The Kelly framework is maximally sensitive to parameter error — overbetting is worse than underbetting because it can lead to ruin.
+
+2. **Observed Maximum ≠ True Maximum**: The 9 consecutive losses observed in 5 years is a sample statistic. The probability of 15 consecutive losses with a 42% loss rate is (0.42)^15 ≈ 2.3 × 10^-8 — rare but not impossible over a 20-year career. At full Kelly, 15 consecutive losses produce a 12.0% drawdown. At 20 consecutive losses: 16.1%. The tail risk of longer-than-observed loss runs is the primary danger.
+
+3. **Discretionary Execution Variance**: The backtest assumes consistent execution. A discretionary trader introduces behavioral variance — hesitation on entries, premature exits, emotional position sizing adjustments. This execution noise further degrades the edge, making the estimated parameters even less reliable.
+
+**Practical Recommendation: Half-Kelly**
+
+At half-Kelly (15% of capital = $37,500 per trade), the 9-loss drawdown shrinks to approximately 3.7%, and the strategy tolerates parameter estimation error of up to 3 percentage points in win rate before the Kelly fraction turns negative. The geometric growth rate at half-Kelly is approximately 75% of the maximum achievable at full Kelly — a small sacrifice for dramatically improved robustness.
+
+---
+DECISION FRAMEWORK:
+Regime: N/A — this is a position sizing framework analysis, not a market regime assessment
+Key Evidence:
+- Full-Kelly fraction of 30% produces a 7.3% drawdown during the observed 9-loss run, but parameter estimation error could make the true Kelly as low as 21.3%
+- Overbetting at Kelly (betting above the true Kelly fraction) produces negative geometric growth — the Kelly framework's most dangerous failure mode
+- Half-Kelly (15% = $37,500 per trade) sacrifices only ~25% of geometric growth while providing robustness to parameter error and longer-than-

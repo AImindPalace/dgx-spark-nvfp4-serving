@@ -1,0 +1,14 @@
+<think>
+This is a sophisticated question about Bayesian updating applied to a macro trading thesis — directly connecting Aronson's discussion of Bayesian reasoning in the chapter to practical position management. Aronson describes how Bayesian reasoning allows a trader to update the probability of a thesis being correct as new evidence arrives, rather than treating the thesis as binary (right/wrong).
+
+Let me structure this as a formal Bayesian update. The prior thesis had three pillars: (1) US growth deceleration, (2) 3 Fed cuts, (3) ECB holds longer. The new evidence contradicts pillars 1 and 2 directly: NFP at +312K vs +175K consensus (+78% surprise), wage growth accelerating to +4.1%, GDPNow at 3.4% — all point to acceleration, not deceleration. Fed funds futures dropping from 3.0 to 1.2 expected cuts is a 60% reduction in the probability of the second pillar.
+
+Applying the Bayesian framework: if the prior probability of the thesis was, say, 60% (the trader had conviction but not certainty), and the new evidence has a likelihood ratio of roughly 0.3 (the evidence is 3x more likely under the alternative hypothesis that the US economy is strengthening), the posterior probability drops to approximately 22%. This is a dramatic revision.
+
+The key distinction from the chapter is between thesis invalidation and temporary noise. A single data point can be noisy — one NFP print doesn't define a trend. But when three independent data points (NFP, wage growth, GDPNow) all contradict the same thesis simultaneously, the Bayesian update should be substantial. This is not noise; it's a coherent signal cluster.
+
+The position management decision: at 1.0940 with entry at 1.0820, the trader has +120 pips of unrealized profit. The Bayesian posterior of ~22% means the expected value of holding has shifted dramatically. The rational action is to take partial profits and reduce exposure to reflect the updated probability.
+
+Specific conditions for full exit vs. reduced size: if the thesis probability drops below 25% (which it has), reduce to 25% of original position. Full exit if: (a) a second consecutive NFP above +250K, (b) Fed funds futures drop below 0.5 cuts, or (c) EUR/USD fails to make a new high above 1.0940 within 2 weeks (momentum confirmation).
+</think>
+

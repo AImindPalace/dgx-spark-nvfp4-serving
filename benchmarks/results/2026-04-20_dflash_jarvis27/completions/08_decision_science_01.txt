@@ -1,0 +1,35 @@
+<think>
+This scenario is a textbook illustration of multiple cognitive biases converging on a single trading decision. Let me systematically diagnose each one using Kahneman's framework.
+
+**Base-Rate Neglect**: The trader is anchoring on the vivid, specific evidence (the earnings beat, the gap up, the Azure surprise) while ignoring the base rate that only 38% of stocks gapping up 4%+ on earnings sustain those gains through the following month. Kahneman's research shows that when people are given both base-rate information and specific case information, they overwhelmingly overweight the specific case. The trader is doing exactly this — the vivid earnings beat is the 'representativeness' signal that overrides the statistical base rate.
+
+**Availability Heuristic**: The 4.8% gap up on heavy volume is a vivid, emotionally salient event. The trader can easily imagine the stock continuing higher — the image of the gap, the volume surge, the analyst upgrades that will follow — all of these are highly available mental images. Kahneman's availability heuristic framework predicts that the ease with which the trader can imagine the stock continuing higher inflates the perceived probability of that outcome. The 62% base rate of failure (stocks that don't sustain the gap) is abstract and less available — it's a statistic, not a vivid image.
+
+**Planning Fallacy**: The trader's desire to 'add aggressively' reflects the planning fallacy — the tendency to underestimate the costs and risks of a course of action while overestimating the benefits. The trader is planning for the scenario where the gap sustains (the inside view) rather than considering the distribution of outcomes (the outside view). Kahneman's reference class forecasting method would require the trader to look at what typically happens to stocks in this situation, not just what the trader hopes will happen.
+
+**WYSIATI (What You See Is All There Is)**: The trader is constructing a coherent narrative from the available data (earnings beat → gap up → add aggressively) without considering what information is missing. The forward P/E at 36x versus the 5-year median of 30x is a critical data point that suggests the stock is pricing in continued outperformance — but the base rate says most stocks that gap this much don't sustain it. The trader's System 1 is constructing a coherent story from the visible evidence and ignoring the invisible base rate.
+
+**The Structured Decision Process**: Applying Kahneman's debiasing framework, the trader should use a structured checklist that forces outside-view anchoring before inside-view adjustment:
+
+1. **Step 1 — Outside View Anchor**: Start with the 38% base rate for gap sustainability. This is the reference class forecast.
+2. **Step 2 — Inside View Adjustment**: Identify specific factors that might make this case different from the base rate. Azure growth at 33% vs. 29% expected is genuinely strong. But is it strong enough to move the probability from 38% to, say, 55%? The trader must quantify the adjustment, not just feel it.
+3. **Step 3 — Valuation Check**: At 36x forward P/E versus 30x median, the stock is 20% above its historical valuation norm. This is a risk factor, not a bullish signal.
+4. **Step 4 — Position Sizing Rule**: If the adjusted probability is, say, 50%, and the expected gain is 8% with a potential loss of 12% (gap fill), the Kelly criterion suggests a very small position — roughly 2% of capital.
+
+**Trade Recommendation**: The trader should NOT add aggressively. Instead, if adding at all, the position should be sized at no more than 25% of what the trader initially wanted to add, with a stop at the pre-earnings close (the gap fill level). Entry at current levels, stop at the pre-earnings close, target at the next resistance level. Confidence: low-to-moderate — the base rate is against the trade, and the valuation is stretched.
+
+---
+DECISION FRAMEWORK:
+Regime: trend — confidence: moderate (the earnings beat is real, but the base rate for gap sustainability is poor)
+Key Evidence:
+- Only 38% of stocks gapping up 4%+ on earnings sustain gains through the following month — this is the critical base rate being neglected
+- Forward P/E at 36x versus 5-year median of 30x indicates the stock is pricing in continued outperformance that the base rate suggests is unlikely
+- Azure growth at 33% vs. 29% expected is a genuine positive, but the availability heuristic inflates its perceived importance relative to the base rate
+Plan: If adding, enter at current levels with maximum 25% of desired add size → stop at pre-earnings close (gap fill level) → target at next resistance level
+Invalidation: Daily close below the pre-earnings close level (gap fill) invalidates the sustainability thesis — exit the add immediately
+Risk: 1R = distance from entry to pre-earnings close (gap fill) | reward: measured to next resistance | risk-reward must exceed 2:1 to justify the trade given the 38% base rate
+No-Trade Conditions: Do not add if the trader cannot articulate a specific, quantified reason why this case differs from the 38% base rate — if the only reason is 'the earnings were good,' that's the availability heuristic, not an analytical edge
+Review Metric: Track whether the structured outside-view-first process (base rate → inside view adjustment → valuation check → sizing rule) produces better-calibrated position sizes than the trader's intuitive sizing over the next 20 earnings-driven decisions
+---
+</think>
+
